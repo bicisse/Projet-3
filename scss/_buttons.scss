@@ -1,0 +1,29 @@
+@import "./variables";
+
+button {
+  background: linear-gradient(
+    to bottom right,
+    $secondary-color,
+    $primary-color
+  );
+  padding: 20px 30px;
+  width: 290px;
+  color: white;
+  font-size: 20px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: #bebebe 5px 5px 5px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: #bebebe 8px 8px 8px;
+  }
+}
+.bouton {
+  padding: 20px 60px;
+  color: white;
+  background-color: violet;
+  border: none;
+  border-radius: 56px;
+  font-size: 20px;
+}

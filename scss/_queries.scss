@@ -1,0 +1,13 @@
+@media screen and (min-width: 992px) {
+  .desktop {
+    text-decoration: line-through;
+  }
+
+  @media screen and (min-width: 798px) and (max-width: 991px) {
+    .desktop,
+    .tablet {
+      text-decoration: line-through;
+      color: red;
+    }
+  }
+}

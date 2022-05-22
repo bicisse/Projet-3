@@ -1,0 +1,12 @@
+@media screen and (min-width: 992px) {
+  .header {
+    border: 5px solid green;
+  }
+}
+
+@media screen and (min-width: 992px) and (min-width: 798px) and (max-width: 991px) {
+  .header {
+    border: 5px solid purple;
+  }
+}
+/*# sourceMappingURL=queries.css.map */
