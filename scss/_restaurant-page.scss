@@ -56,33 +56,3 @@
   text-align: center;
   padding-bottom: 50px;
 }
-
-h1 {
-  font-weight: normal;
-  font-family: "Roboto-Bold";
-  font-size: 35px;
-}
-
-.dish {
-  background-color: white;
-  padding: 17px 15px;
-  border-radius: 20px;
-
-  &__flex {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__name {
-    font-size: 23px;
-    padding-bottom: 5px;
-  }
-
-  &__side {
-    font-size: 20px;
-  }
-
-  &__price {
-    font-size: 22px;
-    font-family: "Roboto-Bold";
-  }
-}

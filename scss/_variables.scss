@@ -1,5 +1,13 @@
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
-$tertiary-color: #99e3d0;
-$cadre-nouveau: #008766;
+$tertiary-color: #99e2d0;
+// $cadrenouveau: #008766;
 $gradient: linear-gradient(to bottom right, $secondary-color, $primary-color);
+
+@mixin dark($color: $tertiary-color) {
+  color: darken($color, 50%);
+}
+
+@mixin light-footer($color) {
+  background-color: lighten($color, $amount: 15%);
+}

@@ -1,0 +1,100 @@
+@import "./variables";
+@import "./settings";
+@import "./fonts";
+
+//
+
+.course {
+  background-color: #f2f2f2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+.overflow {
+  height: fit-content;
+  width: 100%;
+  background-color: white;
+  padding: 17px 15px;
+}
+.card__repas {
+  position: relative;
+  margin: 5px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    & .overflow {
+      width: 66%;
+    }
+    & .plat__price {
+      transform: translate(-90px);
+      width: 80px;
+    }
+
+    & .dish__animation {
+      transform: translateX(-42px) rotate(360deg);
+    }
+  }
+}
+.overflow,
+.plat__price,
+.icon,
+.card__repas {
+  height: 90px;
+  transition: all ease-in-out 400ms;
+}
+
+.plat__price,
+.icon {
+  width: 90px;
+}
+
+.plat__price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  scale: 1;
+  // display: none;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: $tertiary-color;
+}
+
+.dish__name,
+.dish__side {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dish__animation {
+  color: white;
+  transition: all ease-in-out 400ms;
+  line-height: 3 !important;
+  float: right;
+  font-size: 30px;
+}
+
+.price {
+  font-family: "Roboto-Bold";
+  line-height: 7;
+  font-size: 18px;
+  text-align: center;
+}
+
+.dish__side {
+  font-size: 20px;
+}
+
+.dish__name {
+  font-size: 23px;
+  padding-bottom: 5px;
+}

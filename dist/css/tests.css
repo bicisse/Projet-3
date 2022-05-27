@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../fonts/Shrikhand-Regular.ttf);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  min-width: 480px;
+  max-width: 720px;
+  width: 480px;
+  border: white solid 1px;
+  font-family: sans-serif;
+  margin: 50px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto-Regular";
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.course {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+}
+
+.overflow {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: white;
+  padding: 17px 15px;
+}
+
+.card__repas {
+  position: relative;
+  margin: 5px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card__repas:hover .overflow {
+  width: 66%;
+}
+
+.card__repas:hover .plat__price {
+  -webkit-transform: translate(-90px);
+          transform: translate(-90px);
+  width: 80px;
+}
+
+.card__repas:hover .dish__animation {
+  -webkit-transform: translateX(-42px) rotate(360deg);
+          transform: translateX(-42px) rotate(360deg);
+}
+
+.overflow,
+.plat__price,
+.icon,
+.card__repas {
+  height: 90px;
+  -webkit-transition: all ease-in-out 400ms;
+  transition: all ease-in-out 400ms;
+}
+
+.plat__price,
+.icon {
+  width: 90px;
+}
+
+.plat__price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  scale: 1;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #99e2d0;
+}
+
+.dish__name,
+.dish__side {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dish__animation {
+  color: white;
+  -webkit-transition: all ease-in-out 400ms;
+  transition: all ease-in-out 400ms;
+  line-height: 3 !important;
+  float: right;
+  font-size: 30px;
+}
+
+.price {
+  font-family: "Roboto-Bold";
+  line-height: 7;
+  font-size: 18px;
+  text-align: center;
+}
+
+.dish__side {
+  font-size: 20px;
+}
+
+.dish__name {
+  font-size: 23px;
+  padding-bottom: 5px;
+}
+/*# sourceMappingURL=tests.css.map */

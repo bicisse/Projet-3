@@ -3,6 +3,7 @@
   padding: 0%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 button {
@@ -98,39 +99,27 @@ button:hover {
   padding-bottom: 50px;
 }
 
-h1 {
-  font-weight: normal;
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
   font-family: "Roboto-Bold";
-  font-size: 35px;
+  src: url(../../fonts/Roboto-Bold.ttf);
 }
 
-.dish {
-  background-color: white;
-  padding: 17px 15px;
-  border-radius: 20px;
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../fonts/Shrikhand-Regular.ttf);
 }
 
-.dish__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.dish__name {
-  font-size: 23px;
-  padding-bottom: 5px;
-}
-
-.dish__side {
-  font-size: 20px;
-}
-
-.dish__price {
-  font-size: 22px;
-  font-family: "Roboto-Bold";
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 body {
@@ -149,6 +138,20 @@ body {
   height: fit-content;
 }
 
+@media screen and (min-width: 992px) {
+  .desktop {
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (min-width: 992px) and (min-width: 798px) and (max-width: 991px) {
+  .desktop,
+  .tablet {
+    text-decoration: line-through;
+    color: red;
+  }
+}
+
 @font-face {
   font-family: "Roboto-Regular";
   src: url(../../fonts/Roboto-Regular.ttf);
@@ -164,18 +167,136 @@ body {
   src: url(../../fonts/Shrikhand-Regular.ttf);
 }
 
-@media screen and (min-width: 992px) {
-  .desktop {
-    text-decoration: line-through;
-  }
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
 }
 
-@media screen and (min-width: 992px) and (min-width: 798px) and (max-width: 991px) {
-  .desktop,
-  .tablet {
-    text-decoration: line-through;
-    color: red;
-  }
+body {
+  min-width: 480px;
+  max-width: 720px;
+  width: 480px;
+  border: white solid 1px;
+  font-family: sans-serif;
+  margin: 50px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto-Regular";
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.course {
+  background-color: #f2f2f2;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+}
+
+.overflow {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: white;
+  padding: 17px 15px;
+}
+
+.overflow:hover {
+  width: 60%;
+}
+
+.card__repas {
+  position: relative;
+  margin: 5px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card__repas:hover .plat__price {
+  -webkit-transform: translate(-90px);
+          transform: translate(-90px);
+  width: 80px;
+}
+
+.card__repas:hover .dish__animation {
+  -webkit-transform: translateX(-30px) rotate(360deg);
+          transform: translateX(-30px) rotate(360deg);
+}
+
+.overflow,
+.plat__price,
+.icon,
+.card__repas {
+  height: 90px;
+  -webkit-transition: all ease-in-out 400ms;
+  transition: all ease-in-out 400ms;
+}
+
+.plat__price,
+.icon {
+  width: 90px;
+}
+
+.plat__price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  scale: 1;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #99e2d0;
+}
+
+.dish__name, .dish__side {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dish__name {
+  font-size: 23px;
+  padding-bottom: 5px;
+}
+
+.dish__side {
+  font-size: 20px;
+}
+
+.dish__animation {
+  color: white;
+  -webkit-transition: all ease-in-out 400ms;
+  transition: all ease-in-out 400ms;
+  line-height: 3 !important;
+  float: right;
+  font-size: 30px;
+}
+
+.price {
+  font-family: "Roboto-Bold";
+  line-height: 7;
+  font-size: 18px;
+  text-align: center;
 }
 
 /* HEADER */
@@ -375,8 +496,8 @@ h2 {
 }
 
 .restaurant__new {
-  background-color: #99e3d0;
-  color: #008766;
+  color: #1b6150;
+  background-color: #99e2d0;
   font-family: "Roboto-Bold";
   padding: 8px 15px;
   width: -webkit-fit-content;
@@ -415,7 +536,7 @@ a:link, a:hover, a:visited {
 
 /* FOOTER */
 .footer {
-  background-color: #353535;
+  background-color: #262626;
   padding: 25px;
   width: 100%;
   color: white;

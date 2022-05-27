@@ -5,6 +5,7 @@
 @import "./variables";
 @import "./fonts";
 @import "./queries";
+@import "./animations";
 
 /* HEADER */
 .header {
@@ -172,8 +173,8 @@ h2 {
   }
 
   &__new {
+    @include dark($color: $tertiary-color);
     background-color: $tertiary-color;
-    color: $cadre-nouveau;
     font-family: "Roboto-Bold";
     padding: 8px 15px;
     width: fit-content;
@@ -213,7 +214,7 @@ a {
 /* FOOTER */
 
 .footer {
-  background-color: #353535;
+  @include light-footer(black);
   padding: 25px;
   width: 100%;
   color: white;
@@ -243,6 +244,7 @@ li {
   list-style: none;
   margin-bottom: 10px;
 }
+
 .mentions-legales:visited,
 .mentions-legales {
   color: white;
