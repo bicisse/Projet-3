@@ -4,6 +4,8 @@ $tertiary-color: #99e2d0;
 // $cadrenouveau: #008766;
 $gradient: linear-gradient(to bottom right, $secondary-color, $primary-color);
 
+$shadow: 5px 5px 10px #afafaf;
+
 @mixin dark($color: $tertiary-color) {
   color: darken($color, 50%);
 }

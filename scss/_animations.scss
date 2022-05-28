@@ -17,10 +17,6 @@
   width: 100%;
   background-color: white;
   padding: 17px 15px;
-
-  &:hover {
-    width: 66%;
-  }
 }
 .card__repas {
   position: relative;
@@ -28,6 +24,8 @@
   border-radius: 20px;
   overflow: hidden;
   white-space: nowrap;
+  box-shadow: $shadow;
+  transition: all ease-out 300ms;
 
   &:hover {
     & .plat__price {
@@ -37,6 +35,10 @@
 
     & .dish__animation {
       transform: translateX(-30px) rotate(360deg);
+    }
+
+    & .overflow {
+      width: 66%;
     }
   }
 }

@@ -16,7 +16,7 @@ button {
 
   &:hover {
     cursor: pointer;
-    box-shadow: #bebebe 8px 8px 8px;
+    box-shadow: $shadow;
   }
 }
 .bouton {
@@ -27,3 +27,30 @@ button {
   border-radius: 56px;
   font-size: 20px;
 }
+
+// $first-color: teal;
+// $second-color: tomato;
+// $btn-text-color: white;
+
+// @mixin darken($color: $first-color) {
+//   background-color: darken($color: $color, $amount: 10%);
+// }
+
+// .boutn {
+//   background-color: $first-color;
+//   padding: 10px;
+//   border: $first-color solid 4px;
+//   color: $btn-text-color;
+//   border-radius: 20px;
+//   transition: ease-in 150ms;
+//   outline: none;
+
+//   &:hover {
+//     cursor: pointer;
+//     font-weight: 500;
+//   }
+
+//   &:active {
+//     @include darken;
+//   }
+// }
