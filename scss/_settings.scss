@@ -17,17 +17,15 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: "Roboto";
 }
 
 body {
   min-width: 480px;
-  max-width: 720px;
-  width: 480px;
-  border: white solid 1px;
+  // max-width: 720px;
+  // width: 480px;
+  border: red solid 1px;
   font-family: sans-serif;
   margin: 50px auto;
-  box-sizing: border-box;
   font-family: "Roboto-Regular";
   position: relative;
   height: fit-content;
