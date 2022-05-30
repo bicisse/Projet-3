@@ -33,10 +33,6 @@ body {
 }
 
 /* HEADER */
-.mobile {
-  display: inline;
-}
-
 .header__logo {
   height: 40px;
 }
@@ -61,6 +57,7 @@ body {
 }
 
 .location {
+  background-color: #d9d9d9;
   border-top: #bebebe 4px solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,7 +66,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #e3e2e2;
   padding: 20px;
 }
 
@@ -110,6 +106,7 @@ body {
 h2 {
   font-family: "Roboto-Bold";
   font-size: 25px;
+  margin-left: 50px;
 }
 
 .fonctionnement {
@@ -182,6 +179,11 @@ h2 {
   padding-top: 60px;
 }
 
+.restaurant__icon:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
 .restaurant a:link {
   color: black;
 }
@@ -224,15 +226,17 @@ h2 {
 }
 
 .restaurant__new {
-  background-color: #99e2d0;
+  color: #2c9c81;
+  font-size: 20px;
   font-family: "Roboto-Bold";
   padding: 8px 15px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 15px;
+  right: 15px;
+  background-color: #99e2d0;
 }
 
 .ajuster-img {
@@ -450,6 +454,7 @@ a:link, a:hover, a:visited {
 
 /* FOOTER */
 .footer {
+  background-color: #1a1a1a;
   padding: 25px;
   width: 100%;
   color: white;
@@ -507,6 +512,10 @@ li {
   opacity: 1;
 }
 
+.btn a:visited {
+  color: white;
+}
+
 .btn::after {
   content: "";
   opacity: 0;
@@ -535,9 +544,10 @@ li {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 25px;
   }
   .restaurant__card {
-    width: 50%;
+    width: 48%;
   }
 }
 
@@ -545,6 +555,23 @@ li {
   body {
     border: 1px solid blue;
     max-width: 1190px;
+  }
+  .introduction {
+    display: block;
+    height: 300px;
+  }
+  .btn {
+    float: right;
+    bottom: -67px;
+    right: 97px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .decouvrez {
+    float: left;
+    bottom: 10px;
+    left: 20px;
   }
   .fonctionnement {
     display: -webkit-box;
@@ -565,8 +592,16 @@ li {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .flex__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+  }
   .restaurant__card {
-    width: 25%;
+    width: 48%;
   }
   .card__repas {
     margin: 5px 0;

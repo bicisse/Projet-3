@@ -14,10 +14,11 @@
   .flex__cards {
     display: flex;
     flex-wrap: wrap;
+    gap: 25px;
   }
 
   .restaurant__card {
-    width: 50%;
+    width: 48%;
   }
 }
 
@@ -27,6 +28,26 @@
     max-width: 1190px;
   }
 
+  .introduction {
+    display: block;
+    height: 300px;
+  }
+
+  .btn {
+    float: right;
+    bottom: -67px;
+    right: 97px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .decouvrez {
+    float: left;
+    bottom: 10px;
+    left: 20px;
+  }
   .fonctionnement {
     display: flex;
     flex-direction: row;
@@ -40,10 +61,15 @@
     flex-wrap: wrap;
   }
 
-  .restaurant__card {
-    width: 25%;
+  .flex__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
   }
 
+  .restaurant__card {
+    width: 48%;
+  }
   //
   //
   //

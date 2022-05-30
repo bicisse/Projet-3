@@ -24,6 +24,10 @@
     }
   }
 
+  & a:visited {
+    color: white;
+  }
+
   &::after {
     content: "";
     opacity: 0;

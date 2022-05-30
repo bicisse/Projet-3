@@ -1,8 +1,6 @@
-/* HEADER */
+@import "./variables";
 
-.mobile {
-  display: inline;
-}
+/* HEADER */
 
 .header {
   &__logo {
@@ -28,11 +26,12 @@
 }
 
 .location {
+  @include dark-bg;
   border-top: #bebebe 4px solid;
   display: flex;
   gap: 20px;
   justify-content: center;
-  background-color: #e3e2e2;
+
   padding: 20px;
 
   &__icon {
@@ -66,6 +65,7 @@
 h2 {
   font-family: "Roboto-Bold";
   font-size: 25px;
+  margin-left: 50px;
 }
 .fonctionnement {
   display: flex;
@@ -129,6 +129,16 @@ h2 {
   padding: 20px;
   padding-top: 60px;
 
+  &__icon {
+    &:hover {
+      background: linear-gradient(
+        to bottom right,
+        $secondary-color,
+        $primary-color
+      );
+    }
+  }
+
   a:link {
     color: black;
   }
@@ -164,13 +174,15 @@ h2 {
   }
 
   &__new {
-    background-color: $tertiary-color;
+    @include darkened;
+    font-size: 20px;
     font-family: "Roboto-Bold";
     padding: 8px 15px;
     width: fit-content;
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 15px;
+    right: 15px;
+    background-color: $tertiary-color;
   }
 }
 

@@ -1,6 +1,9 @@
+// @import "./variables";
+
 /* FOOTER */
 
 .footer {
+  @include light-bg;
   padding: 25px;
   width: 100%;
   color: white;
