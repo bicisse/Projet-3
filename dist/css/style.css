@@ -224,7 +224,6 @@ h2 {
 }
 
 .restaurant__new {
-  color: #1b6150;
   background-color: #99e2d0;
   font-family: "Roboto-Bold";
   padding: 8px 15px;
@@ -451,7 +450,6 @@ a:link, a:hover, a:visited {
 
 /* FOOTER */
 .footer {
-  background-color: #262626;
   padding: 25px;
   width: 100%;
   color: white;
@@ -488,32 +486,43 @@ li {
   color: white;
 }
 
-button {
+.btn {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 20px 30px;
   width: 290px;
   color: white;
   font-size: 20px;
-  border-radius: 50px;
   border: none;
-  -webkit-box-shadow: #bebebe 5px 5px 5px;
-          box-shadow: #bebebe 5px 5px 5px;
-}
-
-button:hover {
-  cursor: pointer;
   -webkit-box-shadow: 5px 5px 10px #afafaf;
           box-shadow: 5px 5px 10px #afafaf;
+  z-index: 1;
+  position: relative;
+  padding: 20px 60px;
+  border-radius: 56px;
+  cursor: pointer;
 }
 
-.bouton {
-  padding: 20px 60px;
-  color: white;
-  background-color: violet;
-  border: none;
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn::after {
+  content: "";
+  opacity: 0;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
   border-radius: 56px;
-  font-size: 20px;
+  -webkit-box-shadow: 8px 8px 13px #afafaf;
+          box-shadow: 8px 8px 13px #afafaf;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff46cc), to(#782cd3));
+  background: linear-gradient(to bottom right, #ff46cc 0%, #782cd3 100%);
+  position: absolute;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -565,8 +574,8 @@ button:hover {
     transition: all ease-out 300ms;
   }
   .card__repas:hover .plat__price {
-    -webkit-transform: translate(-90px) scaleX(200px);
-            transform: translate(-90px) scaleX(200px);
+    -webkit-transform: translate(-90px);
+            transform: translate(-90px);
     width: 80px;
   }
   .card__repas:hover .dish__animation {
@@ -576,16 +585,20 @@ button:hover {
   .card__repas:hover .overflow {
     width: 53%;
   }
-  .overflow,
-  .plat__price,
-  .icon,
-  .card__repas {
+  .plat__price {
+    top: 66px;
+    right: 200px;
+  }
+  .plat__price .overflow,
+  .plat__price .plat__price,
+  .plat__price .icon,
+  .plat__price .card__repas {
     height: 150px;
   }
-  .card__repas {
+  .plat__price .card__repas {
     width: 33%;
   }
-  .course {
+  .plat__price .course {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

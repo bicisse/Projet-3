@@ -1,0 +1,36 @@
+body {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.btn {
+  padding: 20px;
+  color: white;
+  background-color: lightblue;
+  border: 0;
+  font-size: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 2rem;
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    background-color: darken($color: lightblue, $amount: 15);
+    opacity: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    transition: background-color 250ms;
+    border-radius: 2rem;
+  }
+}

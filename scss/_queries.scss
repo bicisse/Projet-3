@@ -68,24 +68,23 @@
     }
   }
 
-
   .plat__price {
-    
     top: 66px;
     right: 200px;
 
-  .overflow,
-  .plat__price,
-  .icon,
-  .card__repas {
-    height: 150px;
-  }
+    .overflow,
+    .plat__price,
+    .icon,
+    .card__repas {
+      height: 150px;
+    }
 
-  .card__repas {
-    width: 33%;
-  }
+    .card__repas {
+      width: 33%;
+    }
 
-  .course {
-    flex-direction: row;
+    .course {
+      flex-direction: row;
+    }
   }
 }

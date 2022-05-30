@@ -2,14 +2,18 @@ $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 // $cadrenouveau: #008766;
-$gradient: linear-gradient(to bottom right, $secondary-color, $primary-color);
 
+// $gradient: linear-gradient(to bottom right, $secondary-color, $primary-color);
+
+// $gradient: linear-gradient(to bottom right, red, green);
+
+$hover-shadow: 8px 8px 13px #afafaf;
 $shadow: 5px 5px 10px #afafaf;
 
-@mixin dark($color: $tertiary-color) {
-  color: darken($color, 50%);
-}
+// @mixin dark($color: $tertiary-color) {
+//   color: darken($color, 50%);
+// }
 
-@mixin light-footer($color) {
-  background-color: lighten($color, $amount: 15%);
-}
+// @mixin light-footer($color) {
+//   background-color: lighten($color, $amount: 15%);
+// }

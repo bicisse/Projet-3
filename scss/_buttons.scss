@@ -1,6 +1,6 @@
 @import "./variables";
 
-button {
+.btn {
   background: linear-gradient(
     to bottom right,
     $secondary-color,
@@ -10,20 +10,50 @@ button {
   width: 290px;
   color: white;
   font-size: 20px;
-  border-radius: 50px;
   border: none;
-  box-shadow: #bebebe 5px 5px 5px;
+  box-shadow: $shadow;
+  z-index: 1;
+  position: relative;
+  padding: 20px 60px;
+  border-radius: 56px;
+  cursor: pointer;
 
   &:hover {
-    cursor: pointer;
-    box-shadow: $shadow;
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    opacity: 0;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 56px;
+    box-shadow: $hover-shadow;
+    // background: linear-gradient(
+    //   to bottom right,
+    //   $secondary-color,
+    //   $primary-color
+    // );
+
+    background: linear-gradient(
+      to bottom right,
+      darken($secondary-color, 10) 0%,
+      darken($primary-color, 10) 100%
+    );
+    // background: darken($color: $gradient, $amount: 10);
+
+    position: absolute;
+    transition: opacity 200ms;
   }
 }
-.bouton {
-  padding: 20px 60px;
-  color: white;
-  background-color: violet;
-  border: none;
-  border-radius: 56px;
-  font-size: 20px;
-}
+
+//
+// .btn {
+//   padding: 20px;
+//   background-color: red;
+// }

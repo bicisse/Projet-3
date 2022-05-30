@@ -1,6 +1,5 @@
 /* HEADER */
 
-
 .mobile {
   display: inline;
 }
@@ -165,7 +164,6 @@ h2 {
   }
 
   &__new {
-    @include dark($color: $tertiary-color);
     background-color: $tertiary-color;
     font-family: "Roboto-Bold";
     padding: 8px 15px;
