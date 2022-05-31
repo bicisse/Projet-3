@@ -1,36 +1,13 @@
-body {
-  width: 500px;
-  margin: 50px auto;
+.favorite {
+  border: 2px dotted black;
+  padding: 50px;
 }
 
-.btn {
-  padding: 20px;
-  color: white;
-  background-color: lightblue;
-  border: 0;
-  font-size: 50px;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  border-radius: 2rem;
+.empty {
+  color: red;
 }
 
-.btn:hover::after {
-  opacity: 1;
-}
-
-.btn::after {
-  background-color: #72bcd4;
-  opacity: 0;
-  content: "";
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: background-color 250ms;
-  transition: background-color 250ms;
-  border-radius: 2rem;
+.filled {
+  color: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 /*# sourceMappingURL=tests.css.map */

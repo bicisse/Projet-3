@@ -129,16 +129,6 @@ h2 {
   padding: 20px;
   padding-top: 60px;
 
-  &__icon {
-    &:hover {
-      background: linear-gradient(
-        to bottom right,
-        $secondary-color,
-        $primary-color
-      );
-    }
-  }
-
   a:link {
     color: black;
   }
@@ -168,9 +158,13 @@ h2 {
     object-position: bottom;
   }
   &__details {
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
+
+    & h3 {
+      font-size: 26px;
+    }
   }
 
   &__new {
@@ -186,6 +180,9 @@ h2 {
   }
 }
 
+.quartier {
+  font-size: 23px;
+}
 .ajuster-img {
   object-position: center -196px;
 }

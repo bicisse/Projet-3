@@ -13,9 +13,10 @@
   </head>
 
   <body>
-    
+    <!-- RESTAURANTS -->
 
-   
+    <!-- HEADER  -->
+
     <header>
       <div class="header__logo--center">
         <img
@@ -36,7 +37,7 @@
       <p class="decouvrez">
         Découvrez des restaurants d'exception, selectionnés par nos soins.
       </p>
-      <div class="explorer">
+      <div>
         <button class="btn btn__header"><a href="#restaurants">Explorer nos restaurants</a></button>
       </div>
     </div>
@@ -84,23 +85,29 @@
   <div class="flex__cards"> 
     
     <!--  -->
-    <div class="restaurant__card new"><a href="/dist/lapalettedugout.html"
+    <div class="restaurant__card new">
+      <a href="/dist/lapalettedugout.html"
       >
       <img
         class="restaurant__img"
         src="../images/restaurants/lapalettedugout.jpg"
         alt="La palette du goût"
       />
+
+      </a
+      > 
       <div class="restaurant__details">
         <div>
           <h3>La palette du goût</h3>
-          <p class="quartier">Menilmontant</p>
+          <p class="quartier">Ménilmontant</p>
         </div>
-        <i class="fa-regular fa-heart restaurant__icon"></i>
+
+        <div class="favorite">
+          <i class="fa-regular fa-heart empty"></i>
+          <i class="fa-solid fa-heart filled"></i>
+        </div>
       </div>
-      <div class="restaurant__new">Nouveau</div>
-      </a
-      > </div>
+    </div>
 
   
     <div class="restaurant__card new"><a href="/dist/lanoteenchantee.html">
@@ -109,16 +116,22 @@
         src="../images/restaurants/lanoteenchantee.jpg"
         alt="La note enchantée"
       />
+      </a
+      > 
+    
       <div class="restaurant__details">
         <div>
           <h3>La note enchantée</h3>
           <p class="quartier">Charonne</p>
         </div>
-        <i class="fa-regular fa-heart restaurant__icon"></i>
+
+        <div class="favorite">
+          <i class="fa-regular fa-heart empty"></i>
+          <i class="fa-solid fa-heart filled"></i>
+        </div>
       </div>
-      <div class="restaurant__new">Nouveau</div>
-      </a
-      > </div>
+    
+    </div>
 
   
     <div class="restaurant__card"><a href="/dist/alafrancaise.html">
@@ -129,11 +142,16 @@
       />
       <div class="restaurant__details">
         <div>
-          <h3>A la française</h3>
+          <h3 class="resto__name">A la française</h3>
           <p class="quartier">Cité Rouge</p>
         </div>
-        <i class="fa-regular fa-heart restaurant__icon"></i>
-      </div></a></div
+      </a>
+
+        <div class="favorite">
+          <i class="fa-regular fa-heart empty"></i>
+          <i class="fa-solid fa-heart filled"></i>
+        </div>
+      </div></div
   >
 
 <div class="restaurant__card">  <a href="/dist/ledelicedessens.html"
@@ -143,13 +161,17 @@
         src="../images/restaurants/ledelicedessens.jpg"
         alt="Le délice des sens"
       />
-      <div class="restaurant__details">
+      </a>  <div class="restaurant__details">
         <div>
           <h3>Le délice des sens</h3>
           <p class="quartier">Folie-Méricourt</p>
         </div>
-        <i class="fa-regular fa-heart restaurant__icon"></i>
-      </div></a></div
+
+        <div class="favorite">
+          <i class="fa-regular fa-heart empty"></i>
+          <i class="fa-solid fa-heart filled"></i>
+        </div>
+      </div></div
   >
 </section></div>
 
@@ -175,7 +197,6 @@
         <li><a href="#" class="mentions-legales">Mentions légales</a></li>
         <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
       </ul>
-    </footer>   
- 
+    </footer>
   </body>
 </html>

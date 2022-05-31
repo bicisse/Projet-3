@@ -178,11 +178,6 @@ h2 {
   padding-top: 60px;
 }
 
-.restaurant__icon:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
-}
-
 .restaurant a:link {
   color: black;
 }
@@ -215,13 +210,17 @@ h2 {
 }
 
 .restaurant__details {
-  padding: 20px;
+  padding: 15px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.restaurant__details h3 {
+  font-size: 26px;
 }
 
 .restaurant__new {
@@ -236,6 +235,10 @@ h2 {
   top: 15px;
   right: 15px;
   background-color: #99e2d0;
+}
+
+.quartier {
+  font-size: 23px;
 }
 
 .ajuster-img {
@@ -533,6 +536,35 @@ li {
   transition: opacity 200ms;
 }
 
+.filled {
+  color: white;
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+}
+
+.empty {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  z-index: 1;
+}
+
+.empty:hover {
+  color: #9356dc;
+}
+
+.empty:hover + .filled {
+  color: #9356dc;
+}
+
+.favorite {
+  position: relative;
+  cursor: pointer;
+  right: 45px;
+  top: 13px;
+}
+
 @media screen and (min-width: 500px) and (max-width: 799px) {
   .btn__header {
     float: right;
@@ -618,8 +650,7 @@ li {
 
 @media screen and (min-width: 800px) {
   .btn__header {
-    float: right;
-    padding: 10px 17px;
+    padding: 17px;
   }
   .btn__header ::after {
     border-radius: 10px;
@@ -698,19 +729,16 @@ li {
   }
   .fonctionnement__step {
     width: 33%;
-    padding: 15px 30px;
+    padding: 25px 30px;
   }
   .fonctionnement__step--number {
-    left: -2%;
-    bottom: 9px;
-    padding: 7px 9px;
-    font-size: 10px;
+    left: -3%;
+    bottom: 16px;
+    padding: 9px 13px;
+    font-size: 15px;
   }
   .fonctionnement__text {
-    font-size: 14px;
-  }
-  .fonctionnement__icon {
-    font-size: 15px;
+    font-size: 17px;
   }
   .flex__cards {
     display: -webkit-box;
@@ -719,6 +747,20 @@ li {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 25px;
+  }
+  .restaurant__details h3 {
+    font-size: 16px;
+  }
+  .quartier {
+    font-size: 15px;
+  }
+  .favorite {
+    right: 26px;
+    top: 7px;
+  }
+  .empty,
+  .filled {
+    font-size: 20px;
   }
   .card__repas {
     margin: 5px 0;
