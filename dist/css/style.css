@@ -22,9 +22,8 @@
 
 body {
   min-width: 480px;
-  border: red solid 1px;
   font-family: sans-serif;
-  margin: 50px auto;
+  margin: 0px auto;
   font-family: "Roboto-Regular";
   position: relative;
   height: -webkit-fit-content;
@@ -534,9 +533,75 @@ li {
   transition: opacity 200ms;
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  body {
-    border: 1px solid yellowgreen;
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  .btn__header {
+    float: right;
+    padding: 10px 17px;
+  }
+  .btn__header ::after {
+    border-radius: 10px;
+  }
+  .explorer {
+    width: 65%;
+    margin: 0 auto;
+  }
+  header {
+    background-color: #f2f2f2;
+    margin: 0px;
+    height: 60px;
+  }
+  .header__logo {
+    float: left;
+    margin: 10px 40px;
+    height: 20px;
+  }
+  .header__logo--center {
+    margin: 0;
+  }
+  .flex-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .introduction {
+    padding: 15px 0;
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+  .introduction > h1 {
+    margin-bottom: 10px;
+  }
+  .decouvrez {
+    display: inline-block;
+    width: 40%;
+    font-size: 15px;
+  }
+  .location {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border: 0;
+    border-left: 5px solid #cdcdcd;
+    border-bottom: 5px solid #cdcdcd;
+    padding: 10px;
+  }
+  .location__text {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
   .flex__cards {
     display: -webkit-box;
@@ -551,27 +616,75 @@ li {
   }
 }
 
-@media screen and (min-width: 992px) {
-  body {
-    border: 1px solid blue;
-    max-width: 1190px;
+@media screen and (min-width: 800px) {
+  .btn__header {
+    float: right;
+    padding: 10px 17px;
+  }
+  .btn__header ::after {
+    border-radius: 10px;
+  }
+  .explorer {
+    width: 65%;
+    margin: 0 auto;
+  }
+  header {
+    background-color: #f2f2f2;
+    margin: 0px;
+    height: 60px;
+  }
+  .header__logo {
+    float: left;
+    margin: 10px 40px;
+    height: 20px;
+  }
+  .header__logo--center {
+    margin: 0;
+  }
+  .flex-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .introduction {
+    padding: 15px 0;
     display: block;
-    height: 300px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
   }
-  .btn {
-    float: right;
-    bottom: -67px;
-    right: 97px;
-  }
-  h1 {
-    font-size: 60px;
+  .introduction > h1 {
+    margin-bottom: 10px;
   }
   .decouvrez {
-    float: left;
-    bottom: 10px;
-    left: 20px;
+    display: inline-block;
+    width: 40%;
+    font-size: 15px;
+  }
+  .location {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border: 0;
+    border-left: 5px solid #cdcdcd;
+    border-bottom: 5px solid #cdcdcd;
+    padding: 10px;
+  }
+  .location__text {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
   .fonctionnement {
     display: -webkit-box;
@@ -581,16 +694,23 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 15px;
   }
   .fonctionnement__step {
     width: 33%;
+    padding: 15px 30px;
   }
-  .flex__cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .fonctionnement__step--number {
+    left: -2%;
+    bottom: 9px;
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+  .fonctionnement__text {
+    font-size: 14px;
+  }
+  .fonctionnement__icon {
+    font-size: 15px;
   }
   .flex__cards {
     display: -webkit-box;
@@ -599,9 +719,6 @@ li {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 25px;
-  }
-  .restaurant__card {
-    width: 48%;
   }
   .card__repas {
     margin: 5px 0;
@@ -624,20 +741,32 @@ li {
     top: 66px;
     right: 200px;
   }
-  .plat__price .overflow,
-  .plat__price .plat__price,
-  .plat__price .icon,
-  .plat__price .card__repas {
+  .overflow,
+  .plat__price,
+  .icon,
+  .card__repas {
     height: 150px;
   }
-  .plat__price .card__repas {
-    width: 33%;
+  .card__repas {
+    width: 25%;
   }
-  .plat__price .course {
+  .course {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .restaurant__card {
+    width: 22.5%;
+  }
+  .ajuster-img {
+    -o-object-position: unset;
+       object-position: unset;
+  }
+  .flex__cards {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=style.css.map */
