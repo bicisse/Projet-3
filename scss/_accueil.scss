@@ -10,6 +10,8 @@
       margin: 20px auto;
       text-align: center;
     }
+
+   
   }
 
   &__flex {
@@ -46,33 +48,72 @@
 
 /* INTRODUCTION */
 .introduction {
-  background-color: #f2f2f2;
-  margin-bottom: 30px;
-  padding: 60px 35px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 20px;
+  
+  // margin-bottom: 30px;
+  padding: 60px 10px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // text-align: center;
+  // gap: 20px;
+
+  position: absolute;
+  top: 4%;
+ 
+  
+ 
+  transform: translateX(-50%, -50%);
+  &__background {
+    height: 300px;
+    width: 100%;
+    background-color: #f2f2f2;
+    margin-bottom: 25px;
+  }
+
+  & h1 {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 25px;
+    font-family: "Roboto-Bold";
+    margin-bottom: 10px;
+
+  }
+
+  & .decouvrez {
+    font-size: 20px;
+   
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+  }
 }
 
-.decouvrez {
-  font-size: 23px;
-  margin-bottom: 30px;
+
+
+.decouvrez, .introduction h1, .explorer {
+  text-align: center;
 }
 
 /* FONCTIONNEMENT */
+
 h2 {
   font-family: "Roboto-Bold";
   font-size: 25px;
   margin-left: 50px;
 }
+
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 40px;
+  gap: 30px;
+  width: 90%;
   padding: 40px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  &__center {
+    margin: 0 auto;
+  }
 
   &__text {
     font-size: 20px;
@@ -103,6 +144,7 @@ h2 {
       padding: 10px 14px;
       -webkit-text-fill-color: white;
       position: absolute;
+
       left: -3%;
       text-align: center;
     }
@@ -163,7 +205,7 @@ h2 {
     justify-content: space-between;
 
     & h3 {
-      font-size: 26px;
+      font-size: 23px;
     }
   }
 
@@ -180,6 +222,15 @@ h2 {
   }
 }
 
+// .favorite {
+//   right: 26px;
+//   top: 7px;
+// }
+// .empty,
+// .filled {
+//   font-size: 20px;
+// }
+
 .quartier {
   font-size: 23px;
 }
@@ -187,9 +238,9 @@ h2 {
   object-position: center -196px;
 }
 
-.heart {
-  font-size: 30px;
-}
+// .heart {
+//   font-size: 30px;
+// }
 
 ul:visited {
   color: white;
@@ -210,3 +261,39 @@ a {
 .new {
   position: relative;
 }
+
+//
+// Bouton J'aime
+//
+
+.filled {
+  color: white;
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+}
+
+.empty {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  z-index: 1;
+
+  &:hover {
+    color: $primary-color;
+
+    & + .filled {
+      color: $primary-color;
+    }
+  }
+}
+
+.favorite {
+  position: relative;
+  cursor: pointer;
+  right: 45px;
+  top: 13px;
+}
+
+//
+//

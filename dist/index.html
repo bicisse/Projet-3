@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Accueil</title>
     <meta name="viewport" content="width=device-width" />
-    <link href="../dist/css/style.css" rel="stylesheet" />
+    <link href="../scss/style.css" rel="stylesheet" />
 
     <script
       src="https://kit.fontawesome.com/307cad9016.js"
@@ -26,25 +26,27 @@
         />
       </div>
     </header>
+
     <section class="flex-intro">
     <div class="location">
       <i class="fa-solid fa-location-dot location__icon"></i>
       <p class="location__text">Paris, Belleville</p>
     </div>
-
+    <div class="introduction__background"></div>
     <div class="introduction">
       <h1 class="h1">Réservez le menu qui vous convient</h1>
       <p class="decouvrez">
         Découvrez des restaurants d'exception, selectionnés par nos soins.
       </p>
-      <div>
+      <div class="explorer">
         <button class="btn btn__header"><a href="#restaurants">Explorer nos restaurants</a></button>
       </div>
     </div>
   </section>
 
     <!-- FONCTIONNEMENT -->
-    <section>
+    <section >
+    <div class="center-section">
       <h2 class="fonctionnement__title">Fonctionnement</h2>
 
       <div class="fonctionnement">
@@ -75,13 +77,15 @@
           </di>
         </div>
       </div>
+    </div>
     </section>
 
 
     <!-- RESTAURANT -->
 
     <section class="restaurant">
-      <h2 class="restaurant__h2" id="restaurants">Restaurants</h2>
+ <div class="center-section">
+  <h2 class="restaurant__h2" id="restaurants">Restaurants</h2>
   <div class="flex__cards"> 
     
     <!--  -->
@@ -110,7 +114,8 @@
     </div>
 
   
-    <div class="restaurant__card new"><a href="/dist/lanoteenchantee.html">
+    <div class="restaurant__card new">
+      <a href="/dist/lanoteenchantee.html">
       <img
         class="restaurant__img ajuster-img"
         src="../images/restaurants/lanoteenchantee.jpg"
@@ -134,46 +139,51 @@
     </div>
 
   
-    <div class="restaurant__card"><a href="/dist/alafrancaise.html">
+<div class="restaurant__card">
+  <a href="/dist/alafrancaise.html">
       <img
         class="restaurant__img"
         src="../images/restaurants/alafrancaise.jpg"
         alt="A la française"
       />
+    </a>
       <div class="restaurant__details">
         <div>
           <h3 class="resto__name">A la française</h3>
           <p class="quartier">Cité Rouge</p>
         </div>
-      </a>
+      
 
         <div class="favorite">
           <i class="fa-regular fa-heart empty"></i>
           <i class="fa-solid fa-heart filled"></i>
         </div>
-      </div></div
-  >
+      </div>
+</div>
 
-<div class="restaurant__card">  <a href="/dist/ledelicedessens.html"
-    >
+<div class="restaurant__card"> 
+
+  <a href="/dist/ledelicedessens.html">
       <img
         class="restaurant__img"
         src="../images/restaurants/ledelicedessens.jpg"
         alt="Le délice des sens"
       />
-      </a>  <div class="restaurant__details">
-        <div>
+  </a> 
+  <div class="restaurant__details">
+    <div class="informations-restaurant">
           <h3>Le délice des sens</h3>
           <p class="quartier">Folie-Méricourt</p>
-        </div>
+    </div>
 
-        <div class="favorite">
+    <div class="favorite">
           <i class="fa-regular fa-heart empty"></i>
           <i class="fa-solid fa-heart filled"></i>
-        </div>
-      </div></div
-  >
-</section></div>
+    </div>
+  </div> 
+</div>
+ </div>
+</section>
 
     <!-- FOOTER -->
     <footer class="footer">

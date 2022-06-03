@@ -7,16 +7,18 @@
     $primary-color
   );
   padding: 20px 30px;
-  width: 290px;
+  width: 255px;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   border: none;
   box-shadow: $shadow;
   z-index: 1;
-  position: relative;
-  padding: 20px 60px;
+  
+ 
   border-radius: 56px;
   cursor: pointer;
+
+  
 
   &:hover {
     &::after {
@@ -38,56 +40,17 @@
     top: 0;
     border-radius: 56px;
     box-shadow: $hover-shadow;
-    // background: linear-gradient(
-    //   to bottom right,
-    //   $secondary-color,
-    //   $primary-color
-    // );
-
+  
     background: linear-gradient(
       to bottom right,
       darken($secondary-color, 10) 0%,
       darken($primary-color, 10) 100%
     );
-    // background: darken($color: $gradient, $amount: 10);
+   
 
     position: absolute;
     transition: opacity 200ms;
   }
 }
 
-//
-// Bouton J'aime
-//
 
-.filled {
-  color: white;
-  position: absolute;
-  left: 0;
-  font-size: 30px;
-}
-
-.empty {
-  color: black;
-  font-size: 30px;
-  position: absolute;
-  z-index: 1;
-
-  &:hover {
-    color: $primary-color;
-
-    & + .filled {
-      color: $primary-color;
-    }
-  }
-}
-
-.favorite {
-  position: relative;
-  cursor: pointer;
-  right: 45px;
-  top: 13px;
-}
-
-//
-//

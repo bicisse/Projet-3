@@ -1,8 +1,181 @@
+// /* PAGES DE RESTAURANT INDIVIDUELLES */
+
+// .header {
+//   position: static;
+//   background-color: white;
+// }
+
+// .restaurant {
+//   &__img--page {
+//     height: 345px;
+//     width: 100%;
+//     object-fit: cover;
+//     object-position: center;
+//     margin-bottom: 90px;
+//   }
+//   &__flex {
+//     background-color: #f2f2f2;
+//     width: 100%;
+//   }
+//   &__name {
+//     font-family: "Shrikhand";
+//     font-size: 37px;
+//     background-color: #f2f2f2;
+//     width: 50%;
+//     border-top-left-radius: 50px;
+//     border-top-right-radius: 50px;
+//     position: absolute;
+//     top: 362px;
+//     padding: 40px 20px 40px 20px;
+//     font-size: 40px;
+//     width: 100%;
+//     font-weight: normal;
+//     display: flex;
+//     justify-content: space-between;
+
+//     &--center {
+//       width: 80%;
+//       margin: 0 auto;
+//       display: flex;
+//       justify-content: space-between;
+//     }
+
+//     & h1 {
+//       display: inline;
+//       margin: 0;
+//       font-weight: normal;
+//     }
+//   }
+// }
+
+// #pages {
+//   font-size: 35px;
+// }
+
+// .content {
+//   padding: 15px;
+//   background-color: #f2f2f2;
+
+//   &__flex {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+//     margin-bottom: 30px;
+//   }
+
+//   &__title {
+//     font-weight: normal;
+//     font-size: 25px;
+//     margin-bottom: 20px;
+//     font-family: "Roboto-Regular";
+
+//     &--underline {
+//       border-bottom: rgb(110, 222, 185) 3px solid;
+//       padding-bottom: 10px;
+//     }
+//   }
+// }
+
+// .commander {
+//   background-color: #f2f2f2;
+//   text-align: center;
+//   padding-bottom: 50px;
+// }
+
+// // ANIMATIONS
+
+// .course {
+//   background-color: #f2f2f2;
+//   padding: 10px;
+
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   gap: 5px;
+// }
+// .overflow {
+//   height: fit-content;
+//   width: 100%;
+//   background-color: white;
+//   padding: 15px;
+// }
+// .card__repas {
+//   position: relative;
+//   margin: 5px 0;
+//   border-radius: 20px;
+//   overflow: hidden;
+//   white-space: nowrap;
+
+//   &:hover {
+//     & .plat__price {
+//       transform: translate(-70px);
+//       width: 60px;
+//     }
+
+//     & .dish__animation {
+//       transform: translateX(-25px) rotate(360deg);
+//     }
+
+//     & .overflow {
+//       width: 70%;
+//     }
+//   }
+// }
+// .overflow,
+// .plat__price,
+// .icon,
+// .card__repas {
+//   height: 75px;
+//   transition: all ease-in-out 400ms;
+// }
+
+// .plat__price,
+// .icon {
+//   width: 20%;
+// }
+
+// .plat__price {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   background-color: white;
+//   scale: 1;
+// }
+
+// .icon {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   background-color: $tertiary-color;
+// }
+
+// .dish__name,
+// .dish__side {
+//   overflow: hidden;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+// }
+
+// .dish__animation {
+//   color: white;
+//   transition: all ease-in-out 400ms;
+//   line-height: 3 !important;
+//   float: right;
+//   font-size: 25px;
+// }
+
+// .price {
+//   font-family: "Roboto-Bold";
+//   line-height: 6;
+//   font-size: 18px;
+//   text-align: center;
+// }
 /* PAGES DE RESTAURANT INDIVIDUELLES */
 
 .header {
   position: static;
   background-color: white;
+  
 }
 
 .restaurant {
@@ -11,33 +184,64 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
   }
-
-  &__name {
-    font-family: "Shrikhand";
-    font-size: 37px;
+  &__flex {
     background-color: #f2f2f2;
     width: 100%;
+  }
+  &__name {
+    font-family: "Shrikhand";
+    
+    background-color: #f2f2f2;
+    width: 50%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: absolute;
     top: 362px;
-    padding: 40px 50px 40px 20px;
+    padding: 40px 20px 40px 20px;
     font-size: 40px;
+    width: 100%;
     font-weight: normal;
-  }
-
-  &__flex {
     display: flex;
     justify-content: space-between;
+
+    &--center {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+
+      & h1 {
+        display: inline;
+        margin: 0;
+        font-weight: normal;
+        font-size: 50px;
+        
+       
+      }
+     
+      
+      
+    }
+
+    // restaurant__name--center {
+    //   width: 80%;
+    //
+    // }
+
+    
   }
+}
+
+#pages {
+  font-size: 35px;
 }
 
 .content {
   padding: 15px;
   background-color: #f2f2f2;
-  width: 100%;
 
   &__flex {
     display: flex;
@@ -63,4 +267,105 @@
   background-color: #f2f2f2;
   text-align: center;
   padding-bottom: 50px;
+}
+
+// ANIMATIONS
+
+.course {
+  background-color: #f2f2f2;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+.overflow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 35px;
+}
+.card__repas {
+  position: relative;
+  margin: 5px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    & .plat__price {
+      transform: translate(-130px);
+      width: 21%;
+    }
+
+    & .dish__animation {
+      transform: translateX(-55px) rotate(360deg);
+    }
+
+    & .overflow {
+      width: 70%;
+    }
+  }
+}
+.overflow,
+.plat__price,
+.icon,
+.card__repas {
+  height: 192px;
+  transition: all ease-in-out 400ms;
+}
+
+.icon {
+  width: 30%;
+}
+
+.plat__price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  scale: 1;
+  width: 15%;
+}
+
+.dish__side {
+  margin-left: 12px;
+  font-size: 44px;
+}
+.dish__name {
+  font-size: 50px;
+  margin-left: 12px;
+}
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: $tertiary-color;
+  width: 14%;
+}
+
+.dish__name,
+.dish__side {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dish__animation {
+  color: white;
+  transition: all ease-in-out 400ms;
+  line-height: 3 !important;
+  float: right;
+  font-size: 55px;
+  padding: 0 20px;
+}
+
+.price {
+  font-family: "Roboto-Bold";
+  line-height: 6;
+  font-size: 44px;
+  text-align: center;
 }

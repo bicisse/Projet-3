@@ -1,9 +1,297 @@
-@import "./settings";
 @import "./variables";
 @import "./accueil";
 @import "./restaurant-page";
-@import "./animations";
-@import "./footer";
 @import "./buttons";
 @import "./mq-tablet";
-@import "./mq-desktop";
+
+// SETTINGS
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../fonts/Shrikhand-Regular.ttf);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 480px;
+  // max-width: 720px;
+  // width: 480px;
+
+  font-family: sans-serif;
+  margin: 0px auto;
+  font-family: "Roboto-Regular";
+  position: relative;
+  height: fit-content;
+}
+
+/* FOOTER */
+
+.footer {
+  @include light-bg;
+  padding: 25px;
+  width: 100%;
+  color: white;
+
+  &__logo {
+    filter: invert(1);
+    height: 17px;
+    margin-bottom: 25px;
+
+    &--adjust {
+      font-size: 13px;
+    }
+  }
+
+  a:visited,
+  a:link,
+  a:hover {
+    color: white;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.mentions-legales:visited,
+.mentions-legales {
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  .body {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .center-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+ 
+  
+  header {
+    background-color: #f2f2f2;
+    margin: 0px;
+    height: 60px;
+  }
+
+  .header {
+    &__logo {
+      
+      margin: 10px 40px;
+      height: 35px;
+      &--center {
+        margin: 0;
+        float: left;
+      }
+    }
+  }
+  .introduction {
+  
+   
+
+    top: 4%;  
+   
+   left: 5%;
+   right: 5%;
+    
+   
+    &__background {
+      height: 375px;
+    }
+  
+    & h1 {
+      font-size: 45px;
+    }
+  
+    & .decouvrez {
+      font-size: 30px;
+    }
+  }
+  
+  .btn {
+    
+    padding: 22px 0px;
+    width: 390px;
+   
+    font-size: 25px;
+   
+  }
+
+
+  .location {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border: 0;
+    border-left: 5px solid rgb(205, 205, 205);
+    border-bottom: 5px solid rgb(205, 205, 205);
+    padding: 10px;
+    &__text {
+      font-size: 20px;
+    }
+  }
+
+ 
+  //
+
+  .fct {
+    width: 80%;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: 100%;
+
+    &__step {
+      width: 33%;
+      padding: 25px 30px;
+
+      &--number {
+        left: -3%;
+        bottom: 16px;
+        padding: 9px 13px;
+        font-size: 15px;
+      }
+    }
+
+    &__text {
+      font-size: 17px;
+    }
+  }
+
+  .flex__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .restaurant {
+    &__card {
+      width: 23%;
+      flex-wrap: wrap;
+    }
+  }
+  .ajuster-img {
+    object-position: center 0;
+  }
+  //
+  //
+  //
+
+  .quartier {
+    font-size: 15px;
+  }
+  .favorite {
+    right: 26px;
+    top: 7px;
+  }
+  .empty,
+  .filled {
+    font-size: 20px;
+  }
+  .restaurant__name--center {
+    width: 80%;
+    font-size: 54px;
+  }
+
+  .margin-main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  //  animation
+
+  .course {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  // ICI ICI PROBLEME :'(
+
+  .card__repas {
+    width: 30%;
+  }
+
+  .card__repas,
+  .overflow,
+  .icon,
+  .plat__price {
+    height: 130px;
+  }
+
+  .dish {
+    &__name {
+      font-size: 26px;
+      margin-left: 0;
+    }
+
+    &__side {
+      font-size: 24px;
+      margin-left: 0;
+    }
+  }
+}
+
+.price {
+  font-size: 25px;
+}
+.dish__animation {
+  font-size: 35px;
+  line-height: 4;
+  padding: 0;
+}
+
+.card__repas {
+  &:hover {
+    & .plat__price {
+      transform: translate(-70px);
+      width: 21%;
+    }
+
+    & .dish__animation {
+      transform: translateX(-22px) rotate(360deg);
+    }
+
+    & .overflow {
+      width: 70%;
+    }
+
+    & .icon {
+      width: 29%;
+    }
+  }
+
+  .grey-filled-heart {
+    color: #f2f2f2;
+  }
+}
+
+// .plat__price {
+//   display: none;
+// }
