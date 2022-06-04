@@ -275,10 +275,66 @@ a:link, a:hover, a:visited {
   top: 13px;
 }
 
-/* PAGES DE RESTAURANT INDIVIDUELLES */
 .header {
   position: static;
   background-color: white;
+}
+
+@-webkit-keyframes move-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.first {
+  -webkit-animation-name: move-in;
+          animation-name: move-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.second {
+  -webkit-animation-name: move-in;
+          animation-name: move-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.third {
+  -webkit-animation-name: move-in;
+          animation-name: move-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 
 .restaurant__img--page {
@@ -541,12 +597,18 @@ a:link, a:hover, a:visited {
     height: 60px;
   }
   .header__logo {
-    margin: 10px 40px;
-    height: 35px;
+    margin: 12px 40px;
+    height: 37px;
   }
   .header__logo--center {
-    margin: 0;
-    float: left;
+    margin: 0 auto;
+  }
+  .fleche-retour {
+    position: absolute;
+    top: 15px;
+  }
+  .fa-solid {
+    line-height: 2;
   }
   .location {
     width: 30%;
@@ -589,8 +651,257 @@ a:link, a:hover, a:visited {
         flex-wrap: wrap;
     gap: 15px;
   }
+  #pages {
+    font-size: 50px;
+  }
   .restaurant__card {
     width: 48%;
+  }
+  .dish__name {
+    font-size: 50px;
+  }
+  .dish__side {
+    font-size: 40px;
+  }
+  .content {
+    padding: 25px;
+  }
+  .content__title {
+    font-size: 45px;
+    margin-left: 20px;
+  }
+  .price {
+    font-size: 40px;
+  }
+  .course {
+    gap: 20px;
+  }
+  .card__repas:hover .plat__price {
+    -webkit-transform: translate(-150px);
+            transform: translate(-150px);
+    width: 15%;
+  }
+  .card__repas:hover .dish__animation {
+    -webkit-transform: translateX(-25px) rotate(360deg);
+            transform: translateX(-25px) rotate(360deg);
+  }
+  .card__repas:hover .overflow {
+    width: 70%;
+  }
+  .card__repas:hover .icon {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+  body {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .center-section {
+    width: 95%;
+    margin: 0 auto;
+  }
+  header {
+    background-color: #f2f2f2;
+    margin: 0px;
+    height: 75px;
+  }
+  .header__logo {
+    margin: 16px 40px;
+    height: 40px;
+  }
+  .header__logo--center {
+    margin: 0 auto;
+  }
+  .fleche-retour {
+    text-align: left;
+    padding: 0;
+    position: absolute;
+    top: 18px;
+    left: 40px;
+  }
+  .introduction {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    right: 5%;
+  }
+  .introduction__background {
+    height: 375px;
+  }
+  .introduction h1 {
+    font-size: 45px;
+  }
+  .introduction .decouvrez {
+    font-size: 30px;
+  }
+  .btn {
+    padding: 22px 0px;
+    width: 390px;
+    font-size: 25px;
+  }
+  .location {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border: 0;
+    border-left: 5px solid #cdcdcd;
+    border-bottom: 5px solid #cdcdcd;
+    padding: 10px;
+  }
+  .location__text {
+    font-size: 20px;
+  }
+  .fct {
+    width: 80%;
+  }
+  .fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 15px;
+    width: 100%;
+  }
+  .fonctionnement__step {
+    width: 33%;
+    padding: 25px 30px;
+  }
+  .fonctionnement__step--number {
+    left: -3%;
+    bottom: 19px;
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+  .fonctionnement__text {
+    font-size: 16px;
+  }
+  .flex__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .restaurant__card {
+    width: 23%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurant__details h3 {
+    font-size: 15px;
+  }
+  .restaurant__img {
+    height: 160px;
+  }
+  .ajuster-img {
+    -o-object-position: center 0;
+       object-position: center 0;
+  }
+  .quartier {
+    font-size: 15px;
+  }
+  .favorite {
+    right: 16px;
+    top: 15px;
+  }
+  .empty,
+  .filled {
+    font-size: 20px;
+  }
+  .restaurant__name--center {
+    width: 90%;
+    font-size: 54px;
+    margin: 0;
+  }
+  .margin-main {
+    margin: 0 auto;
+  }
+  .course {
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card__repas {
+    width: 30%;
+  }
+  .card__repas,
+  .overflow,
+  .icon,
+  .plat__price {
+    height: 80px;
+  }
+  .overflow {
+    padding: 15px;
+  }
+  .dish__name {
+    font-size: 17px;
+    margin-left: 0;
+  }
+  .dish__side {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .price {
+    font-size: 17px;
+    line-height: 6.4;
+  }
+  .dish__animation {
+    font-size: 25px;
+    line-height: 4;
+    padding: 0;
+  }
+  .dish__name {
+    font-size: 21px;
+  }
+  .dish__side {
+    font-size: 19px;
+  }
+  .card__repas:hover .plat__price {
+    -webkit-transform: translate(-60px);
+            transform: translate(-60px);
+    width: 15%;
+  }
+  .card__repas:hover .dish__animation {
+    -webkit-transform: translateX(-19px) rotate(360deg);
+            transform: translateX(-19px) rotate(360deg);
+  }
+  .card__repas:hover .overflow {
+    width: 70%;
+  }
+  .card__repas:hover .icon {
+    width: 20%;
+  }
+  .grey-filled-heart {
+    color: #f2f2f2;
+  }
+  .restaurant__name {
+    top: 470px;
+  }
+  .content__title {
+    font-size: 25px;
+    margin-left: 35px;
+  }
+  .restaurant__img--page {
+    height: 450px;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 }
 
@@ -664,188 +975,5 @@ li {
 .mentions-legales:visited,
 .mentions-legales {
   color: white;
-}
-
-@media screen and (min-width: 992px) {
-  .body {
-    max-width: 1110px;
-    margin: 0 auto;
-  }
-  .center-section {
-    width: 90%;
-    margin: 0 auto;
-  }
-  header {
-    background-color: #f2f2f2;
-    margin: 0px;
-    height: 60px;
-  }
-  .header__logo {
-    margin: 10px 40px;
-    height: 35px;
-  }
-  .header__logo--center {
-    margin: 0;
-    float: left;
-  }
-  .introduction {
-    top: 4%;
-    left: 5%;
-    right: 5%;
-  }
-  .introduction__background {
-    height: 375px;
-  }
-  .introduction h1 {
-    font-size: 45px;
-  }
-  .introduction .decouvrez {
-    font-size: 30px;
-  }
-  .btn {
-    padding: 22px 0px;
-    width: 390px;
-    font-size: 25px;
-  }
-  .location {
-    width: 30%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-bottom-left-radius: 50px;
-    border: 0;
-    border-left: 5px solid #cdcdcd;
-    border-bottom: 5px solid #cdcdcd;
-    padding: 10px;
-  }
-  .location__text {
-    font-size: 20px;
-  }
-  .fct {
-    width: 80%;
-  }
-  .fonctionnement {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 15px;
-    width: 100%;
-  }
-  .fonctionnement__step {
-    width: 33%;
-    padding: 25px 30px;
-  }
-  .fonctionnement__step--number {
-    left: -3%;
-    bottom: 16px;
-    padding: 9px 13px;
-    font-size: 15px;
-  }
-  .fonctionnement__text {
-    font-size: 17px;
-  }
-  .flex__cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 15px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .restaurant__card {
-    width: 23%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .ajuster-img {
-    -o-object-position: center 0;
-       object-position: center 0;
-  }
-  .quartier {
-    font-size: 15px;
-  }
-  .favorite {
-    right: 26px;
-    top: 7px;
-  }
-  .empty,
-  .filled {
-    font-size: 20px;
-  }
-  .restaurant__name--center {
-    width: 80%;
-    font-size: 54px;
-  }
-  .margin-main {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .course {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .card__repas {
-    width: 30%;
-  }
-  .card__repas,
-  .overflow,
-  .icon,
-  .plat__price {
-    height: 130px;
-  }
-  .dish__name {
-    font-size: 26px;
-    margin-left: 0;
-  }
-  .dish__side {
-    font-size: 24px;
-    margin-left: 0;
-  }
-}
-
-.price {
-  font-size: 25px;
-}
-
-.dish__animation {
-  font-size: 35px;
-  line-height: 4;
-  padding: 0;
-}
-
-.card__repas:hover .plat__price {
-  -webkit-transform: translate(-70px);
-          transform: translate(-70px);
-  width: 21%;
-}
-
-.card__repas:hover .dish__animation {
-  -webkit-transform: translateX(-22px) rotate(360deg);
-          transform: translateX(-22px) rotate(360deg);
-}
-
-.card__repas:hover .overflow {
-  width: 70%;
-}
-
-.card__repas:hover .icon {
-  width: 29%;
-}
-
-.card__repas .grey-filled-heart {
-  color: #f2f2f2;
 }
 /*# sourceMappingURL=style.css.map */

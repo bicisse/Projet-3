@@ -1,183 +1,51 @@
 // /* PAGES DE RESTAURANT INDIVIDUELLES */
 
-// .header {
-//   position: static;
-//   background-color: white;
-// }
-
-// .restaurant {
-//   &__img--page {
-//     height: 345px;
-//     width: 100%;
-//     object-fit: cover;
-//     object-position: center;
-//     margin-bottom: 90px;
-//   }
-//   &__flex {
-//     background-color: #f2f2f2;
-//     width: 100%;
-//   }
-//   &__name {
-//     font-family: "Shrikhand";
-//     font-size: 37px;
-//     background-color: #f2f2f2;
-//     width: 50%;
-//     border-top-left-radius: 50px;
-//     border-top-right-radius: 50px;
-//     position: absolute;
-//     top: 362px;
-//     padding: 40px 20px 40px 20px;
-//     font-size: 40px;
-//     width: 100%;
-//     font-weight: normal;
-//     display: flex;
-//     justify-content: space-between;
-
-//     &--center {
-//       width: 80%;
-//       margin: 0 auto;
-//       display: flex;
-//       justify-content: space-between;
-//     }
-
-//     & h1 {
-//       display: inline;
-//       margin: 0;
-//       font-weight: normal;
-//     }
-//   }
-// }
-
-// #pages {
-//   font-size: 35px;
-// }
-
-// .content {
-//   padding: 15px;
-//   background-color: #f2f2f2;
-
-//   &__flex {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 20px;
-//     margin-bottom: 30px;
-//   }
-
-//   &__title {
-//     font-weight: normal;
-//     font-size: 25px;
-//     margin-bottom: 20px;
-//     font-family: "Roboto-Regular";
-
-//     &--underline {
-//       border-bottom: rgb(110, 222, 185) 3px solid;
-//       padding-bottom: 10px;
-//     }
-//   }
-// }
-
-// .commander {
-//   background-color: #f2f2f2;
-//   text-align: center;
-//   padding-bottom: 50px;
-// }
-
-// // ANIMATIONS
-
-// .course {
-//   background-color: #f2f2f2;
-//   padding: 10px;
-
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   gap: 5px;
-// }
-// .overflow {
-//   height: fit-content;
-//   width: 100%;
-//   background-color: white;
-//   padding: 15px;
-// }
-// .card__repas {
-//   position: relative;
-//   margin: 5px 0;
-//   border-radius: 20px;
-//   overflow: hidden;
-//   white-space: nowrap;
-
-//   &:hover {
-//     & .plat__price {
-//       transform: translate(-70px);
-//       width: 60px;
-//     }
-
-//     & .dish__animation {
-//       transform: translateX(-25px) rotate(360deg);
-//     }
-
-//     & .overflow {
-//       width: 70%;
-//     }
-//   }
-// }
-// .overflow,
-// .plat__price,
-// .icon,
-// .card__repas {
-//   height: 75px;
-//   transition: all ease-in-out 400ms;
-// }
-
-// .plat__price,
-// .icon {
-//   width: 20%;
-// }
-
-// .plat__price {
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   background-color: white;
-//   scale: 1;
-// }
-
-// .icon {
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   background-color: $tertiary-color;
-// }
-
-// .dish__name,
-// .dish__side {
-//   overflow: hidden;
-//   white-space: nowrap;
-//   text-overflow: ellipsis;
-// }
-
-// .dish__animation {
-//   color: white;
-//   transition: all ease-in-out 400ms;
-//   line-height: 3 !important;
-//   float: right;
-//   font-size: 25px;
-// }
-
-// .price {
-//   font-family: "Roboto-Bold";
-//   line-height: 6;
-//   font-size: 18px;
-//   text-align: center;
-// }
-/* PAGES DE RESTAURANT INDIVIDUELLES */
-
 .header {
   position: static;
   background-color: white;
   
 }
 
+@keyframes move-in {
+  0% {
+opacity: 0;
+transform:translateY(20px)
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.first {
+  animation-name: move-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  
+  
+  
+}
+.second {
+  animation-name: move-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 300ms;
+  
+}
+.third {
+  animation-name: move-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 600ms;
+  
+}
+
+
+
+
+// 
 .restaurant {
   &__img--page {
     height: 345px;

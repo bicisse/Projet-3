@@ -1,24 +1,29 @@
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
   header {
     background-color: #f2f2f2;
     margin: 0px;
     height: 60px;
   }
 
-  
   .header {
     &__logo {
-      
-      margin: 10px 40px;
-      height: 35px;
+      margin: 12px 40px;
+      height: 37px;
       &--center {
-        margin: 0;
-        float: left;
+        margin: 0 auto;
       }
     }
   }
- 
+
+  .fleche-retour {
+    position: absolute;
+    top: 15px;
+  }
+
+  .fa-solid {
+    line-height: 2;
+  }
+
   .location {
     width: 30%;
     position: absolute;
@@ -34,37 +39,30 @@
     }
   }
 
-
   .introduction {
-  
-   
+    top: 2%;
 
-    top: 2%;  
-   
-   left: 5%;
-   right: 5%;
-    
-   
+    left: 5%;
+    right: 5%;
+
     &__background {
       height: 375px;
     }
-  
+
     & h1 {
       font-size: 45px;
     }
-  
+
     & .decouvrez {
       font-size: 30px;
     }
   }
-  
+
   .btn {
-    
     padding: 22px 0px;
     width: 390px;
-   
+
     font-size: 25px;
-   
   }
 
   .flex__cards {
@@ -73,7 +71,68 @@
     gap: 15px;
   }
 
+  #pages {
+    font-size: 50px;
+  }
+
   .restaurant__card {
     width: 48%;
   }
+
+  .dish {
+    &__name {
+      font-size: 50px;
+    }
+    &__side {
+      font-size: 40px;
+    }
+  }
+
+  .content {
+    padding: 25px;
+    &__title {
+      font-size: 45px;
+      margin-left: 20px;
+    }
+  }
+
+  .price {
+    font-size: 40px;
+  }
+
+  .course {
+    gap: 20px;
+  }
+  .card__repas {
+    &:hover {
+      & .plat__price {
+        transform: translate(-150px);
+        width: 15%;
+      }
+
+      & .dish__animation {
+        transform: translateX(-25px) rotate(360deg);
+      }
+
+      & .overflow {
+        width: 70%;
+      }
+
+      & .icon {
+        width: 20%;
+      }
+    }
+  }
+
+  //
+
+  //
+
+  //
+
+  //
+
+  // .plat__price {
+  //   display: none;
+  // }
 }

@@ -1,0 +1,258 @@
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+  body {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .center-section {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  header {
+    background-color: #f2f2f2;
+    margin: 0px;
+    height: 75px;
+  }
+
+  .header {
+    &__logo {
+      margin: 16px 40px;
+      height: 40px;
+      &--center {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .fleche-retour {
+    text-align: left;
+    padding: 0;
+    position: absolute;
+    top: 18px;
+    left: 40px;
+  }
+  .introduction {
+    position: absolute;
+    top: 4%;
+
+    left: 5%;
+    right: 5%;
+
+    &__background {
+      height: 375px;
+    }
+
+    & h1 {
+      font-size: 45px;
+    }
+
+    & .decouvrez {
+      font-size: 30px;
+    }
+  }
+
+  .btn {
+    padding: 22px 0px;
+    width: 390px;
+
+    font-size: 25px;
+  }
+
+  .location {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border: 0;
+    border-left: 5px solid rgb(205, 205, 205);
+    border-bottom: 5px solid rgb(205, 205, 205);
+    padding: 10px;
+    &__text {
+      font-size: 20px;
+    }
+  }
+
+  //
+
+  .fct {
+    width: 80%;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: 100%;
+
+    &__step {
+      width: 33%;
+      padding: 25px 30px;
+
+      &--number {
+        left: -3%;
+        bottom: 19px;
+        padding: 7px 11px;
+        font-size: 12px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  .flex__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .restaurant {
+    &__card {
+      width: 23%;
+      flex-wrap: wrap;
+    }
+
+    &__details h3 {
+      font-size: 15px;
+    }
+
+    &__img {
+      height: 160px;
+    }
+  }
+  .ajuster-img {
+    object-position: center 0;
+  }
+  //
+  //
+  //
+
+  .quartier {
+    font-size: 15px;
+  }
+  .favorite {
+    right: 16px;
+    top: 15px;
+  }
+  .empty,
+  .filled {
+    font-size: 20px;
+  }
+  .restaurant__name--center {
+    width: 90%;
+    font-size: 54px;
+    margin: 0;
+  }
+
+  .margin-main {
+    // width: 80%;
+    margin: 0 auto;
+  }
+  //  animation
+
+  .course {
+    padding: 0;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  // ICI ICI PROBLEME :'(
+
+  .card__repas {
+    width: 30%;
+  }
+
+  .card__repas,
+  .overflow,
+  .icon,
+  .plat__price {
+    height: 80px;
+  }
+
+  .overflow {
+    padding: 15px;
+  }
+
+  .dish {
+    &__name {
+      font-size: 17px;
+      margin-left: 0;
+    }
+
+    &__side {
+      font-size: 14px;
+      margin-left: 0;
+    }
+  }
+
+  .price {
+    font-size: 17px;
+    line-height: 6.4;
+  }
+  .dish {
+    &__animation {
+      font-size: 25px;
+      line-height: 4;
+      padding: 0;
+    }
+
+    &__name {
+      font-size: 21px;
+    }
+
+    &__side {
+      font-size: 19px;
+    }
+  }
+
+  .card__repas {
+    &:hover {
+      & .plat__price {
+        transform: translate(-60px);
+        width: 15%;
+      }
+
+      & .dish__animation {
+        transform: translateX(-19px) rotate(360deg);
+      }
+
+      & .overflow {
+        width: 70%;
+      }
+
+      & .icon {
+        width: 20%;
+      }
+    }
+  }
+
+  .grey-filled-heart {
+    color: #f2f2f2;
+  }
+
+  .restaurant__name {
+    top: 470px;
+  }
+
+  .content {
+    &__title {
+      font-size: 25px;
+      margin-left: 35px;
+    }
+  }
+
+  .restaurant__img--page {
+    height: 450px;
+    object-position: bottom;
+  }
+  // .restaurant__name {
+  //   display: none;
+  // }
+  // .plat__price {
+  //   display: none;
+  // }
+}
