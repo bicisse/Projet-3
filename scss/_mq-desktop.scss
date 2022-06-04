@@ -1,6 +1,6 @@
-@media screen and (min-width: 992px) and (max-width: 1500px) {
+@media screen and (min-width: 992px) and (max-width: 5000px) {
   body {
-    max-width: 1110px;
+    max-width: 1500px;
     margin: 0 auto;
   }
 
@@ -124,7 +124,7 @@
     }
   }
   .ajuster-img {
-    object-position: center 0;
+    object-position: center;
   }
   //
   //
@@ -247,7 +247,7 @@
 
   .restaurant__img--page {
     height: 450px;
-    object-position: bottom;
+    object-position: center;
   }
   // .restaurant__name {
   //   display: none;
