@@ -25,28 +25,43 @@
 
 <!--     TITRE RESTAURANT -->
 
-    <div class="img-resto">
-      <img
-        class="restaurant__img--page"
-        src="../images/restaurants/lanoteenchantee.jpg"
-      />
+<section class="nom-resto">  
+  <div class="img-resto">
+    <img
+    class="restaurant__img--page"
+    src="../images/restaurants/lanoteenchantee.jpg"
+    />
+  </div>
+
+
+
+    <div class="restaurant__name">   
+      <div class="restaurant__name--center">
+        <h1 >La note enchantée</h1>   
+        <div class="favorite">
+        <i class="fa-regular fa-heart empty " id="pages"></i>
+        <i class="fa-solid fa-heart filled grey-filled-heart" id="pages"></i>
+      </div></div>
     </div>
-    <div class="restaurant__flex"> <h1 class="restaurant__name">La note enchantée</h1><i class="fa-regular fa-heart"></i>
-    </div>
+   
+    
+
+</section>
 
 <!-- MENU -->
-<section class="content">
+    <section class="content">
+<div class="margin-main">
   <!-- ENTREES -->
- <div class="content__flex">
+  <div class="content__flex">
 
-
- <div class="course">
-   <!-- CARD REPAS -->
    <h2 class="content__title">
      <span class="content__title--underline">ENTR</span>ÉES
-   </h2> 
+   </h2>
+ <div class="course">
+   <!-- CARD REPAS -->
+  
 
-   <div class="card__repas">
+   <div class="card__repas first">
      <div class="overflow">
        <h2 class="dish__name">Tartare de poulpe acidulé</h2>
        <p class="dish__side">Aux zests d'orange</p>
@@ -67,7 +82,7 @@
    </div>
 
    <!-- CARD REPAS -->
-   <div class="card__repas">
+   <div class="card__repas second">
      <div class="overflow">
        <h2 class="dish__name">Velouté de légumes d'antan</h2>
        <p class="dish__side">Carotte, panais, topinambour</p>
@@ -89,7 +104,7 @@
 
    <!-- CARD REPAS -->
 
-   <div class="card__repas">
+   <div class="card__repas third">
      <div class="overflow">
        <h2 class="dish__name">Soupe à l'oignon</h2>
        <p class="dish__side">Revisitée</p>
@@ -108,6 +123,8 @@
 
      <div class="plat__price"><p class="price">25€</p></div>
    </div>
+
+
  </div>
 
  </div>
@@ -115,160 +132,168 @@
 
 <!-- PLATS -->
  <div class="content__flex">
-   
+   <h2 class="content__title">
+     <span class="content__title--underline">PLAT</span>S
+   </h2>  
    <div class="course">
      <!-- CARD REPAS -->
-     <h2 class="content__title">
-       <span class="content__title--underline">PLAT</span>S
-     </h2>  
+     
  
-     <div class="card__repas">
-       <div class="overflow">
-         <h2 class="dish__name">Tartare de poulpe acidulé</h2>
-         <p class="dish__side">Aux zests d'orange</p>
-       </div>
-       <!-- 
+   
+     <div class="card__repas first">
+      <div class="overflow">
+        <h2 class="dish__name">Tartare de poulpe acidulé</h2>
+        <p class="dish__side">Aux zests d'orange</p>
+      </div>
+      <!-- 
+ 
+ -->
+ 
+      <div class="icon">
+        <i class="fa-solid fa-circle-check dish__animation"></i>
+      </div>
+ 
+      <!--  
+ 
+    -->
+ 
+      <div class="plat__price"><p class="price">25€</p></div>
+    </div>
+ 
+    <!-- CARD REPAS -->
+    <div class="card__repas second">
+      <div class="overflow">
+        <h2 class="dish__name">Velouté de légumes d'antan</h2>
+        <p class="dish__side">Carotte, panais, topinambour</p>
+      </div>
+      <!-- 
+ 
+ -->
+ 
+      <div class="icon">
+        <i class="fa-solid fa-circle-check dish__animation"></i>
+      </div>
+ 
+      <!--  
+ 
+    -->
+ 
+      <div class="plat__price"><p class="price">25€</p></div>
+    </div>
+ 
+    <!-- CARD REPAS -->
+ 
+    <div class="card__repas third">
+      <div class="overflow">
+        <h2 class="dish__name">Soupe à l'oignon</h2>
+        <p class="dish__side">Revisitée</p>
+      </div>
+      <!-- 
+ 
+ -->
+ 
+      <div class="icon">
+        <i class="fa-solid fa-circle-check dish__animation"></i>
+      </div>
+ 
+      <!--  
+ 
+    -->
+ 
+      <div class="plat__price"><p class="price">25€</p></div>
+    </div>
 
--->
 
-       <div class="icon">
-         <i class="fa-solid fa-circle-check dish__animation"></i>
-       </div>
-
-       <!--  
-
-     -->
-
-       <div class="plat__price"><p class="price">25€</p></div>
-     </div>
-
-     <!-- CARD REPAS -->
-     <div class="card__repas">
-       <div class="overflow">
-         <h2 class="dish__name">Velouté de légumes d'antan</h2>
-         <p class="dish__side">Carotte, panais, topinambour</p>
-       </div>
-       <!-- 
-
--->
-
-       <div class="icon">
-         <i class="fa-solid fa-circle-check dish__animation"></i>
-       </div>
-
-       <!--  
-
-     -->
-
-       <div class="plat__price"><p class="price">25€</p></div>
-     </div>
-
-     <!-- CARD REPAS -->
-
-     <div class="card__repas">
-       <div class="overflow">
-         <h2 class="dish__name">Œuf au plat</h2>
-         <p class="dish__side">Assaisonné à la truffe sur lit de caviar</p>
-       </div>
-       <!-- 
-
--->
-
-       <div class="icon">
-         <i class="fa-solid fa-circle-check dish__animation"></i>
-       </div>
-
-       <!--  
-
-     -->
-
-       <div class="plat__price"><p class="price">25€</p></div>
-     </div>
    </div>
 
    </div>
 <!-- DESSERTS -->
    
 <div class="content__flex">
-   
+<h2 class="content__title">
+ <span class="content__title--underline">DESS</span>ERTS
+</h2>  
 <div class="course plats">
  <!-- CARD REPAS -->
- <h2 class="content__title">
-   <span class="content__title--underline">PLAT</span>S
- </h2>  
 
- <div class="card__repas">
-   <div class="overflow">
-     <h2 class="dish__name">Tartare de poulpe acidulé</h2>
-     <p class="dish__side">Aux zests d'orange</p>
-   </div>
-   <!-- 
 
--->
 
-   <div class="icon">
-     <i class="fa-solid fa-circle-check dish__animation"></i>
-   </div>
-
-   <!--  
-
- -->
-
-   <div class="plat__price"><p class="price">25€</p></div>
- </div>
-
- <!-- CARD REPAS -->
- <div class="card__repas">
-   <div class="overflow">
-     <h2 class="dish__name">Velouté de légumes d'antan</h2>
-     <p class="dish__side">Carotte, panais, topinambour</p>
-   </div>
-   <!-- 
+ <div class="card__repas first">
+  <div class="overflow">
+    <h2 class="dish__name">Tartare de poulpe acidulé</h2>
+    <p class="dish__side">Aux zests d'orange</p>
+  </div>
+  <!-- 
 
 -->
 
-   <div class="icon">
-     <i class="fa-solid fa-circle-check dish__animation"></i>
-   </div>
+  <div class="icon">
+    <i class="fa-solid fa-circle-check dish__animation"></i>
+  </div>
 
-   <!--  
-
- -->
-
-   <div class="plat__price"><p class="price">25€</p></div>
- </div>
-
- <!-- CARD REPAS -->
-
- <div class="card__repas">
-   <div class="overflow">
-     <h2 class="dish__name">Œuf au plat</h2>
-     <p class="dish__side">Assaisonné à la truffe sur lit de caviar</p>
-   </div>
-   <!-- 
+  <!--  
 
 -->
 
-   <div class="icon">
-     <i class="fa-solid fa-circle-check dish__animation"></i>
-   </div>
+  <div class="plat__price"><p class="price">25€</p></div>
+</div>
 
-   <!--  
+<!-- CARD REPAS -->
+<div class="card__repas second">
+  <div class="overflow">
+    <h2 class="dish__name">Velouté de légumes d'antan</h2>
+    <p class="dish__side">Carotte, panais, topinambour</p>
+  </div>
+  <!-- 
 
- -->
+-->
 
-   <div class="plat__price"><p class="price">25€</p></div>
- </div>
+  <div class="icon">
+    <i class="fa-solid fa-circle-check dish__animation"></i>
+  </div>
+
+  <!--  
+
+-->
+
+  <div class="plat__price"><p class="price">25€</p></div>
+</div>
+
+<!-- CARD REPAS -->
+
+<div class="card__repas third">
+  <div class="overflow">
+    <h2 class="dish__name">Soupe à l'oignon</h2>
+    <p class="dish__side">Revisitée</p>
+  </div>
+  <!-- 
+
+-->
+
+  <div class="icon">
+    <i class="fa-solid fa-circle-check dish__animation"></i>
+  </div>
+
+  <!--  
+
+-->
+
+  <div class="plat__price"><p class="price">25€</p></div>
+</div>
+
+
 </div>
 
 </div>
 
 
-     
-</section>
+</div>
+        
+  </section>
 
   <div class="commander">
-    <button class="bouton">Commander</button>
+    <button class="btn">Commander</button>
+  
   </div>
 
 
