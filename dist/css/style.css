@@ -693,9 +693,9 @@ a:link, a:hover, a:visited {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1500px) {
+@media screen and (min-width: 992px) and (max-width: 5000px) {
   body {
-    max-width: 1110px;
+    max-width: 1500px;
     margin: 0 auto;
   }
   .center-section {
@@ -805,8 +805,8 @@ a:link, a:hover, a:visited {
     height: 160px;
   }
   .ajuster-img {
-    -o-object-position: center 0;
-       object-position: center 0;
+    -o-object-position: center;
+       object-position: center;
   }
   .quartier {
     font-size: 15px;
@@ -900,8 +900,8 @@ a:link, a:hover, a:visited {
   }
   .restaurant__img--page {
     height: 450px;
-    -o-object-position: bottom;
-       object-position: bottom;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 
