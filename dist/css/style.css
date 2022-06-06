@@ -1,4 +1,40 @@
-/* HEADER */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../fonts/Shrikhand-Regular.ttf);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-width: 480px;
+  font-family: sans-serif;
+  margin: 0px auto;
+  font-family: "Roboto-Regular";
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+a {
+  text-decoration: none;
+}
+
 .header__logo {
   height: 40px;
 }
@@ -22,8 +58,12 @@
   position: absolute;
 }
 
+.nav {
+  margin-bottom: 50px;
+}
+
 .location {
-  background-color: #d9d9d9;
+  background-color: #1a1a1a;
   border-top: #bebebe 4px solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,15 +114,10 @@
   margin-bottom: 30px;
 }
 
-.decouvrez, .introduction h1, .explorer {
+.decouvrez,
+.introduction h1,
+.explorer {
   text-align: center;
-}
-
-/* FONCTIONNEMENT */
-h2 {
-  font-family: "Roboto-Bold";
-  font-size: 25px;
-  margin-left: 50px;
 }
 
 .fonctionnement {
@@ -146,17 +181,22 @@ h2 {
   /* color: blueviolet; */
 }
 
-.fonctionnement__step:hover .fonctionnement__icon {
+.fonctionnement__step:hover,
+.fonctionnement__icon {
   color: #9356dc;
 }
 
-.nav {
-  margin-bottom: 50px;
+/* HEADER */
+/* FONCTIONNEMENT */
+h2 {
+  font-family: "Roboto-Bold";
+  font-size: 25px;
+  margin-left: 50px;
 }
 
 /* RESTAURANT */
 .restaurant {
-  background-color: #f1f1f1;
+  background-color: #f2f2f2;
   padding: 20px;
   padding-top: 60px;
 }
@@ -175,9 +215,9 @@ h2 {
 
 .restaurant__card {
   width: 100%;
-  background-color: white;
-  -webkit-box-shadow: 5px 5px 10px #afafaf;
-          box-shadow: 5px 5px 10px #afafaf;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 }
 
@@ -230,15 +270,15 @@ h2 {
 }
 
 ul:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
-a:visited {
+a:link:visited {
   color: black;
 }
 
-a:link, a:hover, a:visited {
+a:link:hover, a:link:visited {
   text-decoration: none;
 }
 
@@ -246,33 +286,34 @@ a:link, a:hover, a:visited {
   position: relative;
 }
 
-.filled {
-  color: white;
-  position: absolute;
-  left: 0;
-  font-size: 30px;
+.favorite {
+  position: relative;
+  cursor: pointer;
+  right: 45px;
+  top: 13px;
+  z-index: 0;
 }
 
-.empty {
+.favorite__empty {
   color: black;
   font-size: 30px;
   position: absolute;
   z-index: 1;
 }
 
-.empty:hover {
+.favorite__empty:hover {
   color: #9356dc;
 }
 
-.empty:hover + .filled {
+.favorite__empty:hover + .favorite__filled {
   color: #9356dc;
 }
 
-.favorite {
-  position: relative;
-  cursor: pointer;
-  right: 45px;
-  top: 13px;
+.favorite__filled {
+  color: white;
+  position: absolute;
+  left: 0;
+  font-size: 30px;
 }
 
 .header {
@@ -554,35 +595,52 @@ a:link, a:hover, a:visited {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 20px 30px;
   width: 255px;
-  color: white;
+  color: #fff;
   font-size: 17px;
   border: none;
-  -webkit-box-shadow: 5px 5px 10px #afafaf;
-          box-shadow: 5px 5px 10px #afafaf;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 56px;
   cursor: pointer;
 }
 
 .btn:hover::after {
-  opacity: 1;
+  opacity: 0;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn a:visited {
-  color: white;
+  color: #fff;
 }
 
 .btn::after {
   content: "";
-  opacity: 0;
+  opacity: 1;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
   z-index: -1;
-  bottom: 0;
+  bottom: 50px;
   left: 0;
   right: 0;
   top: 0;
-  border-radius: 56px;
-  -webkit-box-shadow: 8px 8px 13px #afafaf;
-          box-shadow: 8px 8px 13px #afafaf;
+  border-radius: 200pxpx;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  width: 255px;
   background: -webkit-gradient(linear, left top, right bottom, from(#ff46cc), to(#782cd3));
   background: linear-gradient(to bottom right, #ff46cc 0%, #782cd3 100%);
   position: absolute;
@@ -602,6 +660,7 @@ a:link, a:hover, a:visited {
   }
   .header__logo--center {
     margin: 0 auto;
+    text-align: left;
   }
   .fleche-retour {
     position: absolute;
@@ -713,6 +772,7 @@ a:link, a:hover, a:visited {
   }
   .header__logo--center {
     margin: 0 auto;
+    text-align: left;
   }
   .fleche-retour {
     text-align: left;
@@ -815,8 +875,8 @@ a:link, a:hover, a:visited {
     right: 16px;
     top: 15px;
   }
-  .empty,
-  .filled {
+  .favorite__empty,
+  .favorite__filled {
     font-size: 20px;
   }
   .restaurant__name--center {
@@ -905,45 +965,12 @@ a:link, a:hover, a:visited {
   }
 }
 
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url(../../fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url(../../fonts/Roboto-Bold.ttf);
-}
-
-@font-face {
-  font-family: "Shrikhand";
-  src: url(../../fonts/Shrikhand-Regular.ttf);
-}
-
-* {
-  margin: 0%;
-  padding: 0%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  min-width: 480px;
-  font-family: sans-serif;
-  margin: 0px auto;
-  font-family: "Roboto-Regular";
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 /* FOOTER */
 .footer {
   background-color: #1a1a1a;
   padding: 25px;
   width: 100%;
-  color: white;
+  color: #fff;
 }
 
 .footer__logo {
@@ -960,7 +987,7 @@ body {
 .footer a:visited,
 .footer a:link,
 .footer a:hover {
-  color: white;
+  color: #fff;
 }
 
 .footer__icon {
@@ -974,6 +1001,6 @@ li {
 
 .mentions-legales:visited,
 .mentions-legales {
-  color: white;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

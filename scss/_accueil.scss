@@ -1,98 +1,7 @@
 @import "./variables";
+@import "./fonctionnement";
 
 /* HEADER */
-
-.header {
-  &__logo {
-    height: 40px;
-
-    &--center {
-      margin: 20px auto;
-      text-align: center;
-    }
-
-   
-  }
-
-  &__flex {
-    display: flex;
-  }
-}
-
-.fleche-retour {
-  text-align: left;
-  font-size: 30px;
-  line-height: 1.4;
-  padding: 0 29px;
-  position: absolute;
-}
-
-.location {
-  @include dark-bg;
-  border-top: #bebebe 4px solid;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-
-  padding: 20px;
-
-  &__icon {
-    font-size: 20px;
-  }
-
-  &__text {
-    font-size: 20px;
-    font-family: "Roboto-Bold";
-  }
-}
-
-/* INTRODUCTION */
-.introduction {
-  
-  // margin-bottom: 30px;
-  padding: 60px 10px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // text-align: center;
-  // gap: 20px;
-
-  position: absolute;
-  top: 4%;
- 
-  
- 
-  transform: translateX(-50%, -50%);
-  &__background {
-    height: 300px;
-    width: 100%;
-    background-color: #f2f2f2;
-    margin-bottom: 25px;
-  }
-
-  & h1 {
-    width: 65%;
-    margin: 0 auto;
-    font-size: 25px;
-    font-family: "Roboto-Bold";
-    margin-bottom: 10px;
-
-  }
-
-  & .decouvrez {
-    font-size: 20px;
-   
-    margin: 0 auto;
-    margin-bottom: 30px;
-    
-  }
-}
-
-
-
-.decouvrez, .introduction h1, .explorer {
-  text-align: center;
-}
 
 /* FONCTIONNEMENT */
 
@@ -102,72 +11,10 @@ h2 {
   margin-left: 50px;
 }
 
-.fonctionnement {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 90%;
-  padding: 40px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-
-  &__center {
-    margin: 0 auto;
-  }
-
-  &__text {
-    font-size: 20px;
-    font-family: "Roboto-Bold";
-    /* color: black; */
-  }
-  &__flex {
-    display: flex;
-  }
-
-  &__icon {
-    margin-right: 20px;
-    font-size: 23px;
-    color: #939292;
-  }
-
-  &__step {
-    position: relative;
-    padding: 35px 15px;
-    padding-left: 40px;
-    background-color: #f1f1f1;
-    border-radius: 35px;
-
-    &--number {
-      border-radius: 40px;
-      font-size: 15px;
-      background-color: $primary-color;
-      padding: 10px 14px;
-      -webkit-text-fill-color: white;
-      position: absolute;
-
-      left: -3%;
-      text-align: center;
-    }
-  }
-
-  &__step:hover {
-    background-color: #e7daf4;
-    /* color: blueviolet; */
-  }
-}
-
-.fonctionnement__step:hover .fonctionnement__icon {
-  color: #9356dc;
-}
-
-.nav {
-  margin-bottom: 50px;
-}
-
 /* RESTAURANT */
 
 .restaurant {
-  background-color: #f1f1f1;
+  background-color: $light-grey;
   padding: 20px;
   padding-top: 60px;
 
@@ -187,7 +34,7 @@ h2 {
 
   &__card {
     width: 100%;
-    background-color: white;
+    background-color: $white;
     box-shadow: $shadow;
     margin-bottom: 20px;
   }
@@ -222,15 +69,6 @@ h2 {
   }
 }
 
-// .favorite {
-//   right: 26px;
-//   top: 7px;
-// }
-// .empty,
-// .filled {
-//   font-size: 20px;
-// }
-
 .quartier {
   font-size: 23px;
 }
@@ -238,20 +76,15 @@ h2 {
   object-position: center -196px;
 }
 
-// .heart {
-//   font-size: 30px;
-// }
-
 ul:visited {
-  color: white;
+  color: $white;
   text-decoration: none;
 }
 
-a {
+a:link {
   &:visited {
     color: black;
   }
-  &:link,
   &:hover,
   &:visited {
     text-decoration: none;
@@ -266,33 +99,34 @@ a {
 // Bouton J'aime
 //
 
-.filled {
-  color: white;
-  position: absolute;
-  left: 0;
-  font-size: 30px;
-}
-
-.empty {
-  color: black;
-  font-size: 30px;
-  position: absolute;
-  z-index: 1;
-
-  &:hover {
-    color: $primary-color;
-
-    & + .filled {
-      color: $primary-color;
-    }
-  }
-}
-
 .favorite {
   position: relative;
   cursor: pointer;
   right: 45px;
   top: 13px;
+  z-index: 0;
+
+  &__empty {
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    z-index: 1;
+
+    &:hover {
+      color: $primary-color;
+
+      & + .favorite__filled {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__filled {
+    color: white;
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+  }
 }
 
 //

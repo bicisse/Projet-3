@@ -1,0 +1,58 @@
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 90%;
+  padding: 40px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  &__center {
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-family: "Roboto-Bold";
+    /* color: black; */
+  }
+  &__flex {
+    display: flex;
+  }
+
+  &__icon {
+    margin-right: 20px;
+    font-size: 23px;
+    color: #939292;
+  }
+
+  &__step {
+    position: relative;
+    padding: 35px 15px;
+    padding-left: 40px;
+    background-color: #f1f1f1;
+    border-radius: 35px;
+
+    &--number {
+      border-radius: 40px;
+      font-size: 15px;
+      background-color: $primary-color;
+      padding: 10px 14px;
+      -webkit-text-fill-color: white;
+      position: absolute;
+
+      left: -3%;
+      text-align: center;
+    }
+  }
+
+  &__step:hover {
+    background-color: #e7daf4;
+    /* color: blueviolet; */
+  }
+}
+
+.fonctionnement__step:hover,
+.fonctionnement__icon {
+  color: #9356dc;
+}

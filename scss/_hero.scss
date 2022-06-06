@@ -1,0 +1,35 @@
+/* INTRODUCTION */
+.introduction {
+  padding: 60px 10px;
+  position: absolute;
+  top: 4%;
+
+  transform: translateX(-50%, -50%);
+  &__background {
+    height: 300px;
+    width: 100%;
+    background-color: $light-grey;
+    margin-bottom: 25px;
+  }
+
+  & h1 {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 25px;
+    font-family: "Roboto-Bold";
+    margin-bottom: 10px;
+  }
+
+  & .decouvrez {
+    font-size: 20px;
+
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+.decouvrez,
+.introduction h1,
+.explorer {
+  text-align: center;
+}

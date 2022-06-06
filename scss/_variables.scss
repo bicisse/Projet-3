@@ -1,10 +1,12 @@
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
-// $cadrenouveau: #008766;
+$white: #fff;
+$light-grey: #f2f2f2;
+$black: black;
 
-$hover-shadow: 8px 8px 13px #afafaf;
-$shadow: 5px 5px 10px #afafaf;
+$shadow-active: 0 10px 20px rgba($black, 0.2);
+$shadow: 0 5px 10px rgba($black, 0.2);
 
 // @mixin dark($color: $tertiary-color) {
 //   color: darken($color, 50%);
@@ -12,10 +14,6 @@ $shadow: 5px 5px 10px #afafaf;
 
 @mixin light-bg($color: black) {
   background-color: lighten($color, $amount: 10);
-}
-
-@mixin dark-bg($color: #f2f2f2) {
-  background-color: darken($color, $amount: 10);
 }
 
 @mixin darkened($color: $tertiary-color) {

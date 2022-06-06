@@ -21,6 +21,7 @@
       height: 40px;
       &--center {
         margin: 0 auto;
+        text-align: left;
       }
     }
   }
@@ -137,8 +138,8 @@
     right: 16px;
     top: 15px;
   }
-  .empty,
-  .filled {
+  .favorite__empty,
+  .favorite__filled {
     font-size: 20px;
   }
   .restaurant__name--center {

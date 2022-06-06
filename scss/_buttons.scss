@@ -8,49 +8,52 @@
   );
   padding: 20px 30px;
   width: 255px;
-  color: white;
+  color: $white;
   font-size: 17px;
   border: none;
   box-shadow: $shadow;
   z-index: 1;
-  
- 
   border-radius: 56px;
   cursor: pointer;
 
-  
-
   &:hover {
     &::after {
-      opacity: 1;
+      opacity: 0;
+      animation-fill-mode: backwards;
+      transform: translateX(-3px);
+      box-shadow: $shadow-active;
     }
   }
 
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: $shadow-active;
+  }
+
   & a:visited {
-    color: white;
+    color: $white;
   }
 
   &::after {
     content: "";
-    opacity: 0;
+    opacity: 1;
+    animation-fill-mode: backwards;
     z-index: -1;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     right: 0;
     top: 0;
-    border-radius: 56px;
-    box-shadow: $hover-shadow;
-  
+    border-radius: 200pxpx;
+    box-shadow: $shadow;
+    padding: 20px 30px;
+    width: 255px;
     background: linear-gradient(
       to bottom right,
       darken($secondary-color, 10) 0%,
       darken($primary-color, 10) 100%
     );
-   
 
     position: absolute;
     transition: opacity 200ms;
   }
 }
-
-
