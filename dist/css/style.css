@@ -285,19 +285,14 @@ a:link:hover, a:link:visited {
   cursor: pointer;
   right: 45px;
   top: 13px;
-  z-index: 0;
 }
 .favorite__empty {
   color: black;
   font-size: 30px;
   position: absolute;
-  z-index: 1;
-  transition: all 0.2s;
+  z-index: 2;
 }
-.favorite__empty:hover {
-  color: #9356dc;
-}
-.favorite__empty:hover + .favorite__filled {
+.favorite__empty:active {
   color: #9356dc;
 }
 .favorite__filled {
@@ -305,12 +300,17 @@ a:link:hover, a:link:visited {
   position: absolute;
   left: 0;
   font-size: 30px;
-}
-.favorite__filled::after {
   right: 45px;
-  top: 13px;
-  z-index: -1;
-  position: absolute;
+  z-index: 1;
+}
+.favorite:hover .favorite__empty {
+  opacity: 0;
+  color: #9356dc;
+  transform: scale(2);
+  transition: all 0.5s;
+}
+.favorite:hover .favorite__filled {
+  color: blue;
 }
 
 /* FOOTER */

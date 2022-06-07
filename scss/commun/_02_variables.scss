@@ -38,5 +38,9 @@ $shadow: 0 5px 10px rgba($black, 0.2);
     $prim-color-darken
   );
 }
+
+@mixin favorite-hover {
+  color: linear-gradient(to bottom right, $primary-color, $secondary-color);
+}
 //
 //

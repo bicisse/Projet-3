@@ -94,38 +94,39 @@ a:link {
   cursor: pointer;
   right: 45px;
   top: 13px;
-  z-index: 0;
 
   &__empty {
     color: black;
     font-size: 30px;
     position: absolute;
-    z-index: 1;
-    transition: all 0.2s;
+    z-index: 2;
 
-    &:hover {
+    &:active {
       color: $primary-color;
-
-      & + .favorite__filled {
-        color: $primary-color;
-      }
     }
   }
 
   &__filled {
     color: white;
+
     position: absolute;
     left: 0;
     font-size: 30px;
+    right: 45px;
+    z-index: 1;
+  }
 
-    &::after {
-      right: 45px;
-      top: 13px;
-      z-index: -1;
-      position: absolute;
+  &:hover {
+    & .favorite__empty {
+      opacity: 0;
+      color: $primary-color;
+      transform: scale(2);
+      transition: all 0.5s;
+    }
+    & .favorite__filled {
+      color: blue;
     }
   }
 }
-
 //
 //
