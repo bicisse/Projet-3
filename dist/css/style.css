@@ -296,7 +296,7 @@ a:link:hover, a:link:visited {
   color: #9356dc;
 }
 .favorite__filled {
-  color: white;
+  opacity: 0;
   position: absolute;
   left: 0;
   font-size: 30px;
@@ -310,7 +310,8 @@ a:link:hover, a:link:visited {
   transition: all 0.5s;
 }
 .favorite:hover .favorite__filled {
-  color: blue;
+  opacity: 1;
+  color: #9356dc;
 }
 
 /* FOOTER */
