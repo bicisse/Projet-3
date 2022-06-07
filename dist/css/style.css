@@ -750,7 +750,7 @@ a:link:hover, a:link:visited {
     margin: 0 auto;
   }
   .center-section {
-    width: 95%;
+    max-width: 1190px;
     margin: 0 auto;
   }
   header {
