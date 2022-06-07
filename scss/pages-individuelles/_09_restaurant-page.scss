@@ -1,19 +1,17 @@
 // /* PAGES DE RESTAURANT INDIVIDUELLES */
-
+@import "../commun/02_variables";
 .header {
   position: static;
   background-color: white;
-  
 }
 
 @keyframes move-in {
   0% {
-opacity: 0;
-transform:translateY(20px)
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -23,56 +21,46 @@ transform:translateY(20px)
   animation-name: move-in;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  
-  
-  
 }
 .second {
   animation-name: move-in;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 300ms;
-  
 }
 .third {
   animation-name: move-in;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 600ms;
-  
 }
 
-
-
-
-// 
+//
 .restaurant {
   &__img--page {
-    height: 345px;
+    height: 385px;
     width: 100%;
     object-fit: cover;
     object-position: center;
     margin-bottom: 90px;
   }
   &__flex {
-    background-color: #f2f2f2;
+    background-color: $light-grey;
     width: 100%;
   }
   &__name {
     font-family: "Shrikhand";
-    
-    background-color: #f2f2f2;
+
+    background-color: $light-grey;
     width: 50%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: absolute;
-    top: 362px;
+    top: 400px;
     padding: 40px 20px 40px 20px;
     font-size: 40px;
     width: 100%;
     font-weight: normal;
-    display: flex;
-    justify-content: space-between;
 
     &--center {
       width: 100%;
@@ -86,20 +74,8 @@ transform:translateY(20px)
         margin: 0;
         font-weight: normal;
         font-size: 50px;
-        
-       
       }
-     
-      
-      
     }
-
-    // restaurant__name--center {
-    //   width: 80%;
-    //
-    // }
-
-    
   }
 }
 
@@ -109,7 +85,7 @@ transform:translateY(20px)
 
 .content {
   padding: 15px;
-  background-color: #f2f2f2;
+  background-color: $light-grey;
 
   &__flex {
     display: flex;
@@ -125,7 +101,7 @@ transform:translateY(20px)
     font-family: "Roboto-Regular";
 
     &--underline {
-      border-bottom: rgb(110, 222, 185) 3px solid;
+      border-bottom: $tertiary-color 3px solid;
       padding-bottom: 10px;
     }
   }

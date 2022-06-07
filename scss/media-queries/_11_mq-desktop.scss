@@ -1,12 +1,5 @@
 @media screen and (min-width: 992px) and (max-width: 5000px) {
   body {
-    // max-width: 1500px;
-    margin: 0 auto;
-  }
-
-  .center-section {
-    // width: 95%;
-    max-width: 1190px;
     margin: 0 auto;
   }
 
@@ -36,7 +29,7 @@
   }
   .introduction {
     position: absolute;
-    top: 7%;
+    top: 125px;
 
     &__background {
       height: 375px;
@@ -47,16 +40,16 @@
     }
 
     & .decouvrez {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 
-  .btn {
-    padding: 22px 0px;
-    width: 390px;
-    font-size: 25px;
-    text-align: end;
-  }
+  // .btn {
+  //   padding: 22px 0px;
+  //   width: 390px;
+  //   font-size: 25px;
+  //   text-align: end;
+  // }
 
   .location {
     width: 30%;
@@ -97,7 +90,7 @@
     }
 
     &__text {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -110,7 +103,7 @@
 
   .restaurant {
     &__card {
-      width: 23%;
+      width: 48%;
       flex-wrap: wrap;
     }
 
@@ -119,7 +112,7 @@
     }
 
     &__img {
-      height: 160px;
+      height: 300px;
     }
   }
   .ajuster-img {

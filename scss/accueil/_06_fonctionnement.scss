@@ -1,3 +1,10 @@
+@import "../commun/02_variables";
+
+h2 {
+  font-family: "Roboto-Bold";
+  font-size: 25px;
+  margin-left: 50px;
+}
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -6,7 +13,7 @@
   padding: 40px;
   margin: 0 auto;
   margin-bottom: 40px;
-
+  cursor: pointer;
   &__center {
     margin: 0 auto;
   }
@@ -23,15 +30,18 @@
   &__icon {
     margin-right: 20px;
     font-size: 23px;
-    color: #939292;
+    color: $primary-color;
   }
 
   &__step {
     position: relative;
     padding: 35px 15px;
     padding-left: 40px;
-    background-color: #f1f1f1;
+    background-color: $light-grey;
     border-radius: 35px;
+    &:hover {
+      @include fct-hover;
+    }
 
     &--number {
       border-radius: 40px;
@@ -45,14 +55,4 @@
       text-align: center;
     }
   }
-
-  &__step:hover {
-    background-color: #e7daf4;
-    /* color: blueviolet; */
-  }
-}
-
-.fonctionnement__step:hover,
-.fonctionnement__icon {
-  color: #9356dc;
 }

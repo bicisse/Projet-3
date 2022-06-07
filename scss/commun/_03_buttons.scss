@@ -1,0 +1,121 @@
+@import "./02_variables";
+
+.btn {
+  background: linear-gradient(
+    to bottom right,
+    $secondary-color,
+    $primary-color
+  );
+  width: 255px;
+  color: $white;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: $shadow;
+  outline: none;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 100px;
+
+  z-index: 0;
+
+  &::after {
+    background: linear-gradient(
+      to bottom right,
+      $secondary-color,
+      $primary-color
+    );
+    width: 255px;
+    color: $white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: $shadow;
+    outline: none;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 100px;
+
+    z-index: -1;
+  }
+  &:link,
+  &:visited {
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow;
+    color: $white;
+    @include darken-button-bg;
+  }
+
+  &:visited {
+    transform: translateY(-1);
+    box-shadow: $shadow-active;
+  }
+
+  &__header--text {
+    color: $white;
+  }
+}
+
+// // .btn {
+// //   background: linear-gradient(
+// //     to bottom right,
+// //     $secondary-color,
+// //     $primary-color
+// //   );
+// //   padding: 20px 30px;
+// //   width: 255px;
+// //   color: $white;
+// //   font-size: 17px;
+// //   border: none;
+// //   box-shadow: $shadow;
+// //   z-index: 1;
+// //   border-radius: 56px;
+// //   transition: opacity 200ms;
+// //   cursor: pointer;
+
+// //   &::after {
+// //     content: "";
+
+// //     opacity: 0;
+// //     padding: 20px 30px;
+// //     width: 255px;
+// //     color: $white;
+// //     font-size: 17px;
+// //     border: none;
+// //     box-shadow: $shadow;
+// //     z-index: -1;
+// //     border-radius: 56px;
+// //     cursor: pointer;
+// //     position: relative;
+// //   }
+// //   &:hover
+// //    {
+// //     &::after {
+// //       background: linear-gradient(
+// //         to bottom right,
+// //         darken($secondary-color, 10) 0%,
+// //         darken($primary-color, 10) 100%
+// //       );
+// //       opacity: 1;
+// //       // animation-fill-mode: backwards;
+// //       transform: translateX(-3px);
+// //       box-shadow: $shadow-active;
+// //     }
+// //   }
+
+// //   &:active {
+// //     transform: translateY(-1px);
+// //     box-shadow: $shadow-active;
+// //   }
+
+// //   & a:visited {
+// //     color: $white;
+// //   }
+// // }

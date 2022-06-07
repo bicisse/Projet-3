@@ -1,17 +1,7 @@
-@import "./variables";
-@import "./fonctionnement";
+@import "../commun/02_variables";
+// @import "../06_fonctionnement";
 
-/* HEADER */
-
-/* FONCTIONNEMENT */
-
-h2 {
-  font-family: "Roboto-Bold";
-  font-size: 25px;
-  margin-left: 50px;
-}
-
-/* RESTAURANT */
+/* RESTAURANTS */
 
 .restaurant {
   background-color: $light-grey;
@@ -111,6 +101,7 @@ a:link {
     font-size: 30px;
     position: absolute;
     z-index: 1;
+    transition: all 0.2s;
 
     &:hover {
       color: $primary-color;
@@ -126,6 +117,13 @@ a:link {
     position: absolute;
     left: 0;
     font-size: 30px;
+
+    &::after {
+      right: 45px;
+      top: 13px;
+      z-index: -1;
+      position: absolute;
+    }
   }
 }
 

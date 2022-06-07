@@ -1,9 +1,10 @@
-@import "./variables";
+@import "../commun/02_variables";
 
 /* FOOTER */
 
 .footer {
-  @include light-bg;
+  @include footer-bg;
+  
   padding: 25px;
   width: 100%;
   color: $white;

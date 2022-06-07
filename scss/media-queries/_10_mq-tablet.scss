@@ -41,7 +41,7 @@
   }
 
   .introduction {
-    top: 5%;
+    top: 125px;
 
     &__background {
       height: 375px;
@@ -52,17 +52,27 @@
     }
 
     & .decouvrez {
-      font-size: 25px;
+      font-size: 22px;
     }
   }
 
-  .btn {
-    padding: 22px 0px;
-    width: 390px;
-    font-size: 25px;
-    text-align: end;
-  }
+  // .btn {
+  //   padding: 22px 0px;
+  //   width: 390px;
+  //   font-size: 25px;
+  //   text-align: end;
+  // }
 
+  .fonctionnement {
+    &__text {
+      font-size: 25px;
+      line-height: 1.7;
+    }
+
+    &__step {
+      padding: 20px 50px;
+    }
+  }
   .flex__cards {
     display: flex;
     flex-wrap: wrap;

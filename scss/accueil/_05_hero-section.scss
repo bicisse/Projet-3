@@ -1,11 +1,14 @@
 /* INTRODUCTION */
+
+
 .introduction {
   // padding: 60px 10px;
   position: absolute;
   top: 170px;
   right: 50%;
   transform: translateX(50%);
-
+  text-align: center;
+  width: 80%;
   // transform: translateX(-50%, -50%);
   &__background {
     height: 300px;
@@ -28,13 +31,3 @@
     margin-bottom: 30px;
   }
 }
-
-.introduction {
-  text-align: center;
-}
-
-// .decouvrez,
-// .introduction h1,
-// .explorer {
-//   text-align: center;
-// }

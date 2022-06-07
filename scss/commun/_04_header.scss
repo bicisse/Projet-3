@@ -1,4 +1,4 @@
-@import "./variables";
+@import "./02_variables";
 
 .header {
   &__logo {
@@ -29,7 +29,7 @@
 
 .location {
   @include light-bg;
-  border-top: #bebebe 4px solid;
+  border-top: $light-grey 4px solid;
   display: flex;
   gap: 20px;
   justify-content: center;

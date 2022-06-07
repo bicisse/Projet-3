@@ -33,6 +33,12 @@ body {
   height: fit-content;
 }
 
-a {
+a:link {
   text-decoration: none;
+}
+
+.center-section {
+  // width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
