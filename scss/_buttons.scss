@@ -14,6 +14,7 @@
   box-shadow: $shadow;
   z-index: 1;
   border-radius: 56px;
+  transition: opacity 200ms;
   cursor: pointer;
 
   &:hover {
@@ -36,24 +37,22 @@
 
   &::after {
     content: "";
-    opacity: 1;
-    animation-fill-mode: backwards;
-    z-index: -1;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    top: 0;
-    border-radius: 200pxpx;
-    box-shadow: $shadow;
-    padding: 20px 30px;
-    width: 255px;
+
     background: linear-gradient(
       to bottom right,
       darken($secondary-color, 10) 0%,
       darken($primary-color, 10) 100%
     );
 
-    position: absolute;
-    transition: opacity 200ms;
+    padding: 20px 30px;
+    width: 255px;
+    color: $white;
+    font-size: 17px;
+    border: none;
+    box-shadow: $shadow;
+    z-index: -1;
+    border-radius: 56px;
+    cursor: pointer;
+    position: relative;
   }
 }

@@ -86,11 +86,11 @@ a {
 
 /* INTRODUCTION */
 .introduction {
-  padding: 60px 10px;
   position: absolute;
-  top: 4%;
-  -webkit-transform: translateX(-50%, -50%);
-          transform: translateX(-50%, -50%);
+  top: 170px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .introduction__background {
@@ -101,7 +101,6 @@ a {
 }
 
 .introduction h1 {
-  width: 65%;
   margin: 0 auto;
   font-size: 25px;
   font-family: "Roboto-Bold";
@@ -114,9 +113,7 @@ a {
   margin-bottom: 30px;
 }
 
-.decouvrez,
-.introduction h1,
-.explorer {
+.introduction {
   text-align: center;
 }
 
@@ -602,6 +599,8 @@ a:link:hover, a:link:visited {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 56px;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
   cursor: pointer;
 }
 
@@ -628,24 +627,19 @@ a:link:hover, a:link:visited {
 
 .btn::after {
   content: "";
-  opacity: 1;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  z-index: -1;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  top: 0;
-  border-radius: 200pxpx;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px 30px;
-  width: 255px;
   background: -webkit-gradient(linear, left top, right bottom, from(#ff46cc), to(#782cd3));
   background: linear-gradient(to bottom right, #ff46cc 0%, #782cd3 100%);
-  position: absolute;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
+  padding: 20px 30px;
+  width: 255px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  border-radius: 56px;
+  cursor: pointer;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -684,9 +678,7 @@ a:link:hover, a:link:visited {
     font-size: 15px;
   }
   .introduction {
-    top: 2%;
-    left: 5%;
-    right: 5%;
+    top: 5%;
   }
   .introduction__background {
     height: 375px;
@@ -695,12 +687,13 @@ a:link:hover, a:link:visited {
     font-size: 45px;
   }
   .introduction .decouvrez {
-    font-size: 30px;
+    font-size: 25px;
   }
   .btn {
     padding: 22px 0px;
     width: 390px;
     font-size: 25px;
+    text-align: end;
   }
   .flex__cards {
     display: -webkit-box;
@@ -754,7 +747,6 @@ a:link:hover, a:link:visited {
 
 @media screen and (min-width: 992px) and (max-width: 5000px) {
   body {
-    max-width: 1500px;
     margin: 0 auto;
   }
   .center-section {
@@ -783,9 +775,7 @@ a:link:hover, a:link:visited {
   }
   .introduction {
     position: absolute;
-    top: 4%;
-    left: 5%;
-    right: 5%;
+    top: 7%;
   }
   .introduction__background {
     height: 375px;
@@ -800,6 +790,7 @@ a:link:hover, a:link:visited {
     padding: 22px 0px;
     width: 390px;
     font-size: 25px;
+    text-align: end;
   }
   .location {
     width: 30%;

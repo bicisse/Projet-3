@@ -41,10 +41,7 @@
   }
 
   .introduction {
-    top: 2%;
-
-    left: 5%;
-    right: 5%;
+    top: 5%;
 
     &__background {
       height: 375px;
@@ -55,15 +52,15 @@
     }
 
     & .decouvrez {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 
   .btn {
     padding: 22px 0px;
     width: 390px;
-
     font-size: 25px;
+    text-align: end;
   }
 
   .flex__cards {

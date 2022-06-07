@@ -1,10 +1,12 @@
 /* INTRODUCTION */
 .introduction {
-  padding: 60px 10px;
+  // padding: 60px 10px;
   position: absolute;
-  top: 4%;
+  top: 170px;
+  right: 50%;
+  transform: translateX(50%);
 
-  transform: translateX(-50%, -50%);
+  // transform: translateX(-50%, -50%);
   &__background {
     height: 300px;
     width: 100%;
@@ -13,7 +15,6 @@
   }
 
   & h1 {
-    width: 65%;
     margin: 0 auto;
     font-size: 25px;
     font-family: "Roboto-Bold";
@@ -28,8 +29,12 @@
   }
 }
 
-.decouvrez,
-.introduction h1,
-.explorer {
+.introduction {
   text-align: center;
 }
+
+// .decouvrez,
+// .introduction h1,
+// .explorer {
+//   text-align: center;
+// }
