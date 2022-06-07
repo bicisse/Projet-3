@@ -779,7 +779,7 @@ li {
     flex-wrap: wrap;
   }
   .restaurant__details h3 {
-    font-size: 15px;
+    font-size: 25px;
   }
   .restaurant__img {
     height: 300px;
@@ -791,17 +791,17 @@ li {
   }
 
   .quartier {
-    font-size: 15px;
+    font-size: 22px;
   }
 
   .favorite {
-    right: 16px;
-    top: 15px;
+    right: 60px;
+    top: 10px;
   }
 
   .favorite__empty,
 .favorite__filled {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .restaurant__name--center {
@@ -856,7 +856,7 @@ li {
     padding: 0;
   }
   .dish__name {
-    font-size: 21px;
+    font-size: 20px;
   }
   .dish__side {
     font-size: 19px;
@@ -878,6 +878,10 @@ li {
 
   .grey-filled-heart {
     color: #f2f2f2;
+  }
+
+  #pages {
+    font-size: 50px;
   }
 
   .restaurant__name {

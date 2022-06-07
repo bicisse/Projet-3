@@ -108,7 +108,7 @@
     }
 
     &__details h3 {
-      font-size: 15px;
+      font-size: 25px;
     }
 
     &__img {
@@ -123,15 +123,15 @@
   //
 
   .quartier {
-    font-size: 15px;
+    font-size: 22px;
   }
   .favorite {
-    right: 16px;
-    top: 15px;
+    right: 60px;
+    top: 10px;
   }
   .favorite__empty,
   .favorite__filled {
-    font-size: 20px;
+    font-size: 30px;
   }
   .restaurant__name--center {
     width: 90%;
@@ -193,7 +193,7 @@
     }
 
     &__name {
-      font-size: 21px;
+      font-size: 20px;
     }
 
     &__side {
@@ -226,6 +226,9 @@
     color: #f2f2f2;
   }
 
+  #pages {
+    font-size: 50px;
+  }
   .restaurant__name {
     top: 470px;
   }
