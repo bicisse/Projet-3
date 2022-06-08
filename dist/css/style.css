@@ -100,6 +100,10 @@ a:link {
   line-height: 1.4;
   padding: 0 29px;
   position: absolute;
+  color: black;
+}
+.fleche-retour:visited {
+  color: black;
 }
 
 .nav {
@@ -433,14 +437,12 @@ li {
 }
 .restaurant__name--center {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
 }
 .restaurant__name--center h1 {
   display: inline;
-  margin: 0;
   font-weight: normal;
   font-size: 50px;
 }
@@ -496,7 +498,6 @@ li {
 
 .card__repas {
   position: relative;
-  margin: 5px 0;
   border-radius: 20px;
   overflow: hidden;
   white-space: nowrap;
@@ -617,9 +618,6 @@ li {
   .introduction {
     top: 125px;
   }
-  .introduction__background {
-    height: 375px;
-  }
   .introduction h1 {
     font-size: 45px;
   }
@@ -718,9 +716,6 @@ li {
     position: absolute;
     top: 125px;
   }
-  .introduction__background {
-    height: 375px;
-  }
   .introduction h1 {
     font-size: 45px;
   }
@@ -807,7 +802,6 @@ li {
   .restaurant__name--center {
     width: 90%;
     font-size: 54px;
-    margin: 0;
   }
 
   .margin-main {

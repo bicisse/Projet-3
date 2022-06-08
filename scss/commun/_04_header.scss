@@ -21,6 +21,10 @@
   line-height: 1.4;
   padding: 0 29px;
   position: absolute;
+  color: $black;
+  &:visited {
+    color: $black;
+  }
 }
 
 .nav {

@@ -31,10 +31,6 @@
     position: absolute;
     top: 125px;
 
-    &__background {
-      height: 375px;
-    }
-
     & h1 {
       font-size: 45px;
     }
@@ -136,7 +132,6 @@
   .restaurant__name--center {
     width: 90%;
     font-size: 54px;
-    margin: 0;
   }
 
   .margin-main {
