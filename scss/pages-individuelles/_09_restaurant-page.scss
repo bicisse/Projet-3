@@ -1,38 +1,9 @@
 // /* PAGES DE RESTAURANT INDIVIDUELLES */
 @import "../commun/02_variables";
+
 .header {
   position: static;
   background-color: white;
-}
-
-@keyframes move-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.first {
-  animation-name: move-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-.second {
-  animation-name: move-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 300ms;
-}
-.third {
-  animation-name: move-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 600ms;
 }
 
 //
@@ -175,36 +146,38 @@
   width: 15%;
 }
 
-.dish__side {
-  margin-left: 12px;
-  font-size: 44px;
+.dish {
+  &__side {
+    font-size: 44px;
+  }
+  &__name {
+    font-size: 50px;
+  }
+
+  &__name,
+  &__side {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 12px;
+  }
+
+  &__animation {
+    color: white;
+    transition: all ease-in-out 400ms;
+    line-height: 3 !important;
+    float: right;
+    font-size: 55px;
+    padding: 0 20px;
+  }
 }
-.dish__name {
-  font-size: 50px;
-  margin-left: 12px;
-}
+
 .icon {
   position: absolute;
   right: 0;
   top: 0;
   background-color: $tertiary-color;
   width: 14%;
-}
-
-.dish__name,
-.dish__side {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.dish__animation {
-  color: white;
-  transition: all ease-in-out 400ms;
-  line-height: 3 !important;
-  float: right;
-  font-size: 55px;
-  padding: 0 20px;
 }
 
 .price {

@@ -36,6 +36,50 @@ a:link {
   margin: 0 auto;
 }
 
+@-webkit-keyframes move-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animation {
+  -webkit-animation-name: move-in;
+          animation-name: move-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+.animation__second {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.animation__third {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.animation__fourth {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
 .btn {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   width: 255px;
@@ -75,8 +119,8 @@ a:link {
   color: #fff;
   background: linear-gradient(to bottom right, #ff2dc5, #8641d8);
 }
-.btn:visited {
-  transform: translateY(-1);
+.btn:active {
+  transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .btn__header--text {
@@ -357,58 +401,6 @@ li {
   background-color: white;
 }
 
-@-webkit-keyframes move-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes move-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.first {
-  -webkit-animation-name: move-in;
-          animation-name: move-in;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.second {
-  -webkit-animation-name: move-in;
-          animation-name: move-in;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-
-.third {
-  -webkit-animation-name: move-in;
-          animation-name: move-in;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-
 .restaurant__img--page {
   height: 385px;
   width: 100%;
@@ -535,13 +527,24 @@ li {
 }
 
 .dish__side {
-  margin-left: 12px;
   font-size: 44px;
 }
-
 .dish__name {
   font-size: 50px;
+}
+.dish__name, .dish__side {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   margin-left: 12px;
+}
+.dish__animation {
+  color: white;
+  transition: all ease-in-out 400ms;
+  line-height: 3 !important;
+  float: right;
+  font-size: 55px;
+  padding: 0 20px;
 }
 
 .icon {
@@ -550,22 +553,6 @@ li {
   top: 0;
   background-color: #99e2d0;
   width: 14%;
-}
-
-.dish__name,
-.dish__side {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.dish__animation {
-  color: white;
-  transition: all ease-in-out 400ms;
-  line-height: 3 !important;
-  float: right;
-  font-size: 55px;
-  padding: 0 20px;
 }
 
 .price {
@@ -594,10 +581,6 @@ li {
   .fleche-retour {
     position: absolute;
     top: 15px;
-  }
-
-  .fa-solid {
-    line-height: 2;
   }
 
   .location {
@@ -779,6 +762,18 @@ li {
   .restaurant__img {
     height: 300px;
   }
+  .restaurant__img--page {
+    height: 450px;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .restaurant__name {
+    top: 470px;
+  }
+  .restaurant__name--center {
+    width: 90%;
+    font-size: 54px;
+  }
 
   .ajuster-img {
     -o-object-position: center;
@@ -793,19 +788,8 @@ li {
     right: 60px;
     top: 10px;
   }
-
-  .favorite__empty,
-.favorite__filled {
+  .favorite__empty, .favorite__filled {
     font-size: 30px;
-  }
-
-  .restaurant__name--center {
-    width: 90%;
-    font-size: 54px;
-  }
-
-  .margin-main {
-    margin: 0 auto;
   }
 
   .course {
@@ -813,10 +797,6 @@ li {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-  }
-
-  .card__repas {
-    width: 30%;
   }
 
   .card__repas,
@@ -830,32 +810,31 @@ li {
     padding: 15px;
   }
 
-  .dish__name {
+  .price {
     font-size: 17px;
+    line-height: 6.4;
+  }
+
+  .dish__name {
+    font-size: 20px;
     margin-left: 0;
   }
   .dish__side {
     font-size: 14px;
     margin-left: 0;
   }
-
-  .price {
-    font-size: 17px;
-    line-height: 6.4;
-  }
-
   .dish__animation {
     font-size: 25px;
     line-height: 4;
     padding: 0;
   }
-  .dish__name {
-    font-size: 20px;
-  }
   .dish__side {
     font-size: 19px;
   }
 
+  .card__repas {
+    width: 30%;
+  }
   .card__repas:hover .plat__price {
     transform: translate(-60px);
     width: 15%;
@@ -878,18 +857,8 @@ li {
     font-size: 50px;
   }
 
-  .restaurant__name {
-    top: 470px;
-  }
-
   .content__title {
     font-size: 25px;
     margin-left: 35px;
-  }
-
-  .restaurant__img--page {
-    height: 450px;
-    -o-object-position: center;
-       object-position: center;
   }
 }/*# sourceMappingURL=style.css.map */

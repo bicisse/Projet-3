@@ -40,13 +40,6 @@
     }
   }
 
-  // .btn {
-  //   padding: 22px 0px;
-  //   width: 390px;
-  //   font-size: 25px;
-  //   text-align: end;
-  // }
-
   .location {
     width: 30%;
     position: absolute;
@@ -109,6 +102,20 @@
 
     &__img {
       height: 300px;
+
+      &--page {
+        height: 450px;
+        object-position: center;
+      }
+    }
+
+    &__name {
+      top: 470px;
+
+      &--center {
+        width: 90%;
+        font-size: 54px;
+      }
     }
   }
   .ajuster-img {
@@ -124,20 +131,13 @@
   .favorite {
     right: 60px;
     top: 10px;
-  }
-  .favorite__empty,
-  .favorite__filled {
-    font-size: 30px;
-  }
-  .restaurant__name--center {
-    width: 90%;
-    font-size: 54px;
+
+    &__empty,
+    &__filled {
+      font-size: 30px;
+    }
   }
 
-  .margin-main {
-    // width: 80%;
-    margin: 0 auto;
-  }
   //  animation
 
   .course {
@@ -145,12 +145,6 @@
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-  }
-
-  // ICI ICI PROBLEME :'(
-
-  .card__repas {
-    width: 30%;
   }
 
   .card__repas,
@@ -164,9 +158,13 @@
     padding: 15px;
   }
 
+  .price {
+    font-size: 17px;
+    line-height: 6.4;
+  }
   .dish {
     &__name {
-      font-size: 17px;
+      font-size: 20px;
       margin-left: 0;
     }
 
@@ -174,21 +172,10 @@
       font-size: 14px;
       margin-left: 0;
     }
-  }
-
-  .price {
-    font-size: 17px;
-    line-height: 6.4;
-  }
-  .dish {
     &__animation {
       font-size: 25px;
       line-height: 4;
       padding: 0;
-    }
-
-    &__name {
-      font-size: 20px;
     }
 
     &__side {
@@ -197,6 +184,7 @@
   }
 
   .card__repas {
+    width: 30%;
     &:hover {
       & .plat__price {
         transform: translate(-60px);
@@ -224,9 +212,6 @@
   #pages {
     font-size: 50px;
   }
-  .restaurant__name {
-    top: 470px;
-  }
 
   .content {
     &__title {
@@ -234,15 +219,4 @@
       margin-left: 35px;
     }
   }
-
-  .restaurant__img--page {
-    height: 450px;
-    object-position: center;
-  }
-  // .restaurant__name {
-  //   display: none;
-  // }
-  // .plat__price {
-  //   display: none;
-  // }
 }
