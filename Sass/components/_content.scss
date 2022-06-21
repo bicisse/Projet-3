@@ -1,0 +1,161 @@
+.course {
+  padding: 3rem;
+  padding-top: 5rem;
+  height: fit-content;
+  background-color: $light-grey;
+  &__title {
+    margin-bottom: 3rem;
+    padding-left: 5%;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: 400;
+      padding: 2rem 0;
+
+      @include respond(desktop) {
+        font-size: 3.5rem;
+      }
+
+      @include respond(desktop-big) {
+        font-size: 3.5rem;
+      }
+    }
+    &--underline {
+      border-bottom: 0.7rem solid $tertiary-color;
+      padding-bottom: 1rem;
+    }
+  }
+}
+.dish {
+  &__dish {
+    // width: 100%;
+  }
+
+  &__card {
+    background-color: $white;
+    border-radius: 3rem;
+    overflow: hidden;
+    padding: 2rem 3rem;
+    position: relative;
+    cursor: pointer;
+    box-shadow: $shadow-2;
+    width: 100%;
+
+    @include respond(desktop) {
+      width: 33.3333%;
+    }
+
+    @include respond(desktop-big) {
+      width: 33.3333%;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-1;
+      & .dish__dish {
+        width: 66%;
+      }
+
+      & .dish__icon {
+        transform: translateX(-3.5rem) rotate(360deg);
+      }
+
+      & .dish__price {
+        transform: translateX(-11rem);
+        width: 15%;
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: $shadow-1;
+    }
+  }
+
+  &__name,
+  &__dish,
+  &__side,
+  &__price,
+  &__icon {
+    transition: all 0.3s ease-out;
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 4.5rem;
+    white-space: nowrap;
+    width: 100%;
+    @include respond(desktop) {
+      font-size: 2rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 2.7rem;
+    }
+  }
+
+  &__side {
+    font-size: 3.8rem;
+    font-weight: 300;
+    white-space: nowrap;
+    width: 100%;
+    @include respond(desktop) {
+      font-size: 1.8rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 2.5rem;
+    }
+  }
+  &__name,
+  &__side {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__price {
+    height: 100%;
+    width: 21%;
+    background-color: white;
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 0;
+    span {
+      font-weight: 700;
+      font-size: 3.8rem;
+      line-height: 6;
+      padding: 0 2rem;
+
+      @include respond(desktop) {
+        font-size: 2rem;
+      }
+
+      @include respond(desktop-big) {
+        font-size: 2.5rem;
+        line-height: 6.5;
+      }
+    }
+  }
+  &__checked {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    height: 110%;
+    width: 20%;
+    background-color: $tertiary-color;
+  }
+  &__icon {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    color: $white;
+    font-size: 4rem;
+    @include respond(desktop) {
+      font-size: 3rem;
+    }
+
+    @include respond(desktop-big) {
+      font-size: 3.5rem;
+    }
+  }
+}

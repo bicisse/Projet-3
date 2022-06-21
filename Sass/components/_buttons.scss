@@ -1,0 +1,60 @@
+.btn {
+  @include gradient;
+
+  font-size: 1.5rem;
+  font-weight: 00;
+
+  padding: 1.6rem 3rem;
+  border-radius: 50rem;
+  border: none;
+  margin: 2.5rem 2rem;
+  cursor: pointer;
+  box-shadow: 0rem 1rem 2rem rgb(0 0 0 / 20%);
+  z-index: 0;
+
+  @include respond(desktop) {
+    font-size: 2.5rem;
+  }
+  @include respond(desktop-big) {
+    font-size: 2.5rem;
+  }
+
+  a {
+    color: $white !important;
+  }
+
+  &::after {
+    @include gradient;
+    font-size: 2rem;
+    width: 3rem;
+    padding: 2rem;
+    border-radius: 50rem;
+    border: none;
+    margin: 2rem;
+    cursor: pointer;
+    box-shadow: $shadow-1;
+    z-index: -1;
+  }
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-1;
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: $shadow-2;
+    }
+  }
+
+  &__commander {
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+  }
+}

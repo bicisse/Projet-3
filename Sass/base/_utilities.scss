@@ -1,0 +1,43 @@
+.u-small-padding {
+  padding: 2rem 0;
+}
+
+.margin-zero-auto {
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+.u-margin-top-big {
+  margin-bottom: 8rem !important;
+}
+.u-margin-top-huge {
+  margin-bottom: 10rem !important;
+}
+
+@include respond(desktop) {
+  .max-width {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+@include respond(desktop-big) {
+  .max-width {
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+}

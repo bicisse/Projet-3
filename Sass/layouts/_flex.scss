@@ -1,0 +1,97 @@
+.flex {
+  display: flex;
+  &__location {
+    gap: 2rem;
+    justify-content: center;
+
+    @include respond(desktop) {
+      justify-content: right;
+      padding: 1rem;
+    }
+    @include respond(desktop-big) {
+      justify-content: right;
+      padding: 1rem;
+    }
+  }
+
+  &__header {
+    display: block;
+
+    @include respond(desktop) {
+      display: flex;
+    }
+    @include respond(desktop-big) {
+      display: flex;
+    }
+  }
+  &__hero {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__fonctionnement {
+    flex-direction: column;
+    gap: 3rem;
+
+    @include respond(desktop) {
+      flex-direction: row;
+      width: 95%;
+      margin: 0 auto;
+    }
+    @include respond(desktop-big) {
+      flex-direction: row;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  &__fonctionnement-box {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  &__restaurant {
+    flex-direction: column;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      flex-direction: row !important;
+    }
+    @include respond(tab-land) {
+      flex-direction: row;
+    }
+    @include respond(desktop) {
+      flex-direction: row;
+    }
+    @include respond(desktop-big) {
+      flex-direction: row;
+    }
+    &-informations {
+      justify-content: space-between;
+    }
+  }
+  &__footer {
+    gap: 2rem;
+  }
+
+  &__page-name {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__restaurant-cards {
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 8rem;
+    justify-content: center;
+
+    @include respond(desktop) {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+    @include respond(desktop-big) {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.arrow {
+  display: inline-block;
+  position: absolute;
+  &__icon {
+    font-size: 3rem;
+    padding: 2.5rem;
+    margin: auto 0;
+    position: absolute;
+    color: black;
+    transition: transform 0.1s, color 0.2s;
+
+    @include respond(desktop) {
+      padding: 2.5rem 3.5rem;
+    }
+    @include respond(desktop-big) {
+      padding: 2.5rem 3.5rem;
+    }
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover {
+      transform: scale(1.3) rotate(360deg);
+      color: $tertiary-color;
+    }
+  }
+}

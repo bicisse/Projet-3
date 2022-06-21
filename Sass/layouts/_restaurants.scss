@@ -1,0 +1,75 @@
+.restaurant {
+  background-color: $light-grey;
+  padding: 4rem 2.5rem;
+  margin-top: 7rem;
+
+  h3 {
+    margin-bottom: 0;
+  }
+  &__card {
+    width: 100%;
+    overflow: hidden;
+    height: 25rem;
+    position: relative;
+    background-color: $white;
+    border-radius: 1.5rem;
+    box-shadow: $shadow-2;
+    transition: transform 0.2s ease-in-out;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+    &:hover {
+      box-shadow: $shadow-1;
+      transform: translateY(-1rem) scale(1.02);
+    }
+
+    @include respond(tab-port) {
+      width: 48%;
+    }
+    @include respond(tab-land) {
+      width: 48%;
+    }
+    @include respond(desktop) {
+      width: 23%;
+    }
+    @include respond(desktop-big) {
+      width: 23%;
+    }
+  }
+  &__new {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    padding: 0.2rem 1rem;
+    border-radius: 2px;
+    background-color: $tertiary-color;
+    color: $tertiary-color-dark;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &__informations {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  &__quartier {
+    font-size: 1.7rem;
+  }
+}

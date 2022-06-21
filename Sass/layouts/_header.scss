@@ -1,0 +1,68 @@
+.header {
+  background-color: $light-grey;
+  &__logo-box {
+    width: 100%;
+    background-color: $white;
+    padding: 1.5rem;
+
+    @include respond(desktop) {
+      background-color: $light-grey;
+      margin: 0 auto;
+    }
+    @include respond(desktop-big) {
+      padding: 2.5rem;
+      background-color: $light-grey;
+      margin: 0px;
+    }
+  }
+
+  &__logo {
+    height: 3rem;
+    display: block;
+
+    @include respond(desktop) {
+      height: 3.5rem;
+      display: block;
+      margin: 0;
+    }
+    @include respond(desktop-big) {
+      height: 4rem;
+      display: block;
+      margin: 0;
+    }
+
+    &--page {
+      display: inline-block;
+      margin: 0 auto !important;
+    }
+  }
+}
+
+.location {
+  background-color: $medium-grey;
+  border-top: 0.5rem solid $dark-grey;
+  width: 100%;
+  height: 5rem;
+
+  @include respond(desktop) {
+    height: 3.5rem;
+    background-color: $light-grey;
+    border-top: none;
+  }
+  @include respond(desktop-big) {
+    height: 4rem;
+    background-color: $light-grey;
+    border-top: none;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    line-height: 2.5 !important;
+  }
+
+  &__adress {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.5;
+  }
+}
