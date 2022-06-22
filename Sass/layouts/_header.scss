@@ -3,7 +3,8 @@
   &__logo-box {
     width: 100%;
     background-color: $white;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-top: 2rem;
 
     @include respond(desktop) {
       background-color: $light-grey;

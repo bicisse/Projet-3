@@ -1,15 +1,11 @@
 .btn {
   @include gradient;
-
-  font-size: 1.5rem;
-  font-weight: 00;
-
-  padding: 1.6rem 3rem;
+  padding: 1.6rem;
+  width: 18rem;
   border-radius: 50rem;
   border: none;
-  margin: 2.5rem 2rem;
   cursor: pointer;
-  box-shadow: 0rem 1rem 2rem rgb(0 0 0 / 20%);
+  box-shadow: $shadow-1;
   z-index: 0;
 
   @include respond(desktop) {
@@ -52,9 +48,42 @@
     }
   }
 
+  &__header {
+    width: 22rem;
+    margin: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    @include respond(tab-port) {
+      width: 42rem;
+      margin: 3rem;
+      font-size: 2.7rem;
+      padding: 2rem;
+    }
+    @include respond(tab-land) {
+      width: 42rem;
+      margin: 3rem;
+      font-size: 2.7rem;
+      padding: 2rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 2.5rem;
+      width: 35rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 2.5rem;
+      width: 35rem;
+    }
+  }
   &__commander {
     text-align: center;
-    margin-top: 8rem;
-    margin-bottom: 10rem;
+    margin: 3rem;
+
+    span {
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
   }
 }

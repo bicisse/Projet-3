@@ -47,13 +47,16 @@
 
   &__fonctionnement-box {
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
   }
   &__restaurant {
     flex-direction: column;
     gap: 2.5rem;
     flex-wrap: wrap;
 
+    &:first-child {
+      gap: 1.5rem;
+    }
     @include respond(tab-port) {
       flex-direction: row !important;
     }
@@ -81,9 +84,10 @@
 
   &__restaurant-cards {
     flex-direction: column;
-    gap: 3rem;
-    margin-bottom: 8rem;
+    gap: 1.3rem;
+
     justify-content: center;
+    margin-bottom: 2rem;
 
     @include respond(desktop) {
       flex-direction: row;

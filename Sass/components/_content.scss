@@ -1,17 +1,24 @@
 .course {
-  padding: 3rem;
-  padding-top: 5rem;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
   height: fit-content;
   background-color: $light-grey;
   &__title {
-    margin-bottom: 3rem;
-    padding-left: 5%;
+    padding-left: 1%;
+
+    @include respond(desktop) {
+      padding-left: 5%;
+    }
+
+    @include respond(desktop-big) {
+      padding-left: 5%;
+    }
 
     h2 {
       text-transform: uppercase;
-      font-size: 2.5rem;
+      font-size: 1.7rem;
       font-weight: 400;
-      padding: 2rem 0;
+      padding: 2.2rem 0;
 
       @include respond(desktop) {
         font-size: 3.5rem;
@@ -22,8 +29,8 @@
       }
     }
     &--underline {
-      border-bottom: 0.7rem solid $tertiary-color;
-      padding-bottom: 1rem;
+      border-bottom: 0.3rem solid $tertiary-color;
+      padding-bottom: 0.5rem;
     }
   }
 }
@@ -34,13 +41,15 @@
 
   &__card {
     background-color: $white;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
     overflow: hidden;
-    padding: 2rem 3rem;
+    padding: 1.2rem 1rem;
     position: relative;
     cursor: pointer;
-    box-shadow: $shadow-2;
+
     width: 100%;
+    min-height: 6.7rem;
+    height: fit-content;
 
     @include respond(desktop) {
       width: 33.3333%;
@@ -51,25 +60,26 @@
     }
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: $shadow-1;
+      & .dish__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
       & .dish__dish {
-        width: 66%;
+        width: 85%;
       }
 
       & .dish__icon {
-        transform: translateX(-2.5rem) rotate(360deg);
+        transform: translateX(-2rem) rotate(360deg);
       }
 
       & .dish__price {
-        transform: translateX(-8rem);
-        width: 10%;
+        transform: translateX(-6rem);
+        width: 12%;
       }
-    }
-
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: $shadow-1;
+      & .dish__checked {
+        background-color: $tertiary-color;
+      }
     }
   }
 
@@ -77,14 +87,15 @@
   &__dish,
   &__side,
   &__price,
-  &__icon {
+  &__icon,
+  &__checked {
     transition: all 0.3s ease-out;
   }
   &__name {
     font-weight: 600;
-    font-size: 1.9rem;
-    white-space: nowrap;
-    width: 100%;
+    font-size: 1.8rem;
+
+    width: 80%;
     @include respond(desktop) {
       font-size: 2rem;
     }
@@ -94,7 +105,7 @@
   }
 
   &__side {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 300;
     white-space: nowrap;
     width: 100%;
@@ -105,12 +116,7 @@
       font-size: 2.5rem;
     }
   }
-  &__name,
-  &__side {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+
   &__price {
     height: 100%;
     width: 15%;
@@ -121,9 +127,8 @@
     top: 0;
     span {
       font-weight: 700;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       line-height: 6;
-      padding: 0 2rem;
 
       @include respond(desktop) {
         font-size: 2rem;
@@ -142,14 +147,13 @@
     top: 0;
     height: 110%;
     width: 20%;
-    background-color: $tertiary-color;
   }
   &__icon {
     position: absolute;
     top: 35%;
     right: 0;
     color: $white;
-    font-size: 2.2rem;
+    font-size: 2rem;
     @include respond(desktop) {
       font-size: 3rem;
     }

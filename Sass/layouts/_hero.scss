@@ -5,19 +5,37 @@
   width: 100%;
   overflow: hidden;
   padding: 3rem 0;
+  @include respond(tab-port) {
+    height: 40rem;
+  }
+  @include respond(tab-land) {
+    height: 43rem;
+  }
+  @include respond(desktop) {
+    padding: 8rem 0;
+    height: 43rem;
+  }
+
   h1 {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     width: 70%;
     line-height: normal;
     font-weight: 700;
     margin: 1rem 0;
 
-    @include respond(desktop) {
+    @include respond(tab-port) {
       font-size: 4.5rem;
     }
-    @include respond(desktop-big) {
+    @include respond(tab-land) {
       font-size: 4.5rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 5rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 5rem;
     }
   }
 }
@@ -25,13 +43,22 @@
 h2 {
   font-size: 1.8rem;
   font-weight: 300;
-  width: 90%;
+  width: 91%;
   line-height: normal;
+  @include respond(tab-port) {
+    font-size: 3.5rem;
+    width: 80%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 3.5rem;
+    width: 80%;
+  }
 
   @include respond(desktop) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   @include respond(desktop-big) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }

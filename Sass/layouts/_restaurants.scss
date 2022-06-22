@@ -1,6 +1,8 @@
 .restaurant {
   background-color: $light-grey;
-  padding: 4rem 2.5rem;
+  padding: 2.5rem;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
   margin-top: 7rem;
 
   h3 {
@@ -17,6 +19,19 @@
     transition: transform 0.2s ease-in-out;
     margin: 0 auto;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      height: 30rem;
+    }
+    @include respond(tab-land) {
+      height: 30rem;
+    }
+    @include respond(desktop) {
+      height: 30rem;
+    }
+    @include respond(desktop-big) {
+      height: 30rem;
+    }
 
     &:last-child {
       margin-bottom: 5rem;
@@ -43,7 +58,7 @@
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
-    padding: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
     border-radius: 2px;
     background-color: $tertiary-color;
     color: $tertiary-color-dark;
@@ -63,13 +78,46 @@
 
     padding-left: 2rem;
     padding-top: 1rem;
+    @include respond(tab-port) {
+      padding-top: 0.5rem;
+    }
+    @include respond(tab-land) {
+      padding-top: 0.5rem;
+    }
   }
 
   &__name {
     font-weight: 700;
     font-size: 1.8rem;
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2.5rem;
+    }
+    @include respond(desktop) {
+      font-size: 2.3rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 2.3rem;
+    }
   }
   &__quartier {
     font-size: 1.7rem;
+
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 2.4rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 2.2rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 2.2rem;
+    }
   }
 }

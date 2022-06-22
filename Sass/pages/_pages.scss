@@ -2,21 +2,21 @@
   position: relative;
 
   &__img {
-    height: 25rem;
+    height: 27rem;
     width: 100%;
     object-fit: cover;
 
     @include respond(desktop) {
-      height: 45rem;
+      height: 40rem;
     }
     @include respond(desktop-big) {
-      height: 45rem;
+      height: 30rem;
     }
   }
 
   &__name {
     font-family: "Shrikhand";
-    font-size: 2.3rem;
+    font-size: 3rem;
     font-weight: 100;
 
     max-width: 1800px;
@@ -26,19 +26,20 @@
   &__name-box {
     background-color: $light-grey;
     position: absolute;
-    bottom: -5rem;
+    bottom: -2rem;
     width: 100%;
-    padding: 5rem;
-    padding-top: 6rem;
+    padding: 2rem;
+    padding-top: 3rem;
+    padding-right: 5rem;
     padding-bottom: 0;
-    border-radius: 6rem;
+    border-radius: 4rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
   &__favorite {
     .favorite {
       right: -1rem;
-      top: 1;
+      top: 0.5rem;
       font-size: 3rem;
     }
   }

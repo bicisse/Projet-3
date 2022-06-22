@@ -2,7 +2,7 @@
   display: inline-block;
   position: absolute;
   &__icon {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 2.5rem;
     margin: auto 0;
     position: absolute;
@@ -11,9 +11,11 @@
 
     @include respond(desktop) {
       padding: 2.5rem 3.5rem;
+      font-size: 3rem;
     }
     @include respond(desktop-big) {
       padding: 2.5rem 3.5rem;
+      font-size: 3rem;
     }
 
     &:visited {

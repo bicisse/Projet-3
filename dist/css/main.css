@@ -211,12 +211,15 @@ h3 {
 }
 .flex__fonctionnement-box {
   flex-direction: row;
-  gap: 3rem;
+  gap: 2rem;
 }
 .flex__restaurant {
   flex-direction: column;
   gap: 2.5rem;
   flex-wrap: wrap;
+}
+.flex__restaurant:first-child {
+  gap: 1.5rem;
 }
 @media (min-width: 37.5em) and (max-width: 56.25em) {
   .flex__restaurant {
@@ -250,9 +253,9 @@ h3 {
 }
 .flex__restaurant-cards {
   flex-direction: column;
-  gap: 3rem;
-  margin-bottom: 8rem;
+  gap: 1.3rem;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .flex__restaurant-cards {
@@ -270,10 +273,13 @@ h3 {
 .footer {
   width: 100%;
   color: #fff;
+  background-color: black;
+  padding: 3rem;
+  height: 19.5rem;
 }
 .footer__logo {
   filter: invert(1);
-  margin-bottom: 25px;
+  margin-bottom: 1.8rem;
   height: 1.7rem;
 }
 .footer__icon {
@@ -294,7 +300,8 @@ h3 {
 .header__logo-box {
   width: 100%;
   background-color: #fff;
-  padding: 1.5rem;
+  padding: 1rem;
+  padding-top: 2rem;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .header__logo-box {
@@ -370,39 +377,77 @@ h3 {
   overflow: hidden;
   padding: 3rem 0;
 }
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .hero {
+    height: 40rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .hero {
+    height: 43rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .hero {
+    padding: 8rem 0;
+    height: 43rem;
+  }
+}
 .hero h1 {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   width: 70%;
   line-height: normal;
   font-weight: 700;
   margin: 1rem 0;
 }
-@media (min-width: 75em) and (max-width: 112.5em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
   .hero h1 {
     font-size: 4.5rem;
   }
 }
-@media (min-width: 112.5em) {
+@media (min-width: 56.25em) and (max-width: 75em) {
   .hero h1 {
     font-size: 4.5rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .hero h1 {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .hero h1 {
+    font-size: 5rem;
   }
 }
 
 h2 {
   font-size: 1.8rem;
   font-weight: 300;
-  width: 90%;
+  width: 91%;
   line-height: normal;
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  h2 {
+    font-size: 3.5rem;
+    width: 80%;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  h2 {
+    font-size: 3.5rem;
+    width: 80%;
+  }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 112.5em) {
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -420,6 +465,34 @@ h2 {
   line-height: 2.5;
   cursor: pointer;
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .fonctionnement__step {
+    height: 9rem;
+    line-height: 2;
+    border-radius: 2rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .fonctionnement__step {
+    height: 9rem;
+    line-height: 2;
+    border-radius: 2rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .fonctionnement__step {
+    height: 7rem;
+    border-radius: 1.3rem;
+    line-height: 1.7;
+  }
+}
+@media (min-width: 112.5em) {
+  .fonctionnement__step {
+    height: 7rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+  }
 }
 .fonctionnement__step:hover {
   background-color: #e4d5f6;
@@ -440,10 +513,36 @@ h2 {
   text-align: center;
   line-height: 1.6;
 }
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .fonctionnement__number span {
+    font-size: 2rem;
+    line-height: 1.5;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .fonctionnement__number span {
+    font-size: 2rem;
+    line-height: 1.5;
+    height: 3rem;
+    width: 3rem;
+  }
+}
 .fonctionnement__icon {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #999;
-  line-height: 1.5 !important;
+  line-height: 2 !important;
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .fonctionnement__icon {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .fonctionnement__icon {
+    font-size: 2.3rem;
+  }
 }
 .fonctionnement__box {
   padding-left: 2rem;
@@ -452,10 +551,32 @@ h2 {
   font-size: 1.6rem;
   font-weight: 600;
 }
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .fonctionnement__text {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .fonctionnement__text {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .fonctionnement__text {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .fonctionnement__text {
+    font-size: 2.5rem;
+  }
+}
 
 .restaurant {
   background-color: #f2f2f2;
-  padding: 4rem 2.5rem;
+  padding: 2.5rem;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
   margin-top: 7rem;
 }
 .restaurant h3 {
@@ -472,6 +593,26 @@ h2 {
   transition: transform 0.2s ease-in-out;
   margin: 0 auto;
   cursor: pointer;
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .restaurant__card {
+    height: 30rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .restaurant__card {
+    height: 30rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .restaurant__card {
+    height: 30rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .restaurant__card {
+    height: 30rem;
+  }
 }
 .restaurant__card:last-child {
   margin-bottom: 5rem;
@@ -504,7 +645,7 @@ h2 {
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem 1rem;
   border-radius: 2px;
   background-color: #99e2d0;
   color: #32b091;
@@ -525,22 +666,70 @@ h2 {
   padding-left: 2rem;
   padding-top: 1rem;
 }
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .restaurant__informations {
+    padding-top: 0.5rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .restaurant__informations {
+    padding-top: 0.5rem;
+  }
+}
 .restaurant__name {
   font-weight: 700;
   font-size: 1.8rem;
 }
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .restaurant__name {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .restaurant__name {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .restaurant__name {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .restaurant__name {
+    font-size: 2.3rem;
+  }
+}
 .restaurant__quartier {
   font-size: 1.7rem;
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .restaurant__quartier {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .restaurant__quartier {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .restaurant__quartier {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .restaurant__quartier {
+    font-size: 2.2rem;
+  }
 }
 
 .btn {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  font-size: 1.5rem;
-  font-weight: 0;
-  padding: 1.6rem 3rem;
+  padding: 1.6rem;
+  width: 18rem;
   border-radius: 50rem;
   border: none;
-  margin: 2.5rem 2rem;
   cursor: pointer;
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
   z-index: 0;
@@ -582,10 +771,48 @@ h2 {
   transform: translateY(-1px);
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+.btn__header {
+  width: 22rem;
+  margin: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .btn__header {
+    width: 42rem;
+    margin: 3rem;
+    font-size: 2.7rem;
+    padding: 2rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .btn__header {
+    width: 42rem;
+    margin: 3rem;
+    font-size: 2.7rem;
+    padding: 2rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .btn__header {
+    font-size: 2.5rem;
+    width: 35rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .btn__header {
+    font-size: 2.5rem;
+    width: 35rem;
+  }
+}
 .btn__commander {
   text-align: center;
-  margin-top: 8rem;
-  margin-bottom: 10rem;
+  margin: 3rem;
+}
+.btn__commander span {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .favorite {
@@ -622,13 +849,39 @@ h2 {
 .favorite:hover .favorite--filled:active {
   transform: translateY(-1px);
 }
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .favorite {
+    top: 1rem;
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .favorite {
+    top: 1rem;
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .favorite {
+    right: 1rem;
+    top: 1.5rem;
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .favorite {
+    right: 1rem;
+    top: 1.5rem;
+    font-size: 2.8rem;
+  }
+}
 
 .arrow {
   display: inline-block;
   position: absolute;
 }
 .arrow__icon {
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 2.5rem;
   margin: auto 0;
   position: absolute;
@@ -638,11 +891,13 @@ h2 {
 @media (min-width: 75em) and (max-width: 112.5em) {
   .arrow__icon {
     padding: 2.5rem 3.5rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 112.5em) {
   .arrow__icon {
     padding: 2.5rem 3.5rem;
+    font-size: 3rem;
   }
 }
 .arrow__icon:visited {
@@ -654,22 +909,31 @@ h2 {
 }
 
 .course {
-  padding: 3rem;
-  padding-top: 5rem;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: #f2f2f2;
 }
 .course__title {
-  margin-bottom: 3rem;
-  padding-left: 5%;
+  padding-left: 1%;
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .course__title {
+    padding-left: 5%;
+  }
+}
+@media (min-width: 112.5em) {
+  .course__title {
+    padding-left: 5%;
+  }
 }
 .course__title h2 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-weight: 400;
-  padding: 2rem 0;
+  padding: 2.2rem 0;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .course__title h2 {
@@ -682,19 +946,22 @@ h2 {
   }
 }
 .course__title--underline {
-  border-bottom: 0.7rem solid #99e2d0;
-  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid #99e2d0;
+  padding-bottom: 0.5rem;
 }
 
 .dish__card {
   background-color: #fff;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   overflow: hidden;
-  padding: 2rem 3rem;
+  padding: 1.2rem 1rem;
   position: relative;
   cursor: pointer;
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   width: 100%;
+  min-height: 6.7rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__card {
@@ -706,32 +973,31 @@ h2 {
     width: 33.3333%;
   }
 }
-.dish__card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+.dish__card:hover .dish__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .dish__card:hover .dish__dish {
-  width: 66%;
+  width: 85%;
 }
 .dish__card:hover .dish__icon {
-  transform: translateX(-2.5rem) rotate(360deg);
+  transform: translateX(-2rem) rotate(360deg);
 }
 .dish__card:hover .dish__price {
-  transform: translateX(-8rem);
-  width: 10%;
+  transform: translateX(-6rem);
+  width: 12%;
 }
-.dish__card:active {
-  transform: translateY(-1px);
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+.dish__card:hover .dish__checked {
+  background-color: #99e2d0;
 }
-.dish__name, .dish__dish, .dish__side, .dish__price, .dish__icon {
+.dish__name, .dish__dish, .dish__side, .dish__price, .dish__icon, .dish__checked {
   transition: all 0.3s ease-out;
 }
 .dish__name {
   font-weight: 600;
-  font-size: 1.9rem;
-  white-space: nowrap;
-  width: 100%;
+  font-size: 1.8rem;
+  width: 80%;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__name {
@@ -744,7 +1010,7 @@ h2 {
   }
 }
 .dish__side {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 300;
   white-space: nowrap;
   width: 100%;
@@ -759,11 +1025,6 @@ h2 {
     font-size: 2.5rem;
   }
 }
-.dish__name, .dish__side {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 .dish__price {
   height: 100%;
   width: 15%;
@@ -775,9 +1036,8 @@ h2 {
 }
 .dish__price span {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 6;
-  padding: 0 2rem;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__price span {
@@ -797,14 +1057,13 @@ h2 {
   top: 0;
   height: 110%;
   width: 20%;
-  background-color: #99e2d0;
 }
 .dish__icon {
   position: absolute;
   top: 35%;
   right: 0;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__icon {
@@ -821,41 +1080,42 @@ h2 {
   position: relative;
 }
 .restaurant-page__img {
-  height: 25rem;
+  height: 27rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .restaurant-page__img {
-    height: 45rem;
+    height: 40rem;
   }
 }
 @media (min-width: 112.5em) {
   .restaurant-page__img {
-    height: 45rem;
+    height: 30rem;
   }
 }
 .restaurant-page__name {
   font-family: "Shrikhand";
-  font-size: 2.3rem;
+  font-size: 3rem;
   font-weight: 100;
   max-width: 1800px;
 }
 .restaurant-page__name-box {
   background-color: #f2f2f2;
   position: absolute;
-  bottom: -5rem;
+  bottom: -2rem;
   width: 100%;
-  padding: 5rem;
-  padding-top: 6rem;
+  padding: 2rem;
+  padding-top: 3rem;
+  padding-right: 5rem;
   padding-bottom: 0;
-  border-radius: 6rem;
+  border-radius: 4rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 .restaurant-page__favorite .favorite {
   right: -1rem;
-  top: 1;
+  top: 0.5rem;
   font-size: 3rem;
 }/*# sourceMappingURL=main.css.map */
