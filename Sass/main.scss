@@ -14,11 +14,13 @@
 @import "layouts/hero";
 @import "layouts/fonctionnement";
 @import "layouts/restaurants";
+@import "layouts/loading-spinner";
 
 @import "components/buttons";
 @import "components/favorite";
 @import "components/arrow";
-@import "components/content";
+@import "components/dish";
+@import "components/course";
 
 @import "pages/home";
 @import "pages/pages";

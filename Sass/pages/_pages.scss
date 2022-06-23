@@ -16,10 +16,22 @@
 
   &__name {
     font-family: "Shrikhand";
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 100;
 
     max-width: 1800px;
+    @include respond(tab-port) {
+      font-size: 3.5rem;
+    }
+    @include respond(tab-land) {
+      font-size: 3.5rem;
+    }
+    @include respond(desktop) {
+      font-size: 4rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 4rem;
+    }
 
     // TODO: changer le font weight de la police.
   }
@@ -35,6 +47,19 @@
     border-radius: 4rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+
+    @include respond(tab-port) {
+      bottom: -10rem;
+    }
+    @include respond(tab-land) {
+      bottom: -10rem;
+    }
+    @include respond(desktop) {
+      bottom: -10rem;
+    }
+    @include respond(desktop-big) {
+      bottom: -10rem;
+    }
   }
   &__favorite {
     .favorite {

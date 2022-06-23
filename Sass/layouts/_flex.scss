@@ -1,5 +1,9 @@
 .flex {
   display: flex;
+
+  &__spinner {
+    gap: 3rem;
+  }
   &__location {
     gap: 2rem;
     justify-content: center;
@@ -84,18 +88,41 @@
 
   &__restaurant-cards {
     flex-direction: column;
-    gap: 1.3rem;
-
+    gap: 1rem;
     justify-content: center;
-    margin-bottom: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(desktop) {
+      gap: 3rem;
+    }
+    @include respond(desktop-big) {
+      gap: 3rem;
+    }
+  }
+
+  &__course {
+    flex-direction: column;
 
     @include respond(desktop) {
       flex-direction: row;
-      gap: 1.5rem;
+      gap: 5rem;
     }
     @include respond(desktop-big) {
       flex-direction: row;
-      gap: 1.5rem;
+      gap: 5rem;
+    }
+  }
+
+  &__choice {
+    flex-direction: column;
+    @include respond(desktop) {
+      flex-direction: column;
+    }
+    @include respond(desktop-big) {
+      flex-direction: column;
     }
   }
 }

@@ -28,6 +28,7 @@
     }
     @include respond(desktop) {
       height: 30rem;
+      // flex-direction: column;
     }
     @include respond(desktop-big) {
       height: 30rem;

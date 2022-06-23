@@ -1,10 +1,4 @@
-@mixin abs-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
+// MEDIA QUERIES
 // -phone : 0 to 600px
 // -tab-port: 600 to 900px
 // -tab-land: 900 to 1200px
@@ -40,12 +34,23 @@
   }
 }
 
+// GRADIENTS
+
 @mixin gradient {
   background: linear-gradient(
     to bottom right,
     $secondary-color,
     $primary-color
   );
+}
+@mixin gradient-2 {
+  background: linear-gradient(to right, $tertiary-color, $primary-color);
+}
+@mixin gradient-3 {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+}
+@mixin gradient-4 {
+  background: linear-gradient(to right, $secondary-color, $tertiary-color);
 }
 
 @mixin fct-hover($color: $primary-color) {
