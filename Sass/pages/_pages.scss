@@ -16,20 +16,15 @@
 
   &__name {
     font-family: "Shrikhand";
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 100;
 
     max-width: 1800px;
-    @include respond(tab-port) {
-      font-size: 3.5rem;
+    @include respond(tablet) {
+      font-size: 4.5rem;
     }
-    @include respond(tab-land) {
-      font-size: 3.5rem;
-    }
-    @include respond(desktop) {
-      font-size: 4rem;
-    }
-    @include respond(desktop-big) {
+
+    @include respond(desktop-all-sizes) {
       font-size: 4rem;
     }
 
@@ -48,23 +43,18 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 
-    @include respond(tab-port) {
+    @include respond(tablet) {
       bottom: -10rem;
     }
-    @include respond(tab-land) {
-      bottom: -10rem;
-    }
-    @include respond(desktop) {
-      bottom: -10rem;
-    }
-    @include respond(desktop-big) {
+    @include respond(desktop-all-sizes) {
       bottom: -10rem;
     }
   }
+
   &__favorite {
     .favorite {
       right: -1rem;
-      top: 0.5rem;
+      top: 0rem;
       font-size: 3rem;
     }
   }

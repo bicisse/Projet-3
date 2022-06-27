@@ -24,17 +24,11 @@
     font-weight: 700;
     margin: 1rem 0;
 
-    @include respond(tab-port) {
-      font-size: 4.5rem;
-    }
-    @include respond(tab-land) {
+    @include respond(tablet) {
       font-size: 4.5rem;
     }
 
-    @include respond(desktop) {
-      font-size: 5rem;
-    }
-    @include respond(desktop-big) {
+    @include respond(desktop-all-sizes) {
       font-size: 5rem;
     }
   }
@@ -45,20 +39,12 @@ h2 {
   font-weight: 300;
   width: 91%;
   line-height: normal;
-  @include respond(tab-port) {
+  @include respond(tablet) {
     font-size: 3.5rem;
     width: 80%;
   }
 
-  @include respond(tab-land) {
-    font-size: 3.5rem;
-    width: 80%;
-  }
-
-  @include respond(desktop) {
-    font-size: 4rem;
-  }
-  @include respond(desktop-big) {
+  @include respond(desktop-all-sizes) {
     font-size: 4rem;
   }
 }

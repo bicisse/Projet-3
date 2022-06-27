@@ -20,19 +20,15 @@
     margin: 0 auto;
     cursor: pointer;
 
-    @include respond(tab-port) {
+    @include respond(tablet) {
       height: 30rem;
     }
-    @include respond(tab-land) {
-      height: 30rem;
-    }
-    @include respond(desktop) {
+   
+    @include respond(desktop-all-sizes) {
       height: 30rem;
       // flex-direction: column;
     }
-    @include respond(desktop-big) {
-      height: 30rem;
-    }
+  
 
     &:last-child {
       margin-bottom: 5rem;
@@ -42,18 +38,14 @@
       transform: translateY(-1rem) scale(1.02);
     }
 
-    @include respond(tab-port) {
+    @include respond(tablet) {
       width: 48%;
     }
-    @include respond(tab-land) {
-      width: 48%;
-    }
-    @include respond(desktop) {
+   
+    @include respond(desktop-all-sizes) {
       width: 23%;
     }
-    @include respond(desktop-big) {
-      width: 23%;
-    }
+   
   }
   &__new {
     position: absolute;
@@ -79,46 +71,36 @@
 
     padding-left: 2rem;
     padding-top: 1rem;
-    @include respond(tab-port) {
+    @include respond(tablet) {
       padding-top: 0.5rem;
     }
-    @include respond(tab-land) {
-      padding-top: 0.5rem;
-    }
+    
   }
 
   &__name {
     font-weight: 700;
     font-size: 1.8rem;
-    @include respond(tab-port) {
+    @include respond(tablet) {
       font-size: 2.5rem;
     }
-    @include respond(tab-land) {
-      font-size: 2.5rem;
-    }
-    @include respond(desktop) {
+  
+    @include respond(desktop-all-sizes) {
       font-size: 2.3rem;
     }
-    @include respond(desktop-big) {
-      font-size: 2.3rem;
-    }
+    
   }
   &__quartier {
     font-size: 1.7rem;
 
-    @include respond(tab-port) {
+    @include respond(tablet) {
       font-size: 2.4rem;
     }
 
-    @include respond(tab-land) {
-      font-size: 2.4rem;
-    }
+   
 
-    @include respond(desktop) {
+    @include respond(desktop-all-sizes) {
       font-size: 2.2rem;
     }
-    @include respond(desktop-big) {
-      font-size: 2.2rem;
-    }
+    
   }
 }

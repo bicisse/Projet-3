@@ -4,10 +4,8 @@
   height: fit-content;
   background-color: $light-grey;
 
-  @include respond(tab-port) {
-    padding-top: 10rem;
-  }
-  @include respond(tab-land) {
+  @include respond(tablet) {
+    padding: 2.5rem;
     padding-top: 10rem;
   }
   @include respond(desktop) {
@@ -25,19 +23,12 @@
       font-weight: 400;
       padding: 2.2rem 0;
 
-      @include respond(tab-port) {
+      @include respond(tablet) {
         font-size: 3rem;
+        margin-bottom: 2rem;
       }
 
-      @include respond(tab-land) {
-        font-size: 3rem;
-      }
-
-      @include respond(desktop) {
-        font-size: 3.5rem;
-      }
-
-      @include respond(desktop-big) {
+      @include respond(desktop-all-sizes) {
         font-size: 3.5rem;
       }
     }
@@ -48,11 +39,7 @@
   }
 
   &__choice {
-    @include respond(desktop) {
-      width: 33.3333%;
-    }
-
-    @include respond(desktop-big) {
+    @include respond(desktop-all-sizes) {
       width: 33.3333%;
     }
   }

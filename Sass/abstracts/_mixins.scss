@@ -20,6 +20,13 @@
     }
   }
 
+  @if $breakpoint == tablet {
+    @media (min-width: 37.5em) and(max-width: 75em) {
+      //both landscape and portrait
+      @content;
+    }
+  }
+
   @if $breakpoint == desktop {
     @media (min-width: 75em) and (max-width: 112.5em) {
       //up to 1800px
@@ -29,6 +36,13 @@
   @if $breakpoint == desktop-big {
     @media (min-width: 112.5em) {
       //> 1800px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-all-sizes {
+    @media (min-width: 75em) {
+      //>1200. Covers the range of "desktop" et "desktop-big"
       @content;
     }
   }

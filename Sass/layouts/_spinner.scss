@@ -1,0 +1,93 @@
+.spinner {
+  // display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: $white;
+  opacity: 1;
+  transition: opacity 3s;
+  position: fixed;
+
+  z-index: 3000;
+  // Make the loading spinner disappear
+  animation: disappearing 3s ease-out;
+  animation-fill-mode: forwards;
+
+  &__center {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__ball {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    &--inside {
+      animation: inside 0.5s linear infinite;
+      animation-fill-mode: both;
+
+      &-1 {
+        background-color: $secondary-color;
+      }
+      &-2 {
+        background-color: $secondary-color;
+        animation-delay: 0.3333s;
+      }
+      &-3 {
+        background-color: $secondary-color;
+        animation-delay: 0.6666s;
+      }
+    }
+
+    // &--outside {
+    //   animation: outside 1.8s linear infinite;
+    //   &-1 {
+    //     background-color: $tertiary-color;
+    //   }
+    //   &-2 {
+    //     background-color: $tertiary-color;
+    //     animation-delay: 0.3s;
+    //   }
+    //   &-3 {
+    //     background-color: $tertiary-color;
+    //     animation-delay: 0.6s;
+    //   }
+    // }
+  }
+  // Animations
+  @keyframes inside {
+    0% {
+      transform: translateY(3rem);
+      background-color: $secondary-color;
+    }
+
+    50% {
+      transform: translateY(-3rem);
+      background-color: $tertiary-color;
+    }
+
+    100% {
+      transform: translateY(3rem);
+      background-color: $primary-color;
+    }
+  }
+
+  @keyframes disappearing {
+    0% {
+      opacity: 1;
+      width: 100%;
+    }
+    99% {
+      opacity: 1;
+      width: 100%;
+    }
+
+    100% {
+      opacity: 0%;
+      width: 0%;
+    }
+  }
+}
