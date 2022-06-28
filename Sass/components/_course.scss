@@ -9,10 +9,10 @@
     padding-top: 10rem;
   }
   @include respond(desktop) {
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
   @include respond(desktop-big) {
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
   &__title {
     padding-left: 2%;
@@ -25,7 +25,7 @@
 
       @include respond(tablet) {
         font-size: 3rem;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
       }
 
       @include respond(desktop-all-sizes) {

@@ -6,6 +6,10 @@
     width: 100%;
     object-fit: cover;
 
+    @include respond(tablet) {
+      height: 40rem;
+    }
+
     @include respond(desktop) {
       height: 40rem;
     }
@@ -44,10 +48,10 @@
     border-bottom-right-radius: 0;
 
     @include respond(tablet) {
-      bottom: -10rem;
+      bottom: -5rem;
     }
     @include respond(desktop-all-sizes) {
-      bottom: -10rem;
+      bottom: -5rem;
     }
   }
 
@@ -56,6 +60,16 @@
       right: -1rem;
       top: 0rem;
       font-size: 2.5rem;
+      @include respond(tablet) {
+        right: 1rem;
+        top: 0.5rem;
+        font-size: 3.5rem;
+      }
+
+      @include respond(desktop-all-sizes) {
+        right: 1rem;
+        font-size: 3.5rem;
+      }
     }
   }
 }

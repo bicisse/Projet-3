@@ -23,12 +23,11 @@
     @include respond(tablet) {
       height: 30rem;
     }
-   
+
     @include respond(desktop-all-sizes) {
       height: 30rem;
       // flex-direction: column;
     }
-  
 
     &:last-child {
       margin-bottom: 5rem;
@@ -41,11 +40,10 @@
     @include respond(tablet) {
       width: 48%;
     }
-   
+
     @include respond(desktop-all-sizes) {
       width: 23%;
     }
-   
   }
   &__new {
     position: absolute;
@@ -57,6 +55,14 @@
     color: $tertiary-color-dark;
     font-size: 1.5rem;
     font-weight: 600;
+
+    @include respond(tablet) {
+      font-size: 2rem;
+    }
+
+    @include respond(desktop-all-sizes) {
+      font-size: 2rem;
+    }
   }
   &__img {
     height: 70%;
@@ -74,7 +80,6 @@
     @include respond(tablet) {
       padding-top: 0.5rem;
     }
-    
   }
 
   &__name {
@@ -83,11 +88,10 @@
     @include respond(tablet) {
       font-size: 2.5rem;
     }
-  
+
     @include respond(desktop-all-sizes) {
       font-size: 2.3rem;
     }
-    
   }
   &__quartier {
     font-size: 1.7rem;
@@ -96,11 +100,8 @@
       font-size: 2.4rem;
     }
 
-   
-
     @include respond(desktop-all-sizes) {
       font-size: 2.2rem;
     }
-    
   }
 }

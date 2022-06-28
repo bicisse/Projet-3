@@ -3,12 +3,19 @@
   color: $white;
   background-color: black;
   padding: 3rem;
-  height: 19.5rem;
+  height: fit-content;
 
   &__logo {
     filter: invert(1);
     margin-bottom: 1.8rem;
     height: 1.7rem;
+
+    @include respond(tablet) {
+      height: 2.3rem;
+    }
+    @include respond(desktop-all-sizes) {
+      height: 2.5rem;
+    }
   }
 
   &__icon {
@@ -20,6 +27,14 @@
     a:link,
     a:hover {
       color: white;
+
+      @include respond(tablet) {
+        font-size: 2.3rem;
+      }
+
+      @include respond(desktop-all-sizes) {
+        font-size: 2.5rem;
+      }
     }
   }
 }

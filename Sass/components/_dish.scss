@@ -43,7 +43,10 @@
         @include respond(tablet) {
           transform: translateX(-5.5rem) rotate(360deg);
         }
-        @include respond(desktop-all-sizes) {
+        @include respond(desktop) {
+          transform: translateX(-2rem) rotate(360deg);
+        }
+        @include respond(desktop-big) {
           transform: translateX(-3rem) rotate(360deg);
         }
       }
@@ -57,6 +60,12 @@
 
         @include respond(desktop-all-sizes) {
           transform: translateX(-9rem);
+        }
+      }
+
+      & .dish__checked {
+        @include respond(desktop-all-sizes) {
+          width: 20%;
         }
       }
     }
@@ -83,7 +92,7 @@
       font-size: 3.5rem;
     }
     @include respond(desktop) {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     @include respond(desktop-big) {
       font-size: 2.5rem;
@@ -103,7 +112,7 @@
     }
 
     @include respond(desktop) {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
     @include respond(desktop-big) {
       font-size: 2.2rem;
@@ -137,6 +146,7 @@
       @include respond(desktop) {
         font-size: 2rem;
         line-height: 5;
+        padding: 0;
       }
 
       @include respond(desktop-big) {

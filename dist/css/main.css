@@ -262,12 +262,24 @@ h3 {
   color: #fff;
   background-color: black;
   padding: 3rem;
-  height: 19.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .footer__logo {
   filter: invert(1);
   margin-bottom: 1.8rem;
   height: 1.7rem;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .footer__logo {
+    height: 2.3rem;
+  }
+}
+@media (min-width: 75em) {
+  .footer__logo {
+    height: 2.5rem;
+  }
 }
 .footer__icon {
   line-height: 1;
@@ -279,6 +291,20 @@ h3 {
 .footer__link a:link,
 .footer__link a:hover {
   color: white;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .footer__link a:visited,
+.footer__link a:link,
+.footer__link a:hover {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 75em) {
+  .footer__link a:visited,
+.footer__link a:link,
+.footer__link a:hover {
+    font-size: 2.5rem;
+  }
 }
 
 .header {
@@ -293,43 +319,58 @@ h3 {
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
   .header__logo-box {
-    padding: 2.5rem;
-    background-color: #f2f2f2;
     margin: 0px;
-    text-align: left;
   }
 }
-@media (min-width: 37.5em) and (max-width: 75em) and (min-width: 75em) {
+@media (min-width: 75em) {
   .header__logo-box {
-    background-color: #f2f2f2;
     margin: 0 auto;
     text-align: left;
+    padding: 5rem;
+  }
+}
+@media (min-width: 75em) {
+  .header__logo-box--page {
+    background-color: #fff !important;
+    height: 7rem;
   }
 }
 .header__logo {
   height: 3rem;
   display: block;
 }
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .header__logo {
+    height: 4rem;
+    display: inline-block;
+    margin: 0;
+  }
+}
 @media (min-width: 75em) and (max-width: 112.5em) {
   .header__logo {
     height: 3.5rem;
-    display: block;
+    display: inline-block;
     margin: 0;
   }
 }
 @media (min-width: 112.5em) {
   .header__logo {
     height: 4rem;
-    display: block;
+    display: inline-block;
     margin: 0;
   }
+}
+.header__logo--page {
+  text-align: center;
 }
 
 .location {
   background-color: #e9e6e6;
   border-top: 0.3rem solid #d9d9d9;
   width: 100%;
-  height: 5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .location {
@@ -351,10 +392,30 @@ h3 {
   font-size: 1.5rem;
   line-height: 2.5 !important;
 }
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .location__icon {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 75em) {
+  .location__icon {
+    font-size: 2.5rem;
+  }
+}
 .location__adress {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.5;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .location__adress {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 75em) {
+  .location__adress {
+    font-size: 2.5rem;
+  }
 }
 
 .hero {
@@ -568,6 +629,16 @@ h2 {
   color: #32b091;
   font-size: 1.5rem;
   font-weight: 600;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .restaurant__new {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 75em) {
+  .restaurant__new {
+    font-size: 2rem;
+  }
 }
 .restaurant__img {
   height: 70%;
@@ -945,7 +1016,12 @@ h2 {
     transform: translateX(-5.5rem) rotate(360deg);
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .dish__card:hover .dish__icon {
+    transform: translateX(-2rem) rotate(360deg);
+  }
+}
+@media (min-width: 112.5em) {
   .dish__card:hover .dish__icon {
     transform: translateX(-3rem) rotate(360deg);
   }
@@ -964,6 +1040,11 @@ h2 {
     transform: translateX(-9rem);
   }
 }
+@media (min-width: 75em) {
+  .dish__card:hover .dish__checked {
+    width: 20%;
+  }
+}
 .dish__dish, .dish__name, .dish__dish, .dish__side, .dish__price, .dish__icon, .dish__checked {
   transition: all 0.3s ease-out;
 }
@@ -980,7 +1061,7 @@ h2 {
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__name {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 112.5em) {
@@ -1003,7 +1084,7 @@ h2 {
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__side {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 112.5em) {
@@ -1042,6 +1123,7 @@ h2 {
   .dish__price span {
     font-size: 2rem;
     line-height: 5;
+    padding: 0;
   }
 }
 @media (min-width: 112.5em) {
@@ -1101,12 +1183,12 @@ h2 {
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .course {
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
 }
 @media (min-width: 112.5em) {
   .course {
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
 }
 .course__title {
@@ -1121,7 +1203,7 @@ h2 {
 @media (min-width: 37.5em) and (max-width: 75em) {
   .course__title h2 {
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
 }
 @media (min-width: 75em) {
@@ -1147,6 +1229,11 @@ h2 {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .restaurant-page__img {
+    height: 40rem;
+  }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .restaurant-page__img {
@@ -1189,16 +1276,29 @@ h2 {
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
   .restaurant-page__name-box {
-    bottom: -10rem;
+    bottom: -5rem;
   }
 }
 @media (min-width: 75em) {
   .restaurant-page__name-box {
-    bottom: -10rem;
+    bottom: -5rem;
   }
 }
 .restaurant-page__favorite .favorite {
   right: -1rem;
   top: 0rem;
   font-size: 2.5rem;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .restaurant-page__favorite .favorite {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 75em) {
+  .restaurant-page__favorite .favorite {
+    right: 1rem;
+    font-size: 3.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
