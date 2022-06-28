@@ -1,0 +1,72 @@
+// MEDIA QUERIES
+// -phone : 0 to 600px
+// -tab-port: 600 to 900px
+// -tab-land: 900 to 1200px
+//between 1200 and 1600px: normal mode since
+//the website is on desktop first
+// -big-desktop: +1600px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5em) and(max-width: 56.25em) {
+      //up to900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 56.25em) and (max-width: 75em) {
+      //up to 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 37.5em) and(max-width: 75em) {
+      //both landscape and portrait
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 75em) and (max-width: 112.5em) {
+      //up to 1800px
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-big {
+    @media (min-width: 112.5em) {
+      //> 1800px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-all-sizes {
+    @media (min-width: 75em) {
+      //>1200. Covers the range of "desktop" et "desktop-big"
+      @content;
+    }
+  }
+}
+
+// GRADIENTS
+
+@mixin gradient {
+  background: linear-gradient(
+    to bottom right,
+    $secondary-color,
+    $primary-color
+  );
+}
+@mixin gradient-2 {
+  background: linear-gradient(to right, $tertiary-color, $primary-color);
+}
+@mixin gradient-3 {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+}
+@mixin gradient-4 {
+  background: linear-gradient(to right, $secondary-color, $tertiary-color);
+}
+
+@mixin fct-hover($color: $primary-color) {
+  background-color: lighten($color, $amount: 25);
+}

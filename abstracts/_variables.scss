@@ -4,15 +4,14 @@ $primary-color-light: lighten($primary-color, $amount: 30);
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
-$prim-color-darken: darken($primary-color, $amount: 5);
-$sec-color-darken: darken($secondary-color, $amount: 15);
-$tertiary-color-dark: darken($tertiary-color, $amount: 30);
+$prim-color-lighten: lighten($primary-color, $amount: 5);
+$sec-color-lighten: lighten($secondary-color, $amount: 15);
+$tertiary-color-lignten: lighten($tertiary-color, $amount: 30);
 
 $white: #fff;
 $light-grey: #f2f2f2;
 $medium-grey: #e9e6e6;
-$dark-grey: #999;
-$darkened-grey: darken($light-grey, $amount: 10);
+$darkened-grey: darken(red, $amount: 5);
 
 $black: black;
 

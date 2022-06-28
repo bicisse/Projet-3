@@ -5,15 +5,19 @@
     background-color: $white;
     padding: 1rem;
     padding-top: 2rem;
+    text-align: center;
 
-    @include respond(desktop) {
-      background-color: $light-grey;
-      margin: 0 auto;
-    }
-    @include respond(desktop-big) {
+    @include respond(tablet) {
       padding: 2.5rem;
       background-color: $light-grey;
       margin: 0px;
+      text-align: left;
+
+      @include respond(desktop-all-sizes) {
+        background-color: $light-grey;
+        margin: 0 auto;
+        text-align: left;
+      }
     }
   }
 
@@ -31,17 +35,12 @@
       display: block;
       margin: 0;
     }
-
-    &--page {
-      display: inline-block;
-      margin: 0 auto !important;
-    }
   }
 }
 
 .location {
   background-color: $medium-grey;
-  border-top: 0.3rem solid lightgrey;
+  border-top: 0.3rem solid $darkened-grey;
   width: 100%;
   height: 5rem;
 
