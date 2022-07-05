@@ -1,19 +1,13 @@
 .hero {
   text-align: center;
   background-color: $light-grey;
-  height: 29rem;
+  height: fit-content;
+  min-height: 29rem;
   width: 100%;
   overflow: hidden;
   padding: 3rem 0;
   @include respond(tab-port) {
-    height: 40rem;
-  }
-  @include respond(tab-land) {
-    height: 43rem;
-  }
-  @include respond(desktop) {
-    padding: 8rem 0;
-    height: 43rem;
+    padding: auto 0;
   }
 
   h1 {
@@ -25,10 +19,13 @@
     margin: 1rem 0;
 
     @include respond(tablet) {
-      font-size: 4.5rem;
+      font-size: 4rem;
     }
-
-    @include respond(desktop-all-sizes) {
+    @include respond(desktop) {
+      font-size: 4rem;
+      width: 50%;
+    }
+    @include respond(desktop-big) {
       font-size: 5rem;
     }
   }
@@ -40,11 +37,15 @@ h2 {
   width: 91%;
   line-height: normal;
   @include respond(tablet) {
-    font-size: 3.5rem;
+    font-size: 3rem;
     width: 80%;
   }
 
-  @include respond(desktop-all-sizes) {
+  @include respond(desktop) {
+    font-size: 3rem;
+  }
+  @include respond(desktop-big) {
     font-size: 4rem;
+    width: 60%;
   }
 }

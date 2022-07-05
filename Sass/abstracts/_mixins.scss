@@ -57,14 +57,13 @@
     $primary-color
   );
 }
-@mixin gradient-2 {
-  background: linear-gradient(to right, $tertiary-color, $primary-color);
-}
-@mixin gradient-3 {
-  background: linear-gradient(to right, $primary-color, $secondary-color);
-}
-@mixin gradient-4 {
-  background: linear-gradient(to right, $secondary-color, $tertiary-color);
+
+@mixin gradient-hover {
+  background: linear-gradient(
+    to bottom right,
+    $secondary-color-light,
+    $primary-color-light
+  );
 }
 
 @mixin fct-hover($color: $primary-color) {

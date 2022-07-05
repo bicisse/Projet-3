@@ -2,15 +2,19 @@
   display: inline-block;
   position: absolute;
   &__icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 2.5rem;
     margin: auto 0;
     position: absolute;
     color: black;
     transition: transform 0.1s, color 0.2s;
 
-    @include respond(desktop) {
+    @include respond(tablet) {
       padding: 2.5rem 3.5rem;
+      font-size: 3rem;
+    }
+    @include respond(desktop) {
+      padding: 1.5rem 3.5rem;
       font-size: 3rem;
     }
     @include respond(desktop-big) {

@@ -27,7 +27,7 @@
 
     &--inside {
       animation: inside 1s linear infinite;
-      animation-fill-mode: both;
+      animation-fill-mode: ba;
 
       &-1 {
         background-color: $secondary-color;

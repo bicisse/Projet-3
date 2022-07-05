@@ -1,6 +1,9 @@
 .fonctionnement {
   padding-top: 5rem;
 
+  & h3 {
+    padding-bottom: 2rem;
+  }
   &__step {
     position: relative;
     width: 80%;
@@ -58,6 +61,13 @@
         height: 3rem;
         width: 3rem;
       }
+
+      @include respond(desktop) {
+        top: 2rem;
+      }
+      @include respond(desktop-big) {
+        top: 2.5rem;
+      }
     }
   }
   &__icon {
@@ -81,7 +91,7 @@
     }
 
     @include respond(desktop-all-sizes) {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
   }
 }

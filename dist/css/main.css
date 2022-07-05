@@ -78,7 +78,7 @@ a:hover,
 a:visited,
 a:focus {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 li {
@@ -89,7 +89,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: black;
+  color: #000;
 }
 
 h1,
@@ -203,9 +203,6 @@ h3 {
   gap: 2.5rem;
   flex-wrap: wrap;
 }
-.flex__restaurant:first-child {
-  gap: 1.5rem;
-}
 @media (min-width: 37.5em) and (max-width: 75em) {
   .flex__restaurant {
     flex-direction: row !important;
@@ -260,7 +257,7 @@ h3 {
 .footer {
   width: 100%;
   color: #fff;
-  background-color: black;
+  background-color: #262626;
   padding: 3rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -273,7 +270,7 @@ h3 {
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
   .footer__logo {
-    height: 2.3rem;
+    height: 2rem;
   }
 }
 @media (min-width: 75em) {
@@ -291,20 +288,6 @@ h3 {
 .footer__link a:link,
 .footer__link a:hover {
   color: white;
-}
-@media (min-width: 37.5em) and (max-width: 75em) {
-  .footer__link a:visited,
-.footer__link a:link,
-.footer__link a:hover {
-    font-size: 2.3rem;
-  }
-}
-@media (min-width: 75em) {
-  .footer__link a:visited,
-.footer__link a:link,
-.footer__link a:hover {
-    font-size: 2.5rem;
-  }
 }
 
 .header {
@@ -326,7 +309,6 @@ h3 {
   .header__logo-box {
     margin: 0 auto;
     text-align: left;
-    padding: 5rem;
     background-color: #f2f2f2;
   }
 }
@@ -334,6 +316,8 @@ h3 {
   .header__logo-box--page {
     background-color: #fff !important;
     height: 7rem;
+    text-align: center;
+    margin-top: 15px;
   }
 }
 .header__logo {
@@ -367,7 +351,7 @@ h3 {
 
 .location {
   background-color: #e9e6e6;
-  border-top: 0.3rem solid #d9d9d9;
+  border-top: 0.3rem solid #999;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -422,25 +406,17 @@ h3 {
 .hero {
   text-align: center;
   background-color: #f2f2f2;
-  height: 29rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 29rem;
   width: 100%;
   overflow: hidden;
   padding: 3rem 0;
 }
 @media (min-width: 37.5em) and (max-width: 56.25em) {
   .hero {
-    height: 40rem;
-  }
-}
-@media (min-width: 56.25em) and (max-width: 75em) {
-  .hero {
-    height: 43rem;
-  }
-}
-@media (min-width: 75em) and (max-width: 112.5em) {
-  .hero {
-    padding: 8rem 0;
-    height: 43rem;
+    padding: auto 0;
   }
 }
 .hero h1 {
@@ -453,10 +429,16 @@ h3 {
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
   .hero h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .hero h1 {
+    font-size: 4rem;
+    width: 50%;
+  }
+}
+@media (min-width: 112.5em) {
   .hero h1 {
     font-size: 5rem;
   }
@@ -470,18 +452,27 @@ h2 {
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
   h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     width: 80%;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 112.5em) {
   h2 {
     font-size: 4rem;
+    width: 60%;
   }
 }
 
 .fonctionnement {
   padding-top: 5rem;
+}
+.fonctionnement h3 {
+  padding-bottom: 2rem;
 }
 .fonctionnement__step {
   position: relative;
@@ -493,7 +484,7 @@ h2 {
   height: 7.5rem;
   line-height: 2.5;
   cursor: pointer;
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
   .fonctionnement__step {
@@ -517,7 +508,7 @@ h2 {
   }
 }
 .fonctionnement__step:hover {
-  background-color: #ae80e5;
+  background-color: #9b63df;
 }
 .fonctionnement__step:hover .fonctionnement__icon {
   color: #9356dc;
@@ -541,6 +532,16 @@ h2 {
     line-height: 1.5;
     height: 3rem;
     width: 3rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .fonctionnement__number span {
+    top: 2rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .fonctionnement__number span {
+    top: 2.5rem;
   }
 }
 .fonctionnement__icon {
@@ -567,7 +568,7 @@ h2 {
 }
 @media (min-width: 75em) {
   .fonctionnement__text {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -588,7 +589,7 @@ h2 {
   position: relative;
   background-color: #fff;
   border-radius: 1.5rem;
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease-in-out;
   margin: 0 auto;
   cursor: pointer;
@@ -598,7 +599,12 @@ h2 {
     height: 30rem;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .restaurant__card {
+    height: 25rem;
+  }
+}
+@media (min-width: 112.5em) {
   .restaurant__card {
     height: 30rem;
   }
@@ -607,7 +613,7 @@ h2 {
   margin-bottom: 5rem;
 }
 .restaurant__card:hover {
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
   transform: translateY(-1rem) scale(1.02);
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
@@ -627,7 +633,7 @@ h2 {
   padding: 0.3rem 1rem;
   border-radius: 2px;
   background-color: #99e2d0;
-  color: #32b091;
+  color: #1b6150;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -639,6 +645,7 @@ h2 {
 @media (min-width: 75em) {
   .restaurant__new {
     font-size: 2rem;
+    border-radius: 4px;
   }
 }
 .restaurant__img {
@@ -669,7 +676,13 @@ h2 {
     font-size: 2.5rem;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .restaurant__name {
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 112.5em) {
   .restaurant__name {
     font-size: 2.3rem;
   }
@@ -682,7 +695,12 @@ h2 {
     font-size: 2.4rem;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .restaurant__quartier {
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 112.5em) {
   .restaurant__quartier {
     font-size: 2.2rem;
   }
@@ -715,8 +733,8 @@ h2 {
 .spinner__ball--inside {
   -webkit-animation: inside 1s linear infinite;
           animation: inside 1s linear infinite;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-animation-fill-mode: ba;
+          animation-fill-mode: ba;
 }
 .spinner__ball--inside-1 {
   background-color: #ff79da;
@@ -791,87 +809,73 @@ h2 {
 .btn {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 1.6rem;
-  width: 18rem;
   border-radius: 50rem;
   border: none;
   cursor: pointer;
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
   z-index: 0;
+  width: 22rem;
+  margin: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .btn {
+    width: 35rem;
+    margin: 3rem;
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .btn {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 30rem;
   }
 }
 @media (min-width: 112.5em) {
   .btn {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    width: 45rem;
+    padding: 2rem;
   }
 }
 .btn a {
   color: #fff !important;
-}
-.btn::after {
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  font-size: 2rem;
-  width: 3rem;
-  padding: 2rem;
-  border-radius: 50rem;
-  border: none;
-  margin: 2rem;
-  cursor: pointer;
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
-  z-index: -1;
 }
 .btn:link, .btn:visited {
   display: inline-block;
   transition: all 0.2s;
 }
 .btn:hover {
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
   transform: translateY(-3px);
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 .btn:hover:active {
   transform: translateY(-1px);
-  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
 }
-.btn__header {
-  width: 22rem;
-  margin: 3rem;
-  font-size: 1.5rem;
-  font-weight: 500;
+.btn__commander {
+  margin: 5rem auto;
+  display: block;
+  width: 18rem;
 }
-@media (min-width: 37.5em) and (max-width: 56.25em) {
-  .btn__header {
-    width: 42rem;
-    margin: 3rem;
-    font-size: 2.7rem;
-    padding: 2rem;
-  }
-}
-@media (min-width: 56.25em) and (max-width: 75em) {
-  .btn__header {
-    width: 42rem;
-    margin: 3rem;
-    font-size: 2.7rem;
-    padding: 2rem;
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .btn__commander {
+    margin: 7rem auto;
+    width: 30rem;
   }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
-  .btn__header {
-    font-size: 2.5rem;
-    width: 35rem;
+  .btn__commander {
+    width: 23rem;
   }
 }
 @media (min-width: 112.5em) {
-  .btn__header {
-    font-size: 2.5rem;
-    width: 35rem;
+  .btn__commander {
+    margin: 5rem auto;
   }
-}
-.btn__commander {
-  margin: 3rem auto;
-  display: block;
 }
 
 .favorite {
@@ -879,7 +883,31 @@ h2 {
   cursor: pointer;
   right: 1.5rem;
   top: 0.5rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .favorite {
+    top: 1rem;
+    font-size: 4.5rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .favorite {
+    top: 1rem;
+    font-size: 4.5rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .favorite {
+    right: 1rem;
+    font-size: 5rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .favorite {
+    right: 1rem;
+    font-size: 5.5rem;
+  }
 }
 .favorite--empty {
   color: black;
@@ -903,34 +931,37 @@ h2 {
 }
 .favorite:hover .favorite--filled {
   opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to bottom right, #9356dc, #ff79da);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
-@media (min-width: 37.5em) and (max-width: 56.25em) {
-  .favorite {
-    top: 1rem;
-    font-size: 3.5rem;
-  }
-}
-@media (min-width: 56.25em) and (max-width: 75em) {
-  .favorite {
-    top: 1rem;
-    font-size: 3.5rem;
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .favorite--cards {
+    font-size: 4rem;
   }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
-  .favorite {
-    right: 1rem;
-    top: 1.5rem;
-    font-size: 2.8rem;
+  .favorite--cards {
+    font-size: 3rem;
   }
 }
 @media (min-width: 112.5em) {
-  .favorite {
+  .favorite--cards {
+    font-size: 3.5rem;
+  }
+}
+.favorite--page {
+  right: -1rem;
+  top: 0rem;
+}
+@media (min-width: 37.5em) and (max-width: 75em) {
+  .favorite--page {
     right: 1rem;
-    top: 1.5rem;
-    font-size: 2.8rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .favorite--page {
+    right: 1rem;
+    top: 0.5rem;
   }
 }
 
@@ -939,16 +970,22 @@ h2 {
   position: absolute;
 }
 .arrow__icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 2.5rem;
   margin: auto 0;
   position: absolute;
   color: black;
   transition: transform 0.1s, color 0.2s;
 }
-@media (min-width: 75em) and (max-width: 112.5em) {
+@media (min-width: 37.5em) and (max-width: 75em) {
   .arrow__icon {
     padding: 2.5rem 3.5rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 75em) and (max-width: 112.5em) {
+  .arrow__icon {
+    padding: 1.5rem 3.5rem;
     font-size: 3rem;
   }
 }
@@ -959,7 +996,7 @@ h2 {
   }
 }
 .arrow__icon:visited {
-  color: black;
+  color: #000;
 }
 .arrow__icon:hover {
   transform: scale(1.3) rotate(360deg);
@@ -992,7 +1029,7 @@ h2 {
 @media (min-width: 112.5em) {
   .dish__card {
     min-height: 10rem;
-    padding: 1.2rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 .dish__card:hover .dish__name, .dish__card:hover .dish__side {
@@ -1004,9 +1041,14 @@ h2 {
   width: 85%;
 }
 .dish__card:hover .dish__icon {
-  transform: translateX(-2rem) rotate(360deg);
+  transform: translateX(-1.6rem) rotate(360deg);
 }
-@media (min-width: 37.5em) and (max-width: 75em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .dish__card:hover .dish__icon {
+    transform: translateX(-4.5rem) rotate(360deg);
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
   .dish__card:hover .dish__icon {
     transform: translateX(-5.5rem) rotate(360deg);
   }
@@ -1018,26 +1060,54 @@ h2 {
 }
 @media (min-width: 112.5em) {
   .dish__card:hover .dish__icon {
-    transform: translateX(-3rem) rotate(360deg);
+    transform: translateX(-2.5rem) rotate(360deg);
   }
 }
 .dish__card:hover .dish__price {
   transform: translateX(-5rem);
-  width: 15%;
 }
-@media (min-width: 37.5em) and (max-width: 75em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .dish__card:hover .dish__price {
+    transform: translateX(-14rem);
+    width: 15%;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
   .dish__card:hover .dish__price {
     transform: translateX(-15rem);
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
   .dish__card:hover .dish__price {
-    transform: translateX(-9rem);
+    transform: translateX(-6rem);
+    width: 12%;
   }
+}
+@media (min-width: 112.5em) {
+  .dish__card:hover .dish__price {
+    transform: translateX(-8rem);
+    width: 15%;
+  }
+}
+@media (min-width: 75em) {
+  .dish__card:hover .dish__side {
+    width: 80%;
+  }
+}
+.dish__card:hover .dish__checked {
+  width: 18%;
 }
 @media (min-width: 75em) {
   .dish__card:hover .dish__checked {
     width: 20%;
+  }
+}
+.dish__card:hover .dish__name {
+  width: 70%;
+}
+@media (min-width: 75em) {
+  .dish__card:hover .dish__name {
+    width: 80%;
   }
 }
 .dish__dish, .dish__name, .dish__dish, .dish__side, .dish__price, .dish__icon, .dish__checked {
@@ -1049,42 +1119,55 @@ h2 {
   width: 80%;
   line-height: 1.3;
 }
-@media (min-width: 37.5em) and (max-width: 75em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
   .dish__name {
     font-size: 3.5rem;
   }
 }
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .dish__name {
+    font-size: 3rem;
+  }
+}
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__name {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
+    width: 85%;
   }
 }
 @media (min-width: 112.5em) {
   .dish__name {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    width: 85%;
   }
 }
 .dish__side {
   font-size: 1.5rem;
   font-weight: 300;
   white-space: nowrap;
-  width: 80%;
+  width: 85%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media (min-width: 37.5em) and (max-width: 75em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
   .dish__side {
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .dish__side {
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__side {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    white-space: initial;
   }
 }
 @media (min-width: 112.5em) {
   .dish__side {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 .dish__price {
@@ -1104,27 +1187,27 @@ h2 {
 }
 @media (min-width: 37.5em) and (max-width: 56.25em) {
   .dish__price span {
-    font-size: 3.5rem;
-    line-height: 5.5;
+    font-size: 3rem;
+    line-height: 6.3;
   }
 }
 @media (min-width: 56.25em) and (max-width: 75em) {
   .dish__price span {
-    font-size: 3rem;
-    line-height: 6.5;
+    font-size: 2.5rem;
+    line-height: 6.3;
   }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__price span {
-    font-size: 2rem;
-    line-height: 5;
+    font-size: 1.7rem;
+    line-height: 5.8;
     padding: 0;
   }
 }
 @media (min-width: 112.5em) {
   .dish__price span {
-    font-size: 2.5rem;
-    line-height: 5;
+    font-size: 2rem;
+    line-height: 6.5;
   }
 }
 .dish__checked {
@@ -1151,8 +1234,8 @@ h2 {
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .dish__icon {
-    font-size: 3rem;
-    top: 3rem;
+    font-size: 2.5rem;
+    top: 2.5rem;
   }
 }
 @media (min-width: 112.5em) {
@@ -1164,26 +1247,32 @@ h2 {
 
 .course {
   padding: 1.5rem;
-  padding-top: 2.5rem;
+  padding-top: 1rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: #f2f2f2;
 }
-@media (min-width: 37.5em) and (max-width: 75em) {
+@media (min-width: 37.5em) and (max-width: 56.25em) {
   .course {
     padding: 2.5rem;
-    padding-top: 10rem;
+    padding-top: 6rem;
+  }
+}
+@media (min-width: 56.25em) and (max-width: 75em) {
+  .course {
+    padding: 2.5rem;
+    padding-top: 8rem;
   }
 }
 @media (min-width: 75em) and (max-width: 112.5em) {
   .course {
-    padding-top: 7rem;
+    padding-top: 4rem;
   }
 }
 @media (min-width: 112.5em) {
   .course {
-    padding-top: 7rem;
+    padding-top: 5rem;
   }
 }
 .course__title {
@@ -1198,12 +1287,22 @@ h2 {
 @media (min-width: 37.5em) and (max-width: 75em) {
   .course__title h2 {
     font-size: 3rem;
-    margin: 2rem 0;
+    padding-bottom: 5rem;
+  }
+  .course__title h2:not(:first-child) {
+    margin: 12rem 0;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 75em) and (max-width: 112.5em) {
   .course__title h2 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .course__title h2 {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
   }
 }
 .course__title--underline {
@@ -1243,7 +1342,6 @@ h2 {
 .restaurant-page__name {
   font-family: "Shrikhand";
   font-size: 2.7rem;
-  font-weight: 100;
   max-width: 1800px;
 }
 @media (min-width: 37.5em) and (max-width: 75em) {
@@ -1254,6 +1352,7 @@ h2 {
 @media (min-width: 75em) {
   .restaurant-page__name {
     font-size: 4rem;
+    line-height: 2;
   }
 }
 .restaurant-page__name-box {
@@ -1276,24 +1375,8 @@ h2 {
 }
 @media (min-width: 75em) {
   .restaurant-page__name-box {
+    padding: 5rem;
+    padding-bottom: 0;
     bottom: -5rem;
-  }
-}
-.restaurant-page__favorite .favorite {
-  right: -1rem;
-  top: 0rem;
-  font-size: 2.5rem;
-}
-@media (min-width: 37.5em) and (max-width: 75em) {
-  .restaurant-page__favorite .favorite {
-    right: 1rem;
-    top: 0.5rem;
-    font-size: 3.5rem;
-  }
-}
-@media (min-width: 75em) {
-  .restaurant-page__favorite .favorite {
-    right: 1rem;
-    font-size: 3.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

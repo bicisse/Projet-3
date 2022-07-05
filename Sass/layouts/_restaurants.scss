@@ -24,7 +24,11 @@
       height: 30rem;
     }
 
-    @include respond(desktop-all-sizes) {
+    @include respond(desktop) {
+      height: 25rem;
+      // flex-direction: column;
+    }
+    @include respond(desktop-big) {
       height: 30rem;
       // flex-direction: column;
     }
@@ -62,6 +66,7 @@
 
     @include respond(desktop-all-sizes) {
       font-size: 2rem;
+      border-radius: 4px;
     }
   }
   &__img {
@@ -89,7 +94,12 @@
       font-size: 2.5rem;
     }
 
-    @include respond(desktop-all-sizes) {
+    @include respond(desktop) {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    @include respond(desktop-big) {
       font-size: 2.3rem;
     }
   }
@@ -99,8 +109,10 @@
     @include respond(tablet) {
       font-size: 2.4rem;
     }
-
-    @include respond(desktop-all-sizes) {
+    @include respond(desktop) {
+      font-size: 1.9rem;
+    }
+    @include respond(desktop-big) {
       font-size: 2.2rem;
     }
   }

@@ -1,35 +1,34 @@
 .btn {
   @include gradient;
   padding: 1.6rem;
-  width: 18rem;
   border-radius: 50rem;
   border: none;
   cursor: pointer;
-  box-shadow: $shadow-1;
+  box-shadow: $shadow-2;
   z-index: 0;
+  width: 22rem;
+  margin: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @include respond(tablet) {
+    width: 35rem;
+    margin: 3rem;
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
 
   @include respond(desktop) {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 30rem;
   }
   @include respond(desktop-big) {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    width: 45rem;
+    padding: 2rem;
   }
-
   a {
     color: $white !important;
-  }
-
-  &::after {
-    @include gradient;
-    font-size: 2rem;
-    width: 3rem;
-    padding: 2rem;
-    border-radius: 50rem;
-    border: none;
-    margin: 2rem;
-    cursor: pointer;
-    box-shadow: $shadow-1;
-    z-index: -1;
   }
 
   &:link,
@@ -39,45 +38,32 @@
   }
 
   &:hover {
+    @include gradient-hover;
     transform: translateY(-3px);
     box-shadow: $shadow-1;
 
     &:active {
       transform: translateY(-1px);
-      box-shadow: $shadow-2;
+      box-shadow: $shadow-1;
     }
   }
 
-  &__header {
-    width: 22rem;
-    margin: 3rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-
-    @include respond(tab-port) {
-      width: 42rem;
-      margin: 3rem;
-      font-size: 2.7rem;
-      padding: 2rem;
-    }
-    @include respond(tab-land) {
-      width: 42rem;
-      margin: 3rem;
-      font-size: 2.7rem;
-      padding: 2rem;
-    }
-
-    @include respond(desktop) {
-      font-size: 2.5rem;
-      width: 35rem;
-    }
-    @include respond(desktop-big) {
-      font-size: 2.5rem;
-      width: 35rem;
-    }
-  }
   &__commander {
-    margin: 3rem auto;
+    margin: 5rem auto;
     display: block;
+    width: 18rem;
+
+    @include respond(tablet) {
+      margin: 7rem auto;
+
+      width: 30rem;
+    }
+    @include respond(desktop) {
+      width: 23rem;
+    }
+
+    @include respond(desktop-big) {
+      margin: 5rem auto;
+    }
   }
 }

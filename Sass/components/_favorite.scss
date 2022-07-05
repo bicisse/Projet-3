@@ -3,8 +3,25 @@
   cursor: pointer;
   right: 1.5rem;
   top: 0.5rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  @include respond(tab-port) {
+    top: 1rem;
+    font-size: 4.5rem;
+  }
 
+  @include respond(tab-land) {
+    top: 1rem;
+    font-size: 4.5rem;
+  }
+  @include respond(desktop) {
+    right: 1rem;
+    font-size: 5rem;
+  }
+
+  @include respond(desktop-big) {
+    right: 1rem;
+    font-size: 5.5rem;
+  }
   &--empty {
     color: black;
     position: absolute;
@@ -31,36 +48,38 @@
     }
     & .favorite--filled {
       opacity: 1;
-      background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from($primary-color),
-        to($secondary-color)
+      background: linear-gradient(
+        to bottom right,
+        $primary-color,
+        $secondary-color
       );
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
 
-  @include respond(tab-port) {
-    top: 1rem;
-    font-size: 3.5rem;
-  }
+  &--cards {
+    @include respond(tablet) {
+      font-size: 4rem;
+    }
 
-  @include respond(tab-land) {
-    top: 1rem;
-    font-size: 3.5rem;
+    @include respond(desktop) {
+      font-size: 3rem;
+    }
+    @include respond(desktop-big) {
+      font-size: 3.5rem;
+    }
   }
-  @include respond(desktop) {
-    right: 1rem;
-    top: 1.5rem;
-    font-size: 2.8rem;
-  }
+  &--page {
+    right: -1rem;
+    top: 0rem;
 
-  @include respond(desktop-big) {
-    right: 1rem;
-    top: 1.5rem;
-    font-size: 2.8rem;
+    @include respond(tablet) {
+      right: 1rem;
+    }
+
+    @include respond(desktop) {
+      right: 1rem;
+      top: 0.5rem;
+    }
   }
 }

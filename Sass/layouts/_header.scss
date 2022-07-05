@@ -13,7 +13,7 @@
     @include respond(desktop-all-sizes) {
       margin: 0 auto;
       text-align: left;
-      padding: 5rem;
+
       background-color: $light-grey;
     }
 
@@ -21,6 +21,8 @@
       @include respond(desktop-all-sizes) {
         background-color: $white !important;
         height: 7rem;
+        text-align: center;
+        margin-top: 15px;
       }
     }
   }
@@ -53,7 +55,7 @@
 
 .location {
   background-color: $medium-grey;
-  border-top: 0.3rem solid $darkened-grey;
+  border-top: 0.3rem solid $dark-grey;
   width: 100%;
   height: fit-content;
 
